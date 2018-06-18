@@ -6,17 +6,22 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-
+import { AppRoutingModule } from './/app-routing.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BannerComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    HomePageComponent,
+    CarouselComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
