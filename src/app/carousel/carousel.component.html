@@ -1,0 +1,28 @@
+<div>
+  <a routerLink="/home">back</a><br>
+  <!-- Carousel component with animation starts here-->
+  <div class="frame" id="basicSly">
+    <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
+    <div class="sliderContainer">
+      <ul class="clearfix" #animId>
+        <li *ngFor="let carousel of compList; let last = last;">
+          <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
+          <img [src]="carousel.src" alt=""/>
+        </li>
+      </ul>
+    </div>
+    <button class="nextBtn" (click)="Carouselwithoutanimation('next')" *ngIf="carouselList.length > indexVal && endIndex <= carouselList.length">Next</button>
+  </div>
+  <!-- Carousel component with animation ends here-->
+
+<!--  <div class="scrollbar-container" id="carousel">
+    <div class="scrollbar">
+      <div class="handle">
+        <div class="line-track"></div>
+        <div class="focus-ring"></div>
+        <div class="mousearea"></div>
+      </div>
+    </div>
+  </div>-->
+
+</div>
