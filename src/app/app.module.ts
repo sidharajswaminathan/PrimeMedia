@@ -7,7 +7,6 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { HomePageComponent } from './home-page/home-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { CarouselComponent } from './carousel/carousel.component';
     BannerComponent,
     FooterComponent,
     HomeComponent,
-    HomePageComponent,
     CarouselComponent
   ],
   imports: [
