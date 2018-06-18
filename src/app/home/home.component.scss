@@ -1,0 +1,231 @@
+/* Home page style */
+.newhome-section {
+  padding: 25px 6%;
+  text-align: center;
+  h2 {
+    margin: 20px 0 30px;
+    color: #666;
+    text-transform: uppercase;
+    font: normal 32px/28px "MyriadPro-Bold";
+  }
+  ul {
+    li {
+      display: inline-block;
+      width: 20%;
+      padding: 0 12px;
+      margin: 0 0 60px;
+      vertical-align: top;
+
+      .homenew-list {
+        position: relative;
+        .img-info {
+          position: absolute;
+          width: 100%;
+          height: 25%;
+          bottom: 0;
+        }
+        h3,
+        strong {
+          font-size: 2.5vmin;
+          font-family: "MyriadPro-Bold";
+          color: #353535;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        h3 {
+          margin-bottom: 3px;
+        }
+        strong {
+          font-size: 14px;
+        }
+        .newhome-image {
+          margin-bottom: 10px;
+          position: relative;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .see-all-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+      }
+      a.new-seelink {
+        padding: 1.9% 10%;
+        background: #fff;
+        border: 2px solid #a94f39;
+        border-radius: 20px;
+        text-transform: uppercase;
+        height: 38px;
+        font-size: 2vmin;
+        color: #a94f39;
+        line-height: 34px;
+        margin: 0 auto;
+        vertical-align: top;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+          background: #a94f39;
+        }
+      }
+      &.procolor2 {
+        a.new-seelink {
+          color: #3a783c;
+          border-color: #39773b;
+          &:hover {
+            color: #fff;
+            background: #39773b;
+          }
+        }
+      }
+      &.procolor3 {
+        a.new-seelink {
+          color: #5265b6;
+          border-color: #5265b6;
+          &:hover {
+            color: #fff;
+            background: #5265b6;
+          }
+        }
+      }
+      &.procolor4 {
+        a.new-seelink {
+          color: #96701e;
+          border-color: #a07822;
+          &:hover {
+            color: #fff;
+            background: #a07822;
+          }
+        }
+      }
+      &.procolor5 {
+        a.new-seelink {
+          color: #a43b4e;
+          border-color: #a43b4e;
+          &:hover {
+            color: #fff;
+            background: #a43b4e;
+          }
+        }
+      }
+      &.mtcolor1 {
+        a.new-seelink {
+          color: #4f3e7e;
+          border-color: #4a3a77;
+          &:hover {
+            color: #fff;
+            background: #4a3a77;
+          }
+        }
+      }
+      &.mtcolor2 {
+        a.new-seelink {
+          color: #5b5239;
+          border-color: #54482b;
+          &:hover {
+            color: #fff;
+            background: #54482b;
+          }
+        }
+      }
+      &.mtcolor3 {
+        a.new-seelink {
+          color: #8e4966;
+          border-color: #91506c;
+          &:hover {
+            color: #fff;
+            background: #91506c;
+          }
+        }
+      }
+      &.mtcolor4 {
+        a.new-seelink {
+          color: #2c8b99;
+          border-color: #3196a5;
+          &:hover {
+            color: #fff;
+            background: #3196a5;
+          }
+        }
+      }
+      &.mtcolor5 {
+        a.new-seelink {
+          color: #737911;
+          border-color: #737911;
+          &:hover {
+            color: #fff;
+            background: #737911;
+          }
+        }
+      }
+    }
+    &.mediatype-list {
+      li {
+        .img-info {
+          height: 19.5%;
+        }
+      }
+    }
+
+  }
+}
+/* Media query for home page */
+@media (max-width: 1499px) {
+  .newhome-section {
+    ul {
+      li {
+        a.new-seelink {
+          font-size: 2.2vmin;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 1024px) and (orientation:landscape) {
+  .newhome-section {
+    ul {
+      li {
+        a.new-seelink {
+          font-size: 13px;
+        }
+        h3 {
+          margin-bottom: -3px;
+          font-size: 14px!important;
+        }
+        strong {
+          font-size: 11px!important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 991px) {
+  .newhome-section {
+    ul {
+      li {
+        width: 33.33%;
+        a.new-seelink {
+          font-size: 14px;
+        }
+        h3 {
+          font-size: 16px!important;
+        }
+        strong {
+          font-size: 13px!important;
+        }
+      }
+    }
+  }
+}
