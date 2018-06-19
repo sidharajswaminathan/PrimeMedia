@@ -6,3 +6,7 @@ export class carouselProp {
   src: string;
   id: string;
 }
+
+export class sharedValues{
+  showBanner: boolean;
+}

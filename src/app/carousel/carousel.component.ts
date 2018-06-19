@@ -1,7 +1,8 @@
-import { Component, OnInit , ViewChild, ElementRef, AfterViewInit, Input} from '@angular/core';
+import { Component, OnInit , ViewChild, ElementRef, AfterViewInit, Input, Output, EventEmitter} from '@angular/core';
 import { carouselData } from '../mock-appdata';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
+import { SharedserviceService } from '../sharedservice.service';
 import { _ } from 'underscore';
 
 @Component({
@@ -10,11 +11,14 @@ import { _ } from 'underscore';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
-  @Input() shareData:any;
+  @Input() shareData: any;
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
-  carouselList: any = []
+    private router: Router,
+    private sharedObj: SharedserviceService
+  ) { }
+  sharedValues: any;
+  carouselList: any = [];
   compList: Array<any> = [];
   sub: any = 0;
   startIndex: any = 0;
@@ -34,7 +38,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.carouselList = this.shareData;
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
-
   }
 Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
@@ -55,8 +58,7 @@ Carouselwithoutanimation(param: string) {
   }
   Carouselwithanimation(param: string) {
   }
-
-  /*button to change edit and save view*/
+    /*button to change edit and save view*/
   editCarousel(){
     this.editView = !this.editView;
     this.changebutton = this.changebutton=='edit'?'save':'edit';
@@ -67,16 +69,16 @@ Carouselwithoutanimation(param: string) {
     this.compList = _.filter(this.compList, function (x) {
       return x.id != obj.id
     })
-  }
 
-  goTo (idx){
-    if(idx === '24'){this.routUrl = ['/productdetail'];
-    }else{
+  goTo (idx) {
+    if ( idx === '24') { this.routUrl = ['/productdetail'];
+    } else {
       this.routUrl = ['/productdetails'];
     }
-
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
-
+    this.sharedObj.globalObj.showBanner = true;
+    this.sharedValues = this.sharedObj;
+    console.log(this.sharedValues);
   }
 }
 
