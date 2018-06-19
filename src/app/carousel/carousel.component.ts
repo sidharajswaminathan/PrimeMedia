@@ -1,5 +1,4 @@
 import { Component, OnInit , ViewChild, ElementRef, AfterViewInit} from '@angular/core';
-import { HomePageComponent } from '../home-page/home-page.component';
 import { carouselData } from '../mock-appdata';
 import * as $ from 'jquery';
 
