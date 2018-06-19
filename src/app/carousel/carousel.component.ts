@@ -1,5 +1,6 @@
 import { Component, OnInit , ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import { carouselData } from '../mock-appdata';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 
 @Component({
@@ -9,9 +10,12 @@ import * as $ from 'jquery';
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) { }
   carouselList: any = carouselData;
   compList: Array<any> = [];
+  sub:any = 0;
   startIndex: any = 0;
   endIndex: any = 0;
   indexVal: any = 4;
@@ -26,6 +30,17 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
     console.log(this.carouselList);
+    this.sub = this.route
+      .queryParams
+      .subscribe(params => {
+        console.log(params['id']);
+       // this.page = +params['page'] || 0;
+      });
+
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
   Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
