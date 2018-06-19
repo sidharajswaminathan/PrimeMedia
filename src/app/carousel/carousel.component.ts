@@ -1,7 +1,8 @@
-import { Component, OnInit , ViewChild, ElementRef, AfterViewInit,Input} from '@angular/core';
+import { Component, OnInit , ViewChild, ElementRef, AfterViewInit, Input, Output, EventEmitter} from '@angular/core';
 import { carouselData } from '../mock-appdata';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
+import { SharedserviceService } from '../sharedservice.service';
 
 @Component({
   selector: 'app-carousel',
@@ -9,11 +10,14 @@ import * as $ from 'jquery';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
-  @Input() shareData:any;
+  @Input() shareData: any;
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
-  carouselList: any = []
+    private router: Router,
+    private sharedObj: SharedserviceService
+  ) { }
+  sharedValues: any;
+  carouselList: any = [];
   compList: Array<any> = [];
   sub: any = 0;
   startIndex: any = 0;
@@ -31,7 +35,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.carouselList = this.shareData;
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
-
   }
 Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
@@ -53,12 +56,14 @@ Carouselwithoutanimation(param: string) {
   Carouselwithanimation(param: string) {
   }
 
-  goTo (idx){
-    if(idx === '24'){this.routUrl = ['/productdetail'];
-    }else{
+  goTo (idx) {
+    if ( idx === '24') { this.routUrl = ['/productdetail'];
+    } else {
       this.routUrl = ['/productdetails'];
     }
-
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
+    this.sharedObj.globalObj.showBanner = true;
+    this.sharedValues = this.sharedObj;
+    console.log(this.sharedValues);
   }
 }
