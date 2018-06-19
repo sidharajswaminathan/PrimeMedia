@@ -22,7 +22,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     HomeComponent,
     CarouselComponent,
     ProdDetailsComponent,
-    PaginationComponent
+    PaginationComponent,
     CarouselComponent,
     UsercollectionsComponent,
     CarouselComponent,
