@@ -199,12 +199,14 @@
         a.new-seelink {
           font-size: 13px;
         }
-        h3 {
-          margin-bottom: -3px;
-          font-size: 14px!important;
-        }
-        strong {
-          font-size: 11px!important;
+        .homenew-list, .mediatype-list {
+          h3 {
+            margin-bottom: -3px;
+            font-size: 14px;
+          }
+          strong {
+            font-size: 11px;
+          }
         }
       }
     }
@@ -219,12 +221,47 @@
         a.new-seelink {
           font-size: 14px;
         }
-        h3 {
-          font-size: 16px!important;
+        .homenew-list, .mediatype-list {
+          h3 {
+            font-size: 16px;
+          }
+          strong {
+            font-size: 13px;
+          }
         }
-        strong {
-          font-size: 13px!important;
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 767px) {
+  .newhome-section {
+    ul {
+      li {
+        margin-bottom: 30px;
+        width: 49.5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newhome-section {
+    h2 {
+      font-size: 20px;
+    }
+    ul {
+      li {
+        width: 90%;
+        .homenew-list, .mediatype-list {
+          h3 {
+            font-size: 18px;
+          }
+          strong {
+            font-size: 13px;
+          }
         }
+
       }
     }
   }
