@@ -8,7 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
-
+import { UsercollectionsComponent } from './usercollections/usercollections.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     BannerComponent,
     FooterComponent,
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    UsercollectionsComponent,
+    CarouselComponent,
+    ProductdetailsComponent,
   ],
   imports: [
     NgbModule.forRoot(),
