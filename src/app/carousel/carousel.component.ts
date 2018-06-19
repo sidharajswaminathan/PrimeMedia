@@ -14,7 +14,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   compList: Array<any> = [];
   startIndex: any = 0;
   endIndex: any = 0;
-  indexVal: any = 5;
+  indexVal: any = 4;
   carouselPos: any;
   staticId: any = 'anim_';
   @ViewChild('animId') carouselId: ElementRef;
@@ -25,7 +25,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
-    console.log(this.carouselList)
+    console.log(this.carouselList);
   }
   Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
