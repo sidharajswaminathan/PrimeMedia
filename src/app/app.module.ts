@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProdDetailsComponent } from './prod-details/prod-details.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 @NgModule({
@@ -18,9 +19,11 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     FooterComponent,
     HomeComponent,
     CarouselComponent,
+    ProdDetailsComponent,
+    CarouselComponent,
     UsercollectionsComponent,
     CarouselComponent,
-    ProductdetailsComponent,
+    ProductdetailsComponent
   ],
   imports: [
     NgbModule.forRoot(),

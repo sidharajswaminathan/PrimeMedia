@@ -7,7 +7,7 @@
       <ul class="clearfix" #animId>
         <li *ngFor="let carousel of compList; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
-          <img [src]="carousel.src" alt=""/>
+          <a routerLink="/productdetails"><img [src]="carousel.src" alt=""/></a>
         </li>
       </ul>
     </div>
