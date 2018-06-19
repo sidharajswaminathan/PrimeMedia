@@ -18,7 +18,6 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     BannerComponent,
     FooterComponent,
     HomeComponent,
-    HomePageComponent,
     CarouselComponent,
     ProdDetailsComponent,
     CarouselComponent,
