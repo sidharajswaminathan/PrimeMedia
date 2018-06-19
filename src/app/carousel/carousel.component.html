@@ -1,8 +1,13 @@
+
+<div class="carouselframe">
+  <!--<a routerLink="/home">back</a><br>-->
+  <!-- Carousel component with animation starts here-->
+  <h3 class="carouselTitle"></h3>
 <section class="main-wrapper">
   <!--<a routerLink="/home">back</a><br>-->
   <!-- Carousel component with animation starts here-->
   <a [routerLink]="['/productdetail']">see more</a>
-  <div class="frame" id="basicSly">
+ <div class="frame" id="basicSly">
     <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
     <div class="sliderContainer">
       <ul class="clearfix" #animId>
@@ -26,4 +31,10 @@
     </div>
   </div>-->
 
+
+
+<app-draggingslide></app-draggingslide>
+
 </section>
+</div>
+

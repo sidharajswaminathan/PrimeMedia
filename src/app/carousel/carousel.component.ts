@@ -62,3 +62,4 @@ Carouselwithoutanimation(param: string) {
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
   }
 }
+

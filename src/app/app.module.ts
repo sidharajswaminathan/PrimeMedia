@@ -14,6 +14,9 @@ import { UsercollectionsComponent } from './usercollections/usercollections.comp
 import { HttprequestComponent } from './httprequest/httprequest.component';
 import { MycollectionsComponent } from './mycollections/mycollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+import { DraggingslideComponent } from './draggingslide/draggingslide.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 @NgModule({
@@ -33,13 +36,15 @@ import { ProductlistComponent } from './productlist/productlist.component';
     UsercollectionsComponent,
     CarouselComponent,
     ProductdetailsComponent,
+    DraggingslideComponent,
     BreadcrumbComponent,
     ProductlistComponent
   ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
