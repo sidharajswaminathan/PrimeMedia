@@ -6,9 +6,10 @@
     <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
     <div class="sliderContainer">
       <ul class="clearfix" #animId>
-        <li *ngFor="let carousel of compList; let last = last;">
+        <li *ngFor="let carousel of compList; let last = last; index as i">
+
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
-          <img [src]="carousel.src" alt=""/>
+          <a (click) = goTo(carousel.id) ><img [src]="carousel.src" [id] = "carousel.id" alt=""/></a>
         </li>
       </ul>
     </div>
@@ -28,4 +29,4 @@
 
 </div>
 
-
+<app-draggingslide></app-draggingslide>
