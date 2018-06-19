@@ -76,7 +76,7 @@ Carouselwithoutanimation(param: string) {
       this.routUrl = ['/productdetails'];
     }
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
-    this.sharedObj.globalObj.showBanner = true;
+    this.sharedObj.globalObj.showBanner = false;
     this.sharedValues = this.sharedObj;
     console.log(this.sharedValues);
   }
