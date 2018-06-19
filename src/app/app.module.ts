@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     CarouselComponent,
     UsercollectionsComponent,
     CarouselComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    BreadcrumbComponent
   ],
   imports: [
     NgbModule.forRoot(),
