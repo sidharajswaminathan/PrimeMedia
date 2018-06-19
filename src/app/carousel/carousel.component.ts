@@ -10,16 +10,15 @@ import * as $ from 'jquery';
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() shareData:any;
-  constructor() { }
   constructor(
     private route: ActivatedRoute,
     private router: Router) { }
-  carouselList: any = carouselData;
+  carouselList: any = []
   compList: Array<any> = [];
   sub: any = 0;
   startIndex: any = 0;
   endIndex: any = 0;
-  indexVal: any = 4;
+  indexVal: any = 5;
   carouselPos: any;
   routUrl: Array<any> = ['/productdetails'];
   staticId: any = 'anim_';
@@ -30,12 +29,13 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.carouselList = this.shareData;
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
     console.log(this.carouselList);
     this.sub = this.route
       .queryParams
       .subscribe(params => {
-        console.log(params['id']);
+        console.log(params['data'],"data");
        // this.page = +params['page'] || 0;
       });
 
