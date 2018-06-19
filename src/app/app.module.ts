@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
+import { HttprequestComponent } from './httprequest/httprequest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { UsercollectionsComponent } from './usercollections/usercollections.comp
     FooterComponent,
     HomeComponent,
     CarouselComponent,
-    UsercollectionsComponent
+    UsercollectionsComponent,
+    HttprequestComponent
   ],
   imports: [
     NgbModule.forRoot(),
