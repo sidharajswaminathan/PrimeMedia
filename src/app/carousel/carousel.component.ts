@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild, ElementRef, AfterViewInit} from '@angular/core';
+import { Component, OnInit , ViewChild, ElementRef, AfterViewInit,Input} from '@angular/core';
 import { carouselData } from '../mock-appdata';
 import * as $ from 'jquery';
 
@@ -8,6 +8,8 @@ import * as $ from 'jquery';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
+
+  @Input() shareData:any;
 
   constructor() { }
   carouselList: any = carouselData;

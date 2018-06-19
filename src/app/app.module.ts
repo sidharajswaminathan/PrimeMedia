@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
 import { HttprequestComponent } from './httprequest/httprequest.component';
+import { MycollectionsComponent } from './mycollections/mycollections.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HttprequestComponent } from './httprequest/httprequest.component';
     HomeComponent,
     CarouselComponent,
     UsercollectionsComponent,
-    HttprequestComponent
+    HttprequestComponent,
+    MycollectionsComponent
   ],
   imports: [
     NgbModule.forRoot(),

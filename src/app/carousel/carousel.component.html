@@ -5,7 +5,7 @@
     <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
     <div class="sliderContainer">
       <ul class="clearfix" #animId>
-        <li *ngFor="let carousel of compList; let last = last;">
+        <li *ngFor="let carousel of shareData; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
           <img [src]="carousel.src" alt=""/>
         </li>
