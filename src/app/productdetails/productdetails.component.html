@@ -1,3 +1,79 @@
-<p>
-  productdetails works!
-</p>
+<section class="container-fluid">
+  <div class="productdetail_individual_screen">
+    <h2 class="category-title ng-binding">Ebooks</h2>
+    <div class="bookdetail-main">
+      <div class="row mb30">
+        <div class="col-md-5 col-sm-5 col-lg-4 col-xl-3  col-12 bookimage">
+          <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/s/t/sts_e_androcles.jpg" alt="">
+        </div>
+        <div class="offset-lg-1 offset-col-0 offset-xl-1 offset-md-0 offset-sm-0 col-md-5 col-sm-5 col-lg-4 col-xl-3 col-12 d-flex">
+            <div class="bookimage_content align-self-center">
+              <h3 class="booktitle ng-binding ng-scope" ng-if="bookDetails.coursename">Androcles and the Lion</h3>
+              <h5 class="author-title ng-scope" ng-if="bookDetails.author">Author: <span class="ng-binding">Carl Sommer</span></h5>
+              <div class="bookdetail-btn ng-scope" ng-if="!$root.appLoader &amp;&amp; action" ng-disabled="btnDisable" aria-disabled="true" disabled="disabled">
+                <a id="a_readbook_id" ng-if="bookDetails.book_type != 'Games'" ng-click="readBook(bookDetails.book_type)" class="ng-binding ng-scope">Read Now</a>
+              </div>
+              <div class="fav_menus">
+                <ul>
+                  <li> <div class="fav_iconsdiv"><i class="fa fa-heart-o" aria-hidden="true"></i></div><span>Favourite</span></li>
+                  <li> <div class="fav_iconsdiv"><i class="fa fa-files-o" aria-hidden="true"></i></div><span>My collections</span></li>
+                  <li> <div class="fav_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true"></i></div><span>Share</span></li>
+                 </ul>
+              </div>
+              <h6 class="avaialbe-title">Available in:</h6>
+              <div class="available_in_menus">
+                <ul>
+                  <li> <div class="available_iconsdiv"><i class="fa fa-apple" aria-hidden="true"></i></div></li>
+                  <li> <div class="available_iconsdiv"><i class="fa fa-play" aria-hidden="true"></i></div></li>
+                  <li> <div class="available_iconsdiv"><i class="fa fa-amazon" aria-hidden="true"></i></div></li>
+                  <li> <div class="available_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true"></i></div></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h6 ng-if="bookDetails.description" class="ng-scope bold">Description:</h6>
+          <p ng-if="bookDetails.description" class="detail-desc ng-binding ng-scope" ng-bind="bookDetails.description">Androcles lives a miserable life as the slave of a cruel and unjust master. Even though runaway slaves face the death penalty, he flees to the nearby woods. There Androcles delights in his new-found freedom. He also makes an unusual friend: a lion with an injured paw. The two live together happily, but the lion gets captured, and shortly afterwards Androcles, too. Androcles is punished by being fed to a lion.
+            Androcles prepares to die, glad that he has enjoyed a few weeks of freedom. To his surprise, the ferocious lion doesn't attack. It's the lion he helped! The emperor, amazed at what he observed, frees both Androcles and the lion. Androcles then spreads the message that everyone should appreciate their freedom and that slavery should be abolished. This retelling of Aesop's classic fable demonstrates the importance of freedom and friendship.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h6 class="bold">Product Details:</h6>
+        </div>
+        <div class="col-md-7">
+          <ul class="detail-list">
+           <li ng-if="bookDetails.age_range" class="ng-scope">
+            <label>Age Range :</label>
+            <span class="ng-binding">N/A</span>
+          </li>
+            <li ng-if="bookDetails.grade" class="ng-scope">
+            <label>Grade Level:</label>
+            <span class="ng-binding">Kindergarten, Grade 1, Grade 2, Grade 3, Grade 4, Grade 5</span>
+          </li><li ng-if="bookDetails.author" class="ng-scope">
+            <label>Author:</label>
+            <span class="ng-binding">Carl Sommer</span>
+          </li><li ng-if="bookDetails.language" class="ng-scope">
+            <label>Language:</label>
+            <span class="ng-binding">English</span>
+          </li><li ng-if="bookDetails.format" class="ng-scope">
+            <label>Format:</label>
+            <span class="ng-binding">Digital</span>
+          </li><li ng-if="bookDetails.product_dimensions" class="ng-scope">
+            <label>Product Dimensions:</label>
+            <span class="ng-binding">N/A</span>
+          </li><li ng-if="bookDetails.shipping_weight" class="ng-scope">
+            <label>Shipping Weight:</label>
+            <span class="ng-binding">N/A</span>
+          </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

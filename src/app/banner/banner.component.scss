@@ -6,3 +6,14 @@
   height: 250px;
   transition: 1s all ease;
 }
+/* Media query for banner section */
+@media(max-width:768px) {
+  .banner {
+    height: 200px;
+  }
+}
+@media(max-width:600px) {
+  .banner {
+    height: 160px;
+  }
+}

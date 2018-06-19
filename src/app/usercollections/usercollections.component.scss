@@ -1,5 +1,6 @@
 /* breadcrumb */
 .breadcrumb {
+	background: none;
   font-size: 0.95em;
   li {
     &::after {
@@ -9,7 +10,7 @@
       padding:0 5px;
     }
     &:last-child {
-      &::after {
+      &:after {
         display: none;
       }
     }
