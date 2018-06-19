@@ -8,7 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
+<<<<<<< Updated upstream
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
+=======
+import { ProductdetailPageComponent } from './productdetail-page/productdetail-page.component';
+>>>>>>> Stashed changes
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,8 +20,14 @@ import { UsercollectionsComponent } from './usercollections/usercollections.comp
     BannerComponent,
     FooterComponent,
     HomeComponent,
+<<<<<<< Updated upstream
     CarouselComponent,
     UsercollectionsComponent
+=======
+    HomePageComponent,
+    CarouselComponent,
+    ProductdetailPageComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     NgbModule.forRoot(),
