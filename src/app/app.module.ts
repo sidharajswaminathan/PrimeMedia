@@ -11,6 +11,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
+import { HttprequestComponent } from './httprequest/httprequest.component';
+import { MycollectionsComponent } from './mycollections/mycollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 @NgModule({
@@ -21,6 +23,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     FooterComponent,
     HomeComponent,
     CarouselComponent,
+    UsercollectionsComponent,
+    HttprequestComponent,
+    MycollectionsComponent,
     ProdDetailsComponent,
     PaginationComponent,
     CarouselComponent,
