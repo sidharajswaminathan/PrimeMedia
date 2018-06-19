@@ -69,7 +69,7 @@ Carouselwithoutanimation(param: string) {
     this.compList = _.filter(this.compList, function (x) {
       return x.id != obj.id
     })
-
+  }
   goTo (idx) {
     if ( idx === '24') { this.routUrl = ['/productdetail'];
     } else {
