@@ -14,7 +14,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   compList: Array<any> = [];
   startIndex: any = 0;
   endIndex: any = 0;
-  indexVal: any = 5;
+  indexVal: any = 6;
   carouselPos: any;
   staticId: any = 'anim_';
   @ViewChild('animId') carouselId: ElementRef;
@@ -46,3 +46,4 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   Carouselwithanimation(param: string) {
   }
 }
+
