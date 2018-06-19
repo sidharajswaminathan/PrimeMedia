@@ -15,11 +15,12 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     private router: Router) { }
   carouselList: any = carouselData;
   compList: Array<any> = [];
-  sub:any = 0;
+  sub: any = 0;
   startIndex: any = 0;
   endIndex: any = 0;
   indexVal: any = 4;
   carouselPos: any;
+  routUrl: Array<any> = ['/productdetails'];
   staticId: any = 'anim_';
   @ViewChild('animId') carouselId: ElementRef;
 
@@ -55,9 +56,19 @@ export class CarouselComponent implements OnInit, AfterViewInit {
         this.endIndex = this.startIndex + this.indexVal;
         $('.sliderContainer').eq(0).animate({left:'1000px'},200).css({left:'-1000px',opacity:0}).animate({left:'0px',opacity:1},200);
       }
+
     }
     this.compList = this.carouselList.slice(this.startIndex, this.endIndex);
   }
   Carouselwithanimation(param: string) {
+  }
+
+  goTo (idx){
+    if(idx === '24'){this.routUrl = ['/productdetail'];
+    }else{
+      this.routUrl = ['/productdetails'];
+    }
+
+    this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
   }
 }
