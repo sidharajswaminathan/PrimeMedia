@@ -3,6 +3,7 @@ import { carouselData } from '../mock-appdata';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 import { SharedserviceService } from '../sharedservice.service';
+import { _ } from 'underscore';
 
 @Component({
   selector: 'app-carousel',
@@ -23,6 +24,8 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   startIndex: any = 0;
   endIndex: any = 0;
   indexVal: any = 5;
+  editView:any;
+  changebutton:string='edit';
   carouselPos: any;
   routUrl: Array<any> = ['/productdetails'];
   staticId: any = 'anim_';
@@ -55,6 +58,17 @@ Carouselwithoutanimation(param: string) {
   }
   Carouselwithanimation(param: string) {
   }
+    /*button to change edit and save view*/
+  editCarousel(){
+    this.editView = !this.editView;
+    this.changebutton = this.changebutton=='edit'?'save':'edit';
+  }
+  /*method to delete carousel obj*/
+  deleteCarouselObj(obj) {
+    console.log(obj.id);
+    this.compList = _.filter(this.compList, function (x) {
+      return x.id != obj.id
+    })
 
   goTo (idx) {
     if ( idx === '24') { this.routUrl = ['/productdetail'];
@@ -67,3 +81,4 @@ Carouselwithoutanimation(param: string) {
     console.log(this.sharedValues);
   }
 }
+
