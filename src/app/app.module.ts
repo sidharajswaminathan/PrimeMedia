@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
+import { PaginationComponent } from './pagination/pagination.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
@@ -21,6 +22,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     HomeComponent,
     CarouselComponent,
     ProdDetailsComponent,
+    PaginationComponent
     CarouselComponent,
     UsercollectionsComponent,
     CarouselComponent,
