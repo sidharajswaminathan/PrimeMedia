@@ -4,9 +4,11 @@
   <div class="frame" id="basicSly">
     <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
     <div class="sliderContainer">
+      <button (click)="editCarousel()">{{changebutton}}</button>
       <ul class="clearfix" #animId>
         <li *ngFor="let carousel of shareData; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
+          <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
           <img [src]="carousel.src" alt=""/>
         </li>
       </ul>
