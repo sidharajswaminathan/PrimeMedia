@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
+import { PaginationComponent } from './pagination/pagination.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { ProdDetailsComponent } from './prod-details/prod-details.component';
     HomeComponent,
     HomePageComponent,
     CarouselComponent,
-    ProdDetailsComponent
+    ProdDetailsComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
