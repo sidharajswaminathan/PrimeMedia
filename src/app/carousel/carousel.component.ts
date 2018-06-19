@@ -31,20 +31,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.carouselList = this.shareData;
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
-    console.log(this.carouselList);
-    this.sub = this.route
-      .queryParams
-      .subscribe(params => {
-        console.log(params['data'],"data");
-       // this.page = +params['page'] || 0;
-      });
 
   }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-  Carouselwithoutanimation(param: string) {
+Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
       if (this.endIndex > this.indexVal && this.startIndex > 0) {
         this.startIndex = this.startIndex - this.indexVal;
