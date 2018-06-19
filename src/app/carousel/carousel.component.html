@@ -1,15 +1,23 @@
-<div>
+
+<div class="carouselframe">
   <!--<a routerLink="/home">back</a><br>-->
   <!-- Carousel component with animation starts here-->
-  <div class="frame" id="basicSly">
+  <h3 class="carouselTitle"></h3>
+<section class="main-wrapper">
+  <!--<a routerLink="/home">back</a><br>-->
+  <!-- Carousel component with animation starts here-->
+  <a [routerLink]="['/productdetail']">see more</a>
+ <div class="frame" id="basicSly">
     <button class="prevBtn" (click)="Carouselwithoutanimation('prev')" *ngIf="endIndex > 0 && startIndex > 0">Previous</button>
     <div class="sliderContainer">
       <button (click)="editCarousel()">{{changebutton}}</button>
       <ul class="clearfix" #animId>
-        <li *ngFor="let carousel of shareData; let last = last;">
+        <li *ngFor="let carousel of compList; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
           <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
           <img [src]="carousel.src" alt=""/>
+          <a (click) = goTo(carousel.id) ><img [src]="carousel.src" [id] = "carousel.id" alt=""/></a>
+
         </li>
       </ul>
     </div>
@@ -27,4 +35,10 @@
     </div>
   </div>-->
 
+
+
+<app-draggingslide></app-draggingslide>
+
+</section>
 </div>
+
