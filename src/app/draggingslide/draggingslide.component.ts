@@ -25,6 +25,7 @@ export class DraggingslideComponent implements OnInit {
     private sharedObj: SharedserviceService
   ) { }
   ngOnInit(){
+
     this.carouselTileItems = this.shareData.data;
 
     this.carouselTile = {
