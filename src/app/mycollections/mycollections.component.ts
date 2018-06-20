@@ -21,7 +21,7 @@ export class MycollectionsComponent implements OnInit {
   ngOnInit() {
 
     this.carousel = {
-      'configuration' : {'deleteoption' : true, 'editsave': true},
+      'configuration' : {'deleteoption' : true, 'editsave': true, 'itemevent': false},
       'data': [
         {'src': '../assets/images/img1.png', 'id': '1'  },
         {'src': '../assets/images/img3.png', 'id': '2'  },
