@@ -19,4 +19,5 @@ export class carouselDragData{
   src: string;
   id: number;
   itemevent: string;
+  title: string;
 }

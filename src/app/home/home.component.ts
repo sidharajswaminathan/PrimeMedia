@@ -21,8 +21,6 @@ export class HomeComponent implements OnInit {
         console.log( data['data'] );
         this.contentData = data['data'];
       });
-
-
   }
 
 }
