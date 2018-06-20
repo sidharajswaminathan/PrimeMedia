@@ -24,6 +24,7 @@ export class MycollectionsComponent implements OnInit {
       'configuration' : {'deleteoption' : true, 'editsave': true},
       'data': [
         {'src': '../assets/images/img1.png', 'id': '1'  },
+        {'src': '../assets/images/img1.png', 'id': '1'  },
         {'src': '../assets/images/img3.png', 'id': '2'  },
         {'src': '../assets/images/img4.png', 'id': '3' }
       ]
