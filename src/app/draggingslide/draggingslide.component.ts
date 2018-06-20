@@ -62,9 +62,9 @@ export class DraggingslideComponent implements OnInit {
   }
   /*goto product details*/
   goToProductDetails (idx) {
-    if ( idx === '24') { this.routUrl = ['/productdetail'];
+    if ( idx === '24') { this.routUrl = ['home/productdetail'];
     } else {
-      this.routUrl = ['/productdetails'];
+      this.routUrl = ['home/productlist/productdetails'];
     }
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
     this.sharedObj.globalObj.showBanner = false;

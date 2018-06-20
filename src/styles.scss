@@ -28,7 +28,6 @@ ul {
 .main-wrapper {
   padding: 20px 6%;
 }
-
 .ngxcarousel{  
     .ngxcarousel-inner{
         width: 90%;
@@ -55,16 +54,16 @@ ul {
       right: 18px;
       z-index: 9999;
     }
-  }
-  .close-icon {
-    background: none;
-    border: 0;
-    padding: 0;
-    font-size: 2em;
-    position: absolute;
-    top: -19px;
-    right: -11px;
-    left: auto;
+    &.close-icon {
+      background: none;
+      border: 0;
+      padding: 0;
+      font-size: 2em;
+      position: absolute;
+      top: -19px;
+      right: -11px;
+      left: auto;
+    }
   }
 }
 .collection-tabs {
