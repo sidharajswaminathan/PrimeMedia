@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgxCarousel } from 'ngx-carousel';
 import { _ } from 'underscore';
+import { ActivatedRoute, Router } from '@angular/router';
+import * as $ from 'jquery';
+import { SharedserviceService } from '../sharedservice.service';
 
 @Component({
   selector: 'app-draggingslide',
@@ -10,38 +13,19 @@ import { _ } from 'underscore';
 export class DraggingslideComponent implements OnInit {
 
   @Input() shareData: any;
-
+  sharedValues: any;
+  changebutton:string='edit';
+  editView:any;
+  routUrl: Array<any> = ['/productdetails'];
   public carouselTileItems: Array<any>;
   public carouselTile: NgxCarousel;
-
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private sharedObj: SharedserviceService
+  ) { }
   ngOnInit(){
-    this.carouselTileItems = [
-
-      {'src': '../assets/images/img1.png', 'id': '1'  },
-      {'src': '../assets/images/img3.png', 'id': '2'  },
-      {'src': '../assets/images/img4.png', 'id': '3' },
-      {'src': '../assets/images/img4.png', 'id': '4' },
-      {'src': '../assets/images/img2.png', 'id': '5' },
-      {'src': '../assets/images/img3.png', 'id': '6' },
-      {'src': '../assets/images/img4.png', 'id': '7' },
-      {'src': '../assets/images/img2.png', 'id': '8' },
-      {'src': '../assets/images/img3.png', 'id': '9'},
-      {'src': '../assets/images/img2.png', 'id': '10' },
-      {'src': '../assets/images/img2.png', 'id': '11'},
-      {'src': '../assets/images/img1.png', 'id': '12'},
-      {'src': '../assets/images/img4.png', 'id': '13'},
-      {'src': '../assets/images/img2.png', 'id': '14'},
-      {'src': '../assets/images/img1.png', 'id': '15'},
-      {'src': '../assets/images/img3.png', 'id': '16'},
-      {'src': '../assets/images/img1.png', 'id': '17'},
-      {'src': '../assets/images/img3.png', 'id': '18'},
-      {'src': '../assets/images/img1.png', 'id': '19'},
-      {'src': '../assets/images/img3.png', 'id': '20'},
-      {'src': '../assets/images/img1.png', 'id': '21'},
-      {'src': '../assets/images/img3.png', 'id': '22'},
-      {'src': '../assets/images/img1.png', 'id': '23'},
-      {'src': '../assets/images/img2.png', 'id': '24'}
-    ];
+    this.carouselTileItems = this.shareData.data;
 
     this.carouselTile = {
       grid: {xs: 2, sm: 3, md: 3, lg: 5, all: 0},
@@ -56,7 +40,29 @@ export class DraggingslideComponent implements OnInit {
       easing: 'ease'
     }
   }
-
+  /*button to change edit and save view*/
+  editCarousel(){
+    this.editView = !this.editView;
+    this.changebutton = this.changebutton=='edit'?'save':'edit';
+  }
+  /*method to delete carousel obj*/
+  deleteCarouselObj(obj) {
+    console.log(obj.id);
+    this.carouselTileItems = _.filter(this.carouselTileItems, function (x) {
+      return x.id != obj.id
+    })
+  }
+  /*goto product details*/
+  goToProductDetails (idx) {
+    if ( idx === '24') { this.routUrl = ['/productdetail'];
+    } else {
+      this.routUrl = ['/productdetails'];
+    }
+    this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
+    this.sharedObj.globalObj.showBanner = false;
+    this.sharedValues = this.sharedObj;
+    console.log(this.sharedValues);
+  }
   public carouselTileLoad(evt: any) {
 
     const len = this.carouselTileItems.length
@@ -67,6 +73,7 @@ export class DraggingslideComponent implements OnInit {
     }
 
   }
+
 
      // carouselLoad will trigger this funnction when your load value reaches
      // it is helps to load the data by parts to increase the performance of the app
