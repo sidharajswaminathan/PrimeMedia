@@ -30,7 +30,7 @@ export class ProductlistComponent implements OnInit, OnDestroy {
                   this.isloaded = true;
                   console.log(data['data'].content.categoryName, 'productList' , this.carouselData);
                   this.carousel = {
-                    'configuration': {'deleteoption': false, 'editsave': false},
+                    'configuration': {'deleteoption': false, 'editsave': false, 'itemevent': true},
                     'data': this.carouselData,
                     'title': data['data'].content.categoryName
                   };
