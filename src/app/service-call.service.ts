@@ -10,12 +10,17 @@ import { Config} from './config';
 })
 export class ServiceCallService {
   APIurl: any = '';
+  posUrl: any = '';
 
   getConfig(url): Observable<Config> {
     // now returns an Observable of Config
     this.APIurl = 'https://www.advancepublishing-testing.com/sommer_learning/index.php?option=com_sommer&task=' + url;
     console.log(url);
     return this.http.get<Config>(this.APIurl);
+  }
+  postMethod(url, data): Observable<Config> {
+    this.posUrl = 'https://www.advancepublishing-testing.com/sommer_learning/index.php?option=com_sommer&task=' + url;
+    return this.http.post<any>( this.posUrl, data );
   }
   getConfigResponse(): Observable<HttpResponse<Config>> {
     return this.http.get<Config>(

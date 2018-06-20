@@ -1,9 +1,9 @@
 <div class="carouselSliderCont">
-    <h3 class="slideTitle">Phonics Adventure <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">See more</a></h3>
+    <h3 class="slideTitle">{{shareData.title}} <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">See more</a></h3>
     <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}">
       <i class="fa" [ngClass] = "{'fa-pencil':changebutton == 'edit','fa-floppy-o':changebutton == 'save'}" ></i>
     </button>
-    
+
     <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
       <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
          <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="goToProductDetails(Tile.id)">
