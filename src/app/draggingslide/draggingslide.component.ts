@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgxCarousel } from 'ngx-carousel';
+import { _ } from 'underscore';
 
 @Component({
   selector: 'app-draggingslide',
@@ -8,10 +9,13 @@ import { NgxCarousel } from 'ngx-carousel';
 })
 export class DraggingslideComponent implements OnInit {
 
+  @Input() shareData: any;
+
   public carouselTileItems: Array<any>;
   public carouselTile: NgxCarousel;
 
   ngOnInit(){
+    console.log(this.shareData)
     this.carouselTileItems = [
 
       {'src': '../assets/images/img1.png', 'id': '1'  },
