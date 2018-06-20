@@ -71,7 +71,7 @@
         bottom: -30px;
       }
       a.new-seelink {
-        padding: 7px 20px;
+        padding: 7px 25px;
         background: #fff;
         border: 2px solid #a94f39;
         border-radius: 8px;
@@ -228,10 +228,13 @@
         .homenew-list, .mediatype-list {
           h3 {
             margin-bottom: -3px;
-            font-size: 14px;
+            font-size: 16px;
           }
           strong {
             font-size: 11px;
+          }
+          .img-info {
+            bottom: 45px;
           }
         }
       }
@@ -249,12 +252,23 @@
         }
         .homenew-list, .mediatype-list {
           h3 {
-            font-size: 16px;
+            font-size: 15px;
           }
           strong {
             font-size: 13px;
           }
+          .img-info {
+            bottom: 40px;
+          }
+          .book-info {
+            margin-top: -3px;
+            li {
+              line-height: 14px;
+              font-size: 13px;
+            }
+          }
         }
+
       }
     }
   }
@@ -285,6 +299,37 @@
           }
           strong {
             font-size: 13px;
+          }
+          .book-info {
+            margin-top: 0;
+            li {
+              line-height: 16px;
+              font-size: 15px;
+            }
+          }
+          .img-info {
+            bottom: 50px;
+          }
+        }
+
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .newhome-section {
+    h2 {
+      font-size: 20px;
+    }
+    ul {
+      li {
+        .homenew-list, .mediatype-list {
+          .book-info {
+            margin-top: 0;
+            li {
+              line-height: 18px;
+              font-size: 14px;
+            }
           }
         }
 
