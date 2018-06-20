@@ -1,6 +1,6 @@
 <div class="carouselSliderCont">
-    <h3 class="slideTitle">{{shareData.title}} <a [routerLink]="['home/productdetail']" *ngIf="carouselTileItems.length > 25">See more</a></h3>
-    <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}">
+    <h3 class="slideTitle">{{shareData.title}} <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">See more</a></h3>
+    <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}" class="editsaveBtn">
         <i class="fa" [ngClass] = "{'fa-pencil':changebutton == 'edit','fa-floppy-o':changebutton == 'save'}" ></i>
     </button>
    <!-- <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>-->

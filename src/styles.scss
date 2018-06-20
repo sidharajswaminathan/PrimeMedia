@@ -47,9 +47,11 @@ ul {
     }
     .fa-pencil, .fa-floppy-o {
       font-size: 24px;
+    }
+    &.editsaveBtn {
       position: absolute;
-      top: 40px;
-      right: 20px;
+      top: 18px;
+      right: 18px;
       z-index: 9999;
     }
     &.close-icon {
