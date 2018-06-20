@@ -4,6 +4,7 @@ import { _ } from 'underscore';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 import { SharedserviceService } from '../sharedservice.service';
+import {carouselDragData} from '../usertype';
 
 @Component({
   selector: 'app-draggingslide',
@@ -24,9 +25,13 @@ export class DraggingslideComponent implements OnInit {
     private router: Router,
     private sharedObj: SharedserviceService
   ) { }
+  setData:any[];
+  lastObject: object = carouselDragData;
   ngOnInit(){
 
     this.carouselTileItems = this.shareData.data;
+
+
 
     this.carouselTile = {
       grid: {xs: 2, sm: 3, md: 3, lg: 5, all: 0},
@@ -41,6 +46,8 @@ export class DraggingslideComponent implements OnInit {
       easing: 'ease'
     }
   }
+
+
   /*button to change edit and save view*/
   editCarousel(){
     this.editView = !this.editView;
@@ -72,6 +79,11 @@ export class DraggingslideComponent implements OnInit {
         this.carouselTileItems.push(i);
       }
     }
+    console.log(this.carouselTileItems)
+    this.carouselTileItems = _.filter(this.carouselTileItems, function(x,count){
+      return count<25
+    })
+    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'})
 
   }
 
