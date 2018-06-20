@@ -1,12 +1,15 @@
 
 <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="edit"><i class="fa fa-pencil"></i>{{changebutton}}</button>
-<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="save"><i class="fa fa-floppy-o"></i> </button>
+<!--<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="save"><i class="fa fa-floppy-o"></i> </button>-->
 <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>
 <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
   <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
      <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="goToProductDetails(Tile.id)">
-         <button *ngIf="editView" (click)="deleteCarouselObj(carousel)"><i class="fa fa-times-circle"></i></button>
+         <button *ngIf="editView" (click)="deleteCarouselObj(Tile)"><i class="fa fa-times-circle"></i></button>
+
+     <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="shareData.configuration.itemevent && goToProductDetails(Tile.id)">
          <img  style="pointer-events: none; touch-action: pan-y; width: 100%; height: 360px;" src="{{Tile.src}}" id="{{Tile.id}}" alt="">
+     </div>
      </div>
   </ngx-tile>
   <button NgxCarouselPrev class='leftRs'>&lt;</button>

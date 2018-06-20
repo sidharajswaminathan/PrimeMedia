@@ -14,7 +14,7 @@ export class ProductlistComponent implements OnInit {
 console.log(carouselData);
     /*this.data = carouselData;*/
     this.carousel = {
-      'configuration': {'deleteoption': false, 'editsave': false},
+      'configuration': {'deleteoption': false, 'editsave': false, 'itemevent': true},
       'data': carouselData
     }
 
