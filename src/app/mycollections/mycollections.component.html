@@ -1,7 +1,32 @@
+<<<<<<< Updated upstream
+<section class="main-wrapper">
+  <app-breadcrumb></app-breadcrumb>
+  <ngb-tabset>
+    <ngb-tab title="Favorites">
+      <ng-template ngbTabContent>
+        <app-draggingslide [shareData]="carousel"></app-draggingslide>
+        <!--<app-carousel [shareData]="data"></app-carousel>-->
+        <p>favorites section</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="My Collections">
+      <ng-template ngbTabContent>
+        <p>My collections section</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Recent Products">
+      <ng-template ngbTabContent>
+        <p>Recent product section</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</section>
+=======
 <ngb-tabset>
   <ngb-tab title="Favorites">
     <ng-template ngbTabContent>
-      <app-carousel [shareData]="data"></app-carousel>
+      <app-draggingslide [shareData]="carousel"></app-draggingslide>
+      <!--<app-carousel [shareData]="data"></app-carousel>-->
       <p>favorites section</p>
     </ng-template>
   </ngb-tab>
@@ -16,3 +41,4 @@
     </ng-template>
   </ngb-tab>
 </ngb-tabset>
+>>>>>>> Stashed changes

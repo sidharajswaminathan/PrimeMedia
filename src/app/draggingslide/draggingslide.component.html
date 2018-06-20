@@ -1,13 +1,32 @@
 <div class="carouselSliderCont">
     <h3 class="slideTitle">Phonics Adventure</h3>
-  <ngx-carousel class="ngxCarouselCont" [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
-    
-    <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
-      <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;">
-          <img style="pointer-events: none; touch-action: pan-y; width: 100%; height: 360px;" src="{{Tile.src}}" id="{{Tile.id}}" alt="">
-      </div>
-    </ngx-tile>
-    <button NgxCarouselPrev class='leftRs'>&lt;</button>
-    <button NgxCarouselNext class='rightRs'>&gt;</button>
-  </ngx-carousel>
+<<<<<<< Updated upstream
+    <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="edit"><i class="fa fa-pencil"></i>{{changebutton}}</button>
+    <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave">{{changebutton}}</button>
+    <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>
+    <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
+      <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+         <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="goToProductDetails(Tile.id)">
+             <button *ngIf="editView" (click)="deleteCarouselObj(carousel)"><i class="fa fa-times-circle"></i></button>
+             <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
+             <img  style="pointer-events: none; touch-action: pan-y; width: 100%; height: 360px;" src="{{Tile.src}}" id="{{Tile.id}}" alt="">
+         </div>
+      </ngx-tile>
+      <button NgxCarouselPrev class='leftRs'>&lt;</button>
+      <button NgxCarouselNext class='rightRs'>&gt;</button>
+    </ngx-carousel>
+=======
+<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave">{{changebutton}}</button>
+<a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>
+<ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
+  <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+     <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="goToProductDetails(Tile.id)">
+         <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
+         <img  style="pointer-events: none; touch-action: pan-y; width: 100%; height: 360px;" src="{{Tile.src}}" id="{{Tile.id}}" alt="">
+     </div>
+  </ngx-tile>
+  <button NgxCarouselPrev class='leftRs'>&lt;</button>
+  <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel>
+>>>>>>> Stashed changes
 </div>
