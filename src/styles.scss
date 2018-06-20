@@ -28,11 +28,36 @@ ul {
 .main-wrapper {
   padding: 20px 6%;
 }
-
-
 .ngxcarousel{  
     .ngxcarousel-inner{
         width: 90%;
         margin: auto;
       }  
+}
+/*mycollections */
+.mycolletions {
+  float: right;
+  text-align: right;
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    .fa-pencil, .fa-floppy-o {
+      font-size: 24px;
+      padding: 10px 0;
+    }
+    &.close-icon {
+      background: none;
+      border: 0;
+      padding: 0;
+      font-size: 2em;
+      position: absolute;
+      top: -19px;
+      right: -11px;
+      left: auto;
+    }
+  }
 }
