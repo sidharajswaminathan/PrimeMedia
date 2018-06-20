@@ -6,7 +6,7 @@ import {carouselDragData} from '../usertype';
 @Component({
   selector: 'app-mycollections',
   templateUrl: './mycollections.component.html',
-  styleUrls: ['./mycollections.component.css'],
+  styleUrls: ['./mycollections.component.scss'],
   providers: [NgbTabsetConfig]
 })
 export class MycollectionsComponent implements OnInit {
