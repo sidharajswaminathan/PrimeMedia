@@ -180,6 +180,22 @@
   }
 }
 /* Media query for home page */
+@media(min-width:2000px) {
+  .newhome-section {
+    ul {
+      li {
+        .homenew-list, .mediatype-list {
+          h3 {
+            font-size: 26px;
+          }
+        }
+        a.new-seelink {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1499px) {
   .newhome-section {
     ul {
