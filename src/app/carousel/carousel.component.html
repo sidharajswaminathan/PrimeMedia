@@ -12,7 +12,7 @@
     <div class="sliderContainer">
       <button (click)="editCarousel()">{{changebutton}}</button>
       <ul class="clearfix" #animId>
-        <li *ngFor="let carousel of compList; let last = last;">
+        <li routerLink="/productdetails" *ngFor="let carousel of compList; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
           <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
           <img [src]="carousel.src" alt=""/>
