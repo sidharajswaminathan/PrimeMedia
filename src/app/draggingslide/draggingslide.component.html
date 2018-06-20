@@ -1,6 +1,7 @@
 
-<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="edit"><i class="fa fa-pencil"></i>{{changebutton}}</button>
-<!--<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" class="save"><i class="fa fa-floppy-o"></i> </button>-->
+<button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}">
+  <i class="fa" [ngClass] = "{'fa-pencil':changebutton == 'edit','fa-floppy-o':changebutton == 'save'}" ></i>
+</button>
 <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>
 <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
   <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
