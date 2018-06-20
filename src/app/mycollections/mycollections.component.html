@@ -1,10 +1,9 @@
 <section class="main-wrapper">
   <app-breadcrumb></app-breadcrumb>
-  <ngb-tabset>
+  <ngb-tabset class="collection-tabs">
     <ngb-tab title="Favorites">
       <ng-template ngbTabContent>
-        <app-draggingslide [shareData]="carousel"></app-draggingslide>
-        <!--<app-carousel [shareData]="data"></app-carousel>-->
+        <app-draggingslide [shareData]="carousel" class="mycolletions"></app-draggingslide>
         <p>favorites section</p>
       </ng-template>
     </ngb-tab>
