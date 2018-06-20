@@ -29,5 +29,7 @@ export const carouselData: carouselProp[] = [
   {'src': '../assets/images/img1.png', 'id': '21'},
   {'src': '../assets/images/img3.png', 'id': '22'},
   {'src': '../assets/images/img1.png', 'id': '23'},
-  {'src': '../assets/images/img2.png', 'id': '24'}
+  {'src': '../assets/images/img2.png', 'id': '24'},
+  {'src': '../assets/images/img1.png', 'id': '25'},
+  {'src': '../assets/images/img1.png', 'id': '26'}
 ];

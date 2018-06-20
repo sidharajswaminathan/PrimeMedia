@@ -19,6 +19,9 @@ import 'hammerjs';
 import { DraggingslideComponent } from './draggingslide/draggingslide.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { ServiceCallService } from './service-call.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,10 +46,12 @@ import { ProductlistComponent } from './productlist/productlist.component';
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
+    HttpClientModule,
+    HttpModule,
     AppRoutingModule,
     NgxCarouselModule
   ],
-  providers: [],
+  providers: [ServiceCallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
