@@ -11,11 +11,11 @@ import {ProductlistComponent} from './productlist/productlist.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'productlist', component: ProductlistComponent },
-  { path: 'mycollections', component: MycollectionsComponent },
-  { path: 'productdetail', component: ProdDetailsComponent },
-  { path: 'productdetails', component: ProductdetailsComponent },
-  { path: 'myColection', component: UsercollectionsComponent }
+  { path: 'home/productlist', component: ProductlistComponent },
+  { path: 'home/mycollections', component: MycollectionsComponent },
+  { path: 'home/productdetail', component: ProdDetailsComponent },
+  { path: 'home/productlist/productdetails', component: ProductdetailsComponent },
+  { path: 'home/myColection', component: UsercollectionsComponent }
 ]
 @NgModule({
   exports: [ RouterModule ],
