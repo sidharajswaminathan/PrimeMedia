@@ -1,0 +1,12 @@
+.uc-tabs {
+    margin: 0;
+	.nav-tabs {
+		.nav-item {
+			margin-bottom: 0;
+			.nav-link {
+				border-radius: 0;
+				padding: .4rem 3rem;
+			}
+		}
+	}
+}
