@@ -12,8 +12,8 @@
               <li>42 Award-winning</li>
               <li>{{cnt.name}}</li>
             </ul>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-            <div class="see-all-wrap"><a id="a_se_allbtn{{$index+1}}" title="See All" class="new-seelink" [routerLink]="['/productlist']" [queryParams]="{ id: cnt.id}" >See All</a></div>
+            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['productlist']" >See All</a></div>
+            <div class="see-all-wrap"><a id="a_se_allbtn{{$index+1}}" title="See All" class="new-seelink" [routerLink]="['productlist']" [queryParams]="{ id: cnt.id}" >See All</a></div>
           </div>
         </div>
       </div>

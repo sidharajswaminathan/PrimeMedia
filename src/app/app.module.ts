@@ -22,6 +22,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ServiceCallService } from './service-call.service';
+
 @NgModule({
   declarations: [
     AppComponent,
