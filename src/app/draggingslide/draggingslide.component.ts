@@ -11,7 +11,7 @@ export class DraggingslideComponent implements OnInit {
   public carouselTileItems: Array<any>;
   public carouselTile: NgxCarousel;
 
-  ngOnInit(){
+  ngOnInit() {
     this.carouselTileItems = [
 
       {'src': '../assets/images/img1.png', 'id': '1'  },
