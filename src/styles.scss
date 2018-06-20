@@ -62,3 +62,23 @@ ul {
     left: auto;
   }
 }
+.collection-tabs {
+  .nav-tabs {
+    border-bottom: 1px solid #000;
+    .nav-item {
+      margin-bottom: 0px;
+      margin-right: -2px;
+      .nav-link {
+        padding: 0.3rem 3rem;
+        border-radius: 0;
+        font-size: 20px;
+        border: 2px solid #000;
+        color: #000;
+        &.active {
+          background-color: #000;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
