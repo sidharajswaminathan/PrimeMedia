@@ -6,7 +6,7 @@
     <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>
     <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
         <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
-            <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;position:relative;" (click)="goToProductDetails(Tile.id)">
+            <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;position:relative;">
                 <button *ngIf="editView" (click)="deleteCarouselObj(Tile)" class="close-icon"><i class="fa fa-times-circle"></i></button>
 
                 <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;" (click)="shareData.configuration.itemevent && goToProductDetails(Tile.id)">
