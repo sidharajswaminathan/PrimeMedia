@@ -1,14 +1,28 @@
 <div class="modal-header">
-  <h4 class="modal-title">Hi there!</h4>
+  <h4 class="modal-title">Add to Collection</h4>
+  <button (click)="showAdd = !showAdd" [disabled]="showAdd" style="float:right;">Add New</button>
   <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body">
-  <p>Hello, {{name}}!</p>
+  <div *ngIf="!showAdd" class="checkVals">
+      <ul>
+          <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.id}}">{{checkval.name}}</label></li>
+      </ul> 
+  </div>
+  <div *ngIf="showAdd">
+      <form action="" class="addCollect">
+          Collection Name: <input type="text" name="new collection">
+      </form>  
+  </div>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  <div class="addNewCont" *ngIf="showAdd">
+        <button type="button" class="btn btn-outline-dark" (click)="showAdd = !showAdd">Save</button>
+        <button type="button" class="btn btn-outline-dark">Cancel</button>
+  </div>
+  <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>
 
 

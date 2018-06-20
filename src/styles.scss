@@ -87,3 +87,19 @@ ul {
     }
   }
 }
+
+.checkVals ul{
+    list-style-type: none;
+}
+.checkVals ul li{
+    float: left;
+    width: 33.33%;
+}
+.modal-body{
+    display: inline-block;
+    width: 100%;
+}
+.modal-dialog{
+    width: 45%!important;
+    max-width: 45%!important;
+}
