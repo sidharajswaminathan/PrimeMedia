@@ -1,73 +1,19 @@
 <section class="container-fluid">
   <div class="newhome-section">
-  <ul class="program-list">
-    <li>
+  <ul class="program-list" *ngIf="contentData">
+    <li  *ngFor="let cnt of contentData.mediaType">
       <div class="homenew-list">
         <div class="newhome-image">
-          <img src="../../assets/images/program1.png" srcset="../../assets/images/program1-2x.png 2x">
+          <img [src]="'../../assets/images/'+cnt.img+'.png'" [srcset]="'../../assets/images/'+cnt.img+'2x.png 2x'">
           <div class="img-info">
             <h3>Sommer-Time Stories</h3>
-            <ul class="book-info">
+           <ul class="book-info">
               <li>All pages</li>
               <li>42 Award-winning</li>
               <li>Sommer Time Stories</li>
             </ul>
             <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program2.png" srcset="../../assets/images/program2-2x.png 2x">
-          <div class="img-info">
-            <h3>Phonics Adventure</h3>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program3.png" srcset="../../assets/images/program3-2x.png 2x">
-          <div class="img-info">
-            <h3>Reading Success</h3>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program4.png" srcset="../../assets/images/program4-2x.png 2x">
-          <div class="img-info">
-            <h3>Number Success</h3>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program5.png" srcset="../../assets/images/program5-2x.png 2x">
-          <div class="img-info">
-            <h3>Writing Success</h3>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program6.png" srcset="../../assets/images/program6-2x.png 2x">
-          <div class="img-info">
-            <h3>Games</h3>
-            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['/productlist']" >See All</a></div>
+            <div class="see-all-wrap"><a id="a_se_allbtn{{$index+1}}" title="See All" class="new-seelink" [routerLink]="['/productlist']" [queryParams]="{ id: 0 ,data:data}" >See All</a></div>
           </div>
         </div>
       </div>

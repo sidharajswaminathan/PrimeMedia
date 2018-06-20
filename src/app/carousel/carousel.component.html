@@ -15,7 +15,6 @@
         <li routerLink="/productdetails" *ngFor="let carousel of compList; let last = last;">
           <!--appCarouselSlider [last]="last" [carousellistData]="carousel" [id]="staticId+carousel.id"-->
           <button *ngIf="editView" (click)="deleteCarouselObj(carousel)">click me</button>
-          <img [src]="carousel.src" alt=""/>
           <a (click) = goTo(carousel.id) ><img [src]="carousel.src" [id] = "carousel.id" alt=""/></a>
 
         </li>
