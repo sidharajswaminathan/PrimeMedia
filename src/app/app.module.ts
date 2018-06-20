@@ -22,7 +22,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ServiceCallService } from './service-call.service';
-
+import { PrimeModalComponent } from './prime-modal/prime-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,8 +42,10 @@ import { ServiceCallService } from './service-call.service';
     ProductdetailsComponent,
     DraggingslideComponent,
     BreadcrumbComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    PrimeModalComponent
   ],
+  entryComponents: [ PrimeModalComponent ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
