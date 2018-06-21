@@ -9,3 +9,7 @@
     float: left;
     width: 33.33%;
 }
+label.checkbox-inline > input {
+    margin-right: 9px;
+}
+
