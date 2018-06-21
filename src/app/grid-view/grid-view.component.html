@@ -1,101 +1,11 @@
 <ul class="grid-list">
-  <li class="item">
+  <li class="item" *ngFor="let gridItem of shareData.data">
     <div class="gridlist-inner">
-      <div class="fig-info">
+      <div class="fig-info" (click)="shareData.configuration.itemevent && goToProductDetails(gridItem.id)">
         <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/s/t/sts_b_androcles.jpg">
       </div>
       <div class="content-info">
         <h3>Androcles and the Lion</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span class="fa fa-book"></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/s/t/sts_b_king.jpg">
-      </div>
-      <div class="content-info">
-        <h3>King of the Pond</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span class="fa fa-book"></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/l/a/large_land_animals.jpg">
-      </div>
-      <div class="content-info">
-        <h3>Large Land Animals</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/l/e/lets_go_swimming.jpg">
-      </div>
-      <div class="content-info">
-        <h3>Let's Go Swimming</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span class="fa fa-book"></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/s/t/sts_e_red_riding.jpg">
-      </div>
-      <div class="content-info">
-        <h3>Little Red Riding Hood</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span class="fa fa-book"></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/s/t/sts_b_light.jpg">
-      </div>
-      <div class="content-info">
-        <h3>Light Your Candle</h3>
-        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
-        <ul>
-          <li> <span></span> </li>
-          <li> <label>EN</label> </li>
-        </ul>
-      </div>
-    </div>
-  </li>
-  <li class="item">
-    <div class="gridlist-inner">
-      <div class="fig-info">
-        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/p/l/play_ball_with_funny_caps.jpg">
-      </div>
-      <div class="content-info">
-        <h3>Play Ball with Funny Caps</h3>
         <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
         <ul>
           <li> <span class="fa fa-book"></span> </li>

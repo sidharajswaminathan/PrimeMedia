@@ -15,8 +15,8 @@ export class DraggingslideComponent implements OnInit {
 
   @Input() shareData: any;
   sharedValues: any;
-  changebutton:string='edit';
-  editView:any;
+  changebutton: string = 'edit';
+  editView: any;
   routUrl: Array<any> = ['/productdetails'];
   public carouselTileItems: Array<any>;
   public carouselTile: NgxCarousel;
@@ -25,7 +25,7 @@ export class DraggingslideComponent implements OnInit {
     private router: Router,
     private sharedObj: SharedserviceService
   ) { }
-  setData:any[];
+  setData: any[];
   lastObject: object = carouselDragData;
   ngOnInit(){
 
