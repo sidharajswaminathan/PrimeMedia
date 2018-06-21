@@ -7,9 +7,13 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PrimeModalComponent {
   @Input() name;
-  showAdd: boolean = false;
+   showAdd: boolean = false;
+  collectName: string;
   closeResult: string;
-  checkData: Array<any>;
+  colDAta: string;
+  checkData: any;
+  currentUser: Array<any>;
+  colName: any;
   constructor(public activeModal: NgbActiveModal) {
   }
   
@@ -22,6 +26,12 @@ export class PrimeModalComponent {
     {'name':'check5', 'id':'check5'},
     {'name':'check6', 'id':'check6'}];
     
+ }
+    
+ saveCollection() {
+     this.checkData.push({'name': this.colName, 'id': this.colName });
+     this.showAdd = false;
+     localStorage.setItem('this.currentUser', this.checkData);
  }
  
 
