@@ -6,9 +6,14 @@ export class carouselProp {
   src: string;
   id: string;
 }
-
+export class breadCrumbObj {
+  'url': string;
+  'statename': string;
+}
 export class sharedValues{
   showBanner: boolean;
+  breadcrumbList: Array<any>;
+  showBreadcrumb: boolean;
 }
 
 export class carouselDragData{
