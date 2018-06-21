@@ -10,8 +10,9 @@ import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
-  styleUrls: ['./productlist.component.css'],
-  providers:[NgbTabsetConfig]
+  styleUrls: ['./productlist.component.scss'],
+  providers: [ NgbTabsetConfig ]
+
 })
 export class ProductlistComponent implements OnInit, OnDestroy {
   sharedValues: any;

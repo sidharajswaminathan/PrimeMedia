@@ -1,0 +1,223 @@
+{
+  "searchResults": [{
+    "categoryTitle": "eBooks",
+    "results": [{
+      "name": "Book Title 1",
+      "src": "../assets/images/img1.png"
+    },
+      {
+        "name": "Book Title 2",
+        "src": "../assets/images/img2.png"
+      },
+      {
+        "name": "Book Title 3",
+        "src": "../assets/images/img3.png"
+      },
+      {
+        "name": "Book Title 4",
+        "src": "../assets/images/img4.png"
+      },
+      {
+        "name": "Book Title 5",
+        "src": "../assets/images/img5.png"
+      },
+      {
+        "name": "Book Title 6",
+        "src": "../assets/images/img1.png"
+      },
+      {
+        "name": "Book Title 7",
+        "src": "../assets/images/img2.png"
+      },
+      {
+        "name": "Book Title 8",
+        "src": "../assets/images/img3.png"
+      },
+      {
+        "name": "Book Title 9",
+        "src": "../assets/images/img4.png"
+      },
+      {
+        "name": "Book Title 10",
+        "src": "../assets/images/img5.png"
+      }
+    ]
+  },
+    {
+      "categoryTitle": "Videos",
+      "results": [{
+        "name": "Book Title 1",
+        "src": "../assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "../assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "../assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "../assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Songs",
+      "results": [{
+        "name": "Book Title 1",
+        "src": "../assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "../assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "../assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "../assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Worksheets/Activities",
+      "results": [{
+        "name": "Book Title 1",
+        "src": "../assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "../assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "../assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "../assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Games",
+      "results": [{
+        "name": "Book Title 1",
+        "src": "../assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "../assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "../assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "../assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "../assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "../assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "../assets/images/img5.png"
+        }
+      ]
+    }
+  ]
+}

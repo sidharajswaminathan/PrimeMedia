@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ServiceCallService } from './service-call.service';
 import { PrimeModalComponent } from './prime-modal/prime-modal.component';
+import { SearchresultsComponent } from './searchresults/searchresults.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,8 @@ import { PrimeModalComponent } from './prime-modal/prime-modal.component';
     DraggingslideComponent,
     BreadcrumbComponent,
     ProductlistComponent,
-    PrimeModalComponent
+    PrimeModalComponent,
+    SearchresultsComponent,
   ],
   entryComponents: [ PrimeModalComponent ],
   imports: [
