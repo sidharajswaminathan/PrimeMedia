@@ -28,7 +28,7 @@ ul {
 .main-wrapper {
   padding: 20px 6%;
 }
-.ngxcarousel{  
+.ngxcarousel{
     .ngxcarousel-inner{
         width: 90%;
         margin: auto;
@@ -72,7 +72,7 @@ ul {
 }
 .collection-tabs {
   .nav-tabs {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #2a254c;
     margin-bottom: 25px;
     .nav-item {
       margin-bottom: 0px;
@@ -81,10 +81,10 @@ ul {
         padding: 0.3rem 3rem;
         border-radius: 0;
         font-size: 20px;
-        border: 2px solid #000;
-        color: #000;
+        border: 2px solid #2a254c;
+        color: #2a254c;
         &.active {
-          background-color: #000;
+          background-color: #2a254c;
           color: #fff !important;
         }
       }
@@ -102,6 +102,7 @@ ul {
 .modal-body{
     display: inline-block;
     width: 100%;
+    padding: 0!important;
 }
 .modal-dialog{
     width: 45%!important;
@@ -113,3 +114,20 @@ ul {
 .addNewCont > button {
     margin-right: 10px;
 }
+
+.FooterSection{
+    text-align: right;
+}
+.FooterSection, .checkVals,.addCollect{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+
+app-footer {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
