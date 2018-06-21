@@ -1,5 +1,4 @@
-import {userDetails} from './usertype';
-import {carouselProp} from './usertype';
+import {productAllinfoType, userDetails, carouselProp} from './usertype';
 
 export const appData: userDetails[] = [
   {'name' : "sidharaj"},{'name' : "usman"},{'name' : "parthiban"}
@@ -33,3 +32,49 @@ export const carouselData: carouselProp[] = [
   {'src': '../assets/images/img4.png', 'id': '25'},
   {'src': '../assets/images/img1.png', 'id': '26'}
 ];
+
+
+export  const productAllInfo: productAllinfoType[] = [
+  {
+    'title': 'Ebook1',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook2', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook3',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook4', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook5',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook6', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook7',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook8', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook9',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook10', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook11',
+    'description': 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibul.'
+  },
+  {
+    'title': 'Ebook12', 'description': 'XYZ'
+  }
+]
