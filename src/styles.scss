@@ -32,6 +32,10 @@ ul {
     .ngxcarousel-inner{
         width: 90%;
         margin: auto;
+        .item{
+            padding: 2px !important;
+            vertical-align: bottom!important;
+        }
       }  
 }
 /*mycollections */
@@ -102,4 +106,7 @@ ul {
 .modal-dialog{
     width: 45%!important;
     max-width: 45%!important;
+}
+.ngxcarouselPointDefault {
+    display: none;
 }
