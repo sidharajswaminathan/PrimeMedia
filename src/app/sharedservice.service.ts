@@ -4,6 +4,6 @@ import {breadCrumbObj, sharedValues} from './usertype';
   providedIn: 'root'
 })
 export class SharedserviceService {
-  globalObj: sharedValues = {'showBanner': true, 'breadcrumbList': [] , 'showBreadcrumb': false};
+  globalObj: sharedValues = {'showBanner': true, 'breadcrumbList': [] , 'showBreadcrumb': false, 'searchTxt': ''};
   constructor() { }
 }
