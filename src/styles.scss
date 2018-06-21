@@ -98,8 +98,18 @@ ul {
 .modal-body{
     display: inline-block;
     width: 100%;
+    padding: 0!important;
 }
 .modal-dialog{
     width: 45%!important;
     max-width: 45%!important;
 }
+.FooterSection{
+    text-align: right;
+}
+.FooterSection, .checkVals,.addCollect{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+}
+
