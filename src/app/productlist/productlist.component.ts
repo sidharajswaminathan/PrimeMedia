@@ -57,8 +57,6 @@ export class ProductlistComponent implements OnInit, OnDestroy {
           });
             this.localstorage.setLocaldata('catId', this.curId);
       });
-
-
   }
   ngOnDestroy() {
     this.sub.unsubscribe();
