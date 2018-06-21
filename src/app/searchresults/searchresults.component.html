@@ -1,24 +1,28 @@
 <section class="main-wrapper">
   <app-breadcrumb></app-breadcrumb>
   <h2>Search Results for "{{searchBox}}"</h2>
-
-  <div class="frame" *ngIf="arrBooks">
-    <ul>
-      <li *ngFor="let name of arrBooks">
-        <div>{{name.categoryTitle}}</div>
-        <div></div>
-        <div></div>
-      </li>
-    </ul>
-  </div>
-
-  <ngb-tabset>
+  <ngb-tabset class="collection-tabs">
     <ngb-tab>
       <ng-template ngbTabTitle><b>Sommer Time Stories</b></ng-template>
       <ng-template ngbTabContent>
-        <ul>
-          <li *ngFor = "let card of carouselTileItems"></li>
-        </ul>
+          <ul class="search-result-wrap">
+            <li *ngFor="let name of arrBooks">
+              <div>
+                <h3 class="title">{{name.categoryTitle}}</h3>
+                <ul class="book-lists">
+                  <li *ngFor="let subname of name.results; let i=index">
+                    <div *ngIf="i<5">
+                      <div class="bl-wrap">
+                        <figure><img src="{{subname.src}}"/></figure>
+                        <strong>{{subname.name}}</strong>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="text-center"><button type="button" class="btn">Load more</button></div>
+              </div>
+            </li>
+          </ul>
       </ng-template>
     </ngb-tab>
     <ngb-tab>
