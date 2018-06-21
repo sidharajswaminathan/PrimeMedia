@@ -1,12 +1,11 @@
-
-<div *ngIf="isloaded">
+<div *ngIf="isloaded" class="main-wrapper">
   <ngb-tabset class="collection-tabs">
     <ngb-tab title="English">
       <ng-template ngbTabContent>
         <ngb-tabset class="collection-tabs">
           <ngb-tab title="By Alphabetical">
             <ng-template ngbTabContent>
-              <p>Grid view</p>
+              <app-grid-view></app-grid-view>
             </ng-template>
           </ngb-tab>
           <ngb-tab title="By Age">
@@ -29,7 +28,4 @@
     </ngb-tab>
   </ngb-tabset>
 </div>
-
 <!--<app-carousel ></app-carousel>-->
-
-
