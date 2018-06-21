@@ -1,0 +1,11 @@
+.modal-dialog{
+    width: 60%;
+}
+
+.checkVals ul{
+    list-style-type: none;
+}
+.checkVals ul li{
+    float: left;
+    width: 33.33%;
+}

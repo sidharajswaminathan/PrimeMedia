@@ -1,5 +1,7 @@
+
 <section class="container-fluid">
   <div class="productdetail_individual_screen">
+    <app-breadcrumb></app-breadcrumb>
     <h2 class="category-title ng-binding">Ebooks</h2>
     <div class="bookdetail-main">
       <div class="row mb30">
@@ -16,7 +18,7 @@
               <div class="fav_menus">
                 <ul>
                   <li> <div class="fav_iconsdiv"><i class="fa fa-heart-o" aria-hidden="true"></i></div><span>Favourite</span></li>
-                  <li> <div class="fav_iconsdiv"><i class="fa fa-files-o" aria-hidden="true"></i></div><span>My collections</span></li>
+                  <li (click)="openVerticallyCentered()"> <div class="fav_iconsdiv"><i class="fa fa-files-o" aria-hidden="true"></i></div><span>My collections</span></li>
                   <li> <div class="fav_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true"></i></div><span>Share</span></li>
                  </ul>
               </div>

@@ -6,15 +6,16 @@ import {MycollectionsComponent} from './mycollections/mycollections.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
 import {ProductdetailsComponent} from './productdetails/productdetails.component';
 import { UsercollectionsComponent } from './usercollections/usercollections.component';
+import {ProductlistComponent} from './productlist/productlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'carousel', component: CarouselComponent },
-  { path: 'mycollections', component: MycollectionsComponent },
-  { path: 'productdetail', component: ProdDetailsComponent },
-  { path: 'productdetails', component: ProductdetailsComponent },
-  { path: 'myColection', component: UsercollectionsComponent }
+  { path: 'home/productlist', component: ProductlistComponent },
+  { path: 'home/mycollections', component: MycollectionsComponent },
+  { path: 'home/productdetail', component: ProdDetailsComponent },
+  { path: 'home/productlist/productdetails', component: ProductdetailsComponent },
+  { path: 'home/myColection', component: UsercollectionsComponent }
 ]
 @NgModule({
   exports: [ RouterModule ],

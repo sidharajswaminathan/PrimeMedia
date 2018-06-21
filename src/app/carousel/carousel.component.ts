@@ -1,7 +1,9 @@
-import { Component, OnInit , ViewChild, ElementRef, AfterViewInit,Input} from '@angular/core';
+import { Component, OnInit , ViewChild, ElementRef, AfterViewInit, Input, Output, EventEmitter} from '@angular/core';
 import { carouselData } from '../mock-appdata';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
+import { SharedserviceService } from '../sharedservice.service';
+import { _ } from 'underscore';
 
 @Component({
   selector: 'app-carousel',
@@ -9,17 +11,21 @@ import * as $ from 'jquery';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
-  @Input() shareData:any;
-
+  @Input() shareData: any;
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
-  carouselList: any = carouselData;
+    private router: Router,
+    private sharedObj: SharedserviceService
+  ) { }
+  sharedValues: any;
+  carouselList: any = [];
   compList: Array<any> = [];
   sub: any = 0;
   startIndex: any = 0;
   endIndex: any = 0;
-  indexVal: any = 4;
+  indexVal: any = 5;
+  editView:any;
+  changebutton:string='edit';
   carouselPos: any;
   routUrl: Array<any> = ['/productdetails'];
   staticId: any = 'anim_';
@@ -30,21 +36,10 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.carouselList = this.shareData;
     this.compList = this.carouselList.slice(this.startIndex, this.indexVal );
-    console.log(this.carouselList);
-    this.sub = this.route
-      .queryParams
-      .subscribe(params => {
-        console.log(params['id']);
-       // this.page = +params['page'] || 0;
-      });
-
   }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
-  Carouselwithoutanimation(param: string) {
+Carouselwithoutanimation(param: string) {
     if (param === 'prev') {
       if (this.endIndex > this.indexVal && this.startIndex > 0) {
         this.startIndex = this.startIndex - this.indexVal;
@@ -63,13 +58,27 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
   Carouselwithanimation(param: string) {
   }
-
-  goTo (idx){
-    if(idx === '24'){this.routUrl = ['/productdetail'];
-    }else{
+    /*button to change edit and save view*/
+  editCarousel(){
+    this.editView = !this.editView;
+    this.changebutton = this.changebutton=='edit'?'save':'edit';
+  }
+  /*method to delete carousel obj*/
+  deleteCarouselObj(obj) {
+    console.log(obj.id);
+    this.compList = _.filter(this.compList, function (x) {
+      return x.id != obj.id
+    })
+  }
+  goTo (idx) {
+    if ( idx === '24') { this.routUrl = ['/productdetail'];
+    } else {
       this.routUrl = ['/productdetails'];
     }
-
     this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
+    this.sharedObj.globalObj.showBanner = false;
+    this.sharedValues = this.sharedObj;
+    console.log(this.sharedValues);
   }
 }
+

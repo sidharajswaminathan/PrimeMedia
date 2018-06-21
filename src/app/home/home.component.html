@@ -1,82 +1,20 @@
 <section class="container-fluid">
   <div class="newhome-section">
-  <h2>Browse by programs</h2>
-  <ul class="program-list">
-    <li>
+  <ul class="program-list" *ngIf="contentData">
+    <li  *ngFor="let cnt of contentData.mediaType">
       <div class="homenew-list">
         <div class="newhome-image">
-          <img src="../../assets/images/program1.png" srcset="../../assets/images/program1-2x.png 2x">
+          <img [src]="'../../assets/images/'+cnt.img+'.png'" [srcset]="'../../assets/images/'+cnt.img+'2x.png 2x'">
           <div class="img-info">
-            <h3>Sommer-Time Stories</h3>
-            <div class="see-all-wrap"><a id="a_se_allbtn{{$index+1}}" title="See All" class="new-seelink" [routerLink]="['/carousel']" [queryParams]="{ id: 0 }" >See All</a></div>
+            <h3>{{cnt.name | uppercase}}</h3>
+           <ul class="book-info">
+              <li>All pages</li>
+              <li>42 Award-winning</li>
+              <li>{{cnt.name}}</li>
+            </ul>
+            <div class="see-all-wrap"><a title="See All" class="new-seelink" [routerLink]="['productlist']" >See All</a></div>
+            <div class="see-all-wrap"><a id="a_se_allbtn{{$index+1}}" title="See All" class="new-seelink" [routerLink]="['productlist']" [queryParams]="{ id: cnt.id}" >See All</a></div>
           </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program2.png" srcset="../../assets/images/program2-2x.png 2x">
-          <h3></h3>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program3.png" srcset="../../assets/images/program3-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program4.png" srcset="../../assets/images/program4-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program5.png" srcset="../../assets/images/program5-2x.png 2x">
-        </div>
-      </div>
-    </li>
-  </ul>
-  <h2>Browse By Media Type</h2>
-  <ul class="mediatype-list">
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program6.png" srcset="../../assets/images/program6-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program7.png" srcset="../../assets/images/program7-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program8.png" srcset="../../assets/images/program8-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program9.png" srcset="../../assets/images/program9-2x.png 2x">
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="homenew-list">
-        <div class="newhome-image">
-          <img src="../../assets/images/program10.png" srcset="../../assets/images/program10-2x.png 2x">
         </div>
       </div>
     </li>
