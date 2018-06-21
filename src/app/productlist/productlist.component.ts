@@ -5,10 +5,13 @@ import {carouselDragData} from '../usertype';
 import { ServiceCallService } from '../service-call.service';
 import {Config} from '../config';
 import { SharedserviceService } from '../sharedservice.service';
+import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
-  styleUrls: ['./productlist.component.css']
+  styleUrls: ['./productlist.component.css'],
+  providers:[NgbTabsetConfig]
 })
 export class ProductlistComponent implements OnInit, OnDestroy {
   sharedValues: any;
@@ -16,9 +19,13 @@ export class ProductlistComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private serviceCall: ServiceCallService,
-              private sharedObj: SharedserviceService) {
+              private sharedObj: SharedserviceService,
+              config: NgbTabsetConfig) {
     this.sharedObj.globalObj.breadcrumbList = [{'url': '/home', 'statename': 'Home'},{'url': '/productlist', 'statename': 'ProductList'}];
     this.sharedObj.globalObj.showBreadcrumb = true;
+
+    config.justify = 'start';
+    config.type = 'tabs';
   }
   data: Array<any> = [];
   sub: any;
