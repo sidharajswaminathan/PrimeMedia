@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header></app-header>
-<app-banner *ngIf="sharedValues.globalObj.showBanner"></app-banner>
+<app-banner *ngIf="sharedValues.showBanner"></app-banner>
+<app-breadcrumb *ngIf = 'sharedValues.showBreadcrumb && sharedValues.breadcrumbList.length'></app-breadcrumb>
 <section>
   <router-outlet></router-outlet>
 </section>

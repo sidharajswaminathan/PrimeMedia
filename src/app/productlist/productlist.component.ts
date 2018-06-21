@@ -4,14 +4,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {carouselDragData} from '../usertype';
 import { ServiceCallService } from '../service-call.service';
 import {Config} from '../config';
+import { SharedserviceService } from '../sharedservice.service';
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
   styleUrls: ['./productlist.component.css']
 })
 export class ProductlistComponent implements OnInit, OnDestroy {
+  sharedValues: any;
   carousel: object = carouselDragData;
-  constructor(private route: ActivatedRoute, private router: Router, private serviceCall: ServiceCallService) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private serviceCall: ServiceCallService,
+              private sharedObj: SharedserviceService) {
+    this.sharedObj.globalObj.breadcrumbList = [{'url': '/home', 'statename': 'Home'},{'url': '/productlist', 'statename': 'ProductList'}];
+    this.sharedObj.globalObj.showBreadcrumb = true;
+  }
   data: Array<any> = [];
   sub: any;
   config: Config;
@@ -37,7 +45,8 @@ export class ProductlistComponent implements OnInit, OnDestroy {
           });
       });
 
- }
+
+  }
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
