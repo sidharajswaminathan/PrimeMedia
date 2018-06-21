@@ -48,7 +48,7 @@ import { SearchresultsComponent } from './searchresults/searchresults.component'
     ProductlistComponent,
     PrimeModalComponent,
     SearchresultsComponent,
-  ],
+],
   entryComponents: [ PrimeModalComponent ],
   imports: [
     NgbModule.forRoot(),
