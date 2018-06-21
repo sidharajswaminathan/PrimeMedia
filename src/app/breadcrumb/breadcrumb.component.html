@@ -1,4 +1,3 @@
- <ul class="breadcrumb">
-    <li *ngFor="let path of urlArr"><a >{{path.path | uppercase}}</a></li>
-
+ <ul class="breadcrumb"  *ngIf="breadcrumbList.length">
+    <li *ngFor="let path of breadcrumbList"><a [routerLink]="path.url">{{path.statename | uppercase}}</a></li>
   </ul>
