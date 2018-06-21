@@ -1,10 +1,12 @@
 {
-  "searchResults": [{
+  "searchResults": [
+    {
     "categoryTitle": "eBooks",
-    "results": [{
-      "name": "Book Title 1",
-      "src": "../assets/images/img1.png"
-    },
+    "results": [
+      {
+        "name": "Book Title 1",
+        "src": "../assets/images/img1.png"
+      },
       {
         "name": "Book Title 2",
         "src": "../assets/images/img2.png"
@@ -42,7 +44,7 @@
         "src": "../assets/images/img5.png"
       }
     ]
-  },
+    },
     {
       "categoryTitle": "Videos",
       "results": [{
