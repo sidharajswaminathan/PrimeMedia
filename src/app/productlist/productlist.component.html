@@ -1,6 +1,33 @@
 
 <div *ngIf="isloaded">
- <app-draggingslide  [shareData]="carousel"></app-draggingslide>
+  <ngb-tabset class="collection-tabs">
+    <ngb-tab title="English">
+      <ng-template ngbTabContent>
+        <ngb-tabset class="collection-tabs">
+          <ngb-tab title="By Alphabetical">
+            <ng-template ngbTabContent>
+              <p>Grid view</p>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="By Age">
+            <ng-template ngbTabContent>
+              <app-draggingslide  [shareData]="carousel"></app-draggingslide>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Spanish">
+      <ng-template ngbTabContent>
+        <!--<app-draggingslide  [shareData]="carousel"></app-draggingslide>-->
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="bilingual">
+      <ng-template ngbTabContent>
+        <!--<app-draggingslide  [shareData]="carousel"></app-draggingslide>-->
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
 </div>
 
 <!--<app-carousel ></app-carousel>-->
