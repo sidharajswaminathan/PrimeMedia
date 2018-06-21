@@ -7,7 +7,7 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PrimeModalComponent implements OnInit {
   @Input() name;
-  showAdd: boolean = false;
+   showAdd: boolean = false;
   collectName: string;
   closeResult: string;
   colDAta: string;
@@ -34,5 +34,6 @@ export class PrimeModalComponent implements OnInit {
      this.showAdd = false;
      localStorage.setItem('this.currentUser', this.checkData);
  }
+
 
 }
