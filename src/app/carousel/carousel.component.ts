@@ -10,7 +10,7 @@ import * as $ from 'jquery';
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() shareData:any;
-  constructor() { }
+
   constructor(
     private route: ActivatedRoute,
     private router: Router) { }
