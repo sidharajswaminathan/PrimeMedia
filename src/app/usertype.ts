@@ -28,3 +28,7 @@ export class carouselDragData{
   itemevent: string;
   title: string;
 }
+export class productAllinfoType {
+  title: string;
+  description: string;
+}
