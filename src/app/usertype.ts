@@ -9,6 +9,7 @@ export class carouselProp {
 export class breadCrumbObj {
   'url': string;
   'statename': string;
+  'param': string;
 }
 export class sharedValues{
   showBanner: boolean;

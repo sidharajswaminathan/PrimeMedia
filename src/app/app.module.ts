@@ -22,6 +22,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ServiceCallService } from './service-call.service';
+import { LocalstorageService} from './localstorage.service';
 import { PrimeModalComponent } from './prime-modal/prime-modal.component';
 import { SearchresultsComponent } from './searchresults/searchresults.component';
 
@@ -57,7 +58,7 @@ import { SearchresultsComponent } from './searchresults/searchresults.component'
     AppRoutingModule,
     NgxCarouselModule
   ],
-  providers: [ServiceCallService],
+  providers: [ServiceCallService, LocalstorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

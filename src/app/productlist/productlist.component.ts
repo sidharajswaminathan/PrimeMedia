@@ -6,6 +6,7 @@ import { ServiceCallService } from '../service-call.service';
 import {Config} from '../config';
 import { SharedserviceService } from '../sharedservice.service';
 import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
+import { LocalstorageService } from '../localstorage.service';
 
 @Component({
   selector: 'app-productlist',
@@ -21,8 +22,12 @@ export class ProductlistComponent implements OnInit, OnDestroy {
               private router: Router,
               private serviceCall: ServiceCallService,
               private sharedObj: SharedserviceService,
-              config: NgbTabsetConfig) {
-    this.sharedObj.globalObj.breadcrumbList = [{'url': '/home', 'statename': 'Home'},{'url': '/productlist', 'statename': 'ProductList'}];
+              config: NgbTabsetConfig, private localstorage: LocalstorageService) {
+
+    this.sharedObj.globalObj.breadcrumbList = [
+        {'url': '/home', 'statename': 'Home', 'param': ''},
+        {'url': '', 'statename': 'ProductList', 'param': ''}
+      ];
     this.sharedObj.globalObj.showBreadcrumb = true;
 
     config.justify = 'start';
@@ -30,7 +35,6 @@ export class ProductlistComponent implements OnInit, OnDestroy {
   }
   data: Array<any> = [];
   sub: any;
-  config: Config;
   carouselData: any;
   curId: any;
   isloaded: any = false;
@@ -51,6 +55,7 @@ export class ProductlistComponent implements OnInit, OnDestroy {
                     'title': data['data'].content.categoryName
                   };
           });
+            this.localstorage.setLocaldata('catId', this.curId);
       });
 
 
