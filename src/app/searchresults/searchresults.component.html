@@ -5,12 +5,12 @@
       <ng-template ngbTabTitle><b>Sommer Time Stories</b></ng-template>
       <ng-template ngbTabContent>
           <ul class="search-result-wrap">
-            <li *ngFor="let name of arrBooks">
+            <li *ngFor="let name of arrBooks; let i = index">
               <div>
                 <h3 class="title">{{name.categoryTitle}}</h3>
                 <ul class="book-lists">
                   <li *ngFor="let subname of name.results; let i=index">
-                    <div *ngIf="i<5">
+                    <div *ngIf=" i < name.loadcnt ">
                       <div class="bl-wrap">
                         <figure><img src="{{subname.src}}"/></figure>
                         <strong>{{subname.name}}</strong>
@@ -18,7 +18,7 @@
                     </div>
                   </li>
                 </ul>
-                <div class="text-center"><button type="button" class="btn">Load more</button></div>
+                <div class="text-center"><button type="button" class="btn" (click)="loadMore(i)">Load more</button></div>
               </div>
             </li>
           </ul>

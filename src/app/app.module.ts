@@ -26,6 +26,8 @@ import { LocalstorageService} from './localstorage.service';
 import { PrimeModalComponent } from './prime-modal/prime-modal.component';
 import { SearchresultsComponent } from './searchresults/searchresults.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import { GridViewComponent } from './grid-view/grid-view.component';
     ProductlistComponent,
     PrimeModalComponent,
     SearchresultsComponent,
-    GridViewComponent
+    GridViewComponent,
+    SearchresultsComponent
+
   ],
   entryComponents: [ PrimeModalComponent ],
   imports: [

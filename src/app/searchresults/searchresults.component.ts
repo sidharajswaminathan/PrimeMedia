@@ -9,20 +9,25 @@ import {LocalstorageService} from '../localstorage.service';
   templateUrl: './searchresults.component.html',
   styleUrls: ['./searchresults.component.scss']
 })
-export class SearchresultsComponent implements OnInit, DoCheck{
+export class SearchresultsComponent implements OnInit, DoCheck {
   sub: any;
+  counter: any = 5;
   searchResultTxt: string;
-  constructor(private loaclCall: ServiceCallService, private sharedObj: SharedserviceService, private localstorage: LocalstorageService) {
+  arrBooks: any = [];
+  constructor(private loaclCall: ServiceCallService,
+              private sharedObj: SharedserviceService,
+              private localstorage: LocalstorageService) {
     this.sharedObj.globalObj.breadcrumbList = [{'url': '/home', 'statename': 'Home', 'param': ''}];
     this.sharedObj.globalObj.showBreadcrumb = true;
   }
-  arrBooks: any = [];
 
   ngOnInit() {
     this.loaclCall.localService('book-list.json').subscribe((data: any) => {
       this.arrBooks = data.searchResults;
-       console.log(this.arrBooks);
     });
+  }
+  loadMore(index) {
+    this.arrBooks[index].loadcnt = this.arrBooks[index].loadcnt + 5;
   }
   ngDoCheck() {
     if ( this.sharedObj.globalObj.searchTxt ) {

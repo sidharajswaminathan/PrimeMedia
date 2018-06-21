@@ -2,6 +2,7 @@
   "searchResults": [
     {
     "categoryTitle": "eBooks",
+      "loadcnt":5,
     "results": [
       {
         "name": "Book Title 1",
@@ -47,6 +48,7 @@
     },
     {
       "categoryTitle": "Videos",
+      "loadcnt":5,
       "results": [{
         "name": "Book Title 1",
         "src": "../assets/images/img1.png"
@@ -91,6 +93,7 @@
     },
     {
       "categoryTitle": "Songs",
+      "loadcnt":5,
       "results": [{
         "name": "Book Title 1",
         "src": "../assets/images/img1.png"
@@ -135,6 +138,7 @@
     },
     {
       "categoryTitle": "Worksheets/Activities",
+      "loadcnt":5,
       "results": [{
         "name": "Book Title 1",
         "src": "../assets/images/img1.png"
@@ -179,6 +183,7 @@
     },
     {
       "categoryTitle": "Games",
+      "loadcnt":5,
       "results": [{
         "name": "Book Title 1",
         "src": "../assets/images/img1.png"
