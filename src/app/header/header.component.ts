@@ -30,17 +30,15 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(this.routUrl);
       this.sharedObj.globalObj.searchTxt = this.searchText;
       this.localstorage.setLocaldata('searchTxt', this.searchText);
-
     }
   }
 
   searchResult(event) {
-
   if ( this.searchText ) {
-      this.sharedObj.globalObj.searchTxt = this.searchText;
-      this.localstorage.setLocaldata('searchTxt', this.searchText);
       this.routUrl = ['/searchresults'];
       this.router.navigate(this.routUrl);
+      this.sharedObj.globalObj.searchTxt = this.searchText;
+      this.localstorage.setLocaldata('searchTxt', this.searchText);
     }
   }
 
