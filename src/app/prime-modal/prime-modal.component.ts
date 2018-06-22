@@ -49,7 +49,7 @@ export class PrimeModalComponent implements OnInit {
       }).subscribe((data: CollectionList) => {
         this.checkData = data.data.collections;
       });
-     this.activeModal.close('Close click')
+     this.activeModal.close('Close click');
   }
   }
   checkboxChecked(event) {

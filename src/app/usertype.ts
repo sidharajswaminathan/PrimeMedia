@@ -5,6 +5,7 @@ export class userDetails {
 export class carouselProp {
   src: string;
   id: string;
+  is_active: any;
 }
 export class breadCrumbObj {
   'url': string;
