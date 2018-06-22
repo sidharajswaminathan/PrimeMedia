@@ -9,7 +9,7 @@ import { CollectionList} from '../usertype';
 })
 export class PrimeModalComponent implements OnInit {
   @Input() name;
-   showAdd: boolean = false;
+  showAdd: boolean = false;
   collectName: string;
   closeResult: string;
   colDAta: string;
@@ -28,10 +28,21 @@ export class PrimeModalComponent implements OnInit {
  }
 
  saveCollection() {
+    this.serviceCall.postMethod('medialibv2.addCollection', { name: this.colName}).subscribe((data: CollectionList) => {
+      console.log(data, 'data');
+    })
+
+
+
+
+
      this.checkData.push({'name': this.colName, 'id': this.colName });
      this.showAdd = false;
      localStorage.setItem('this.currentUser', this.checkData);
  }
+  addCollection() {
 
-
+  }
 }
+
+

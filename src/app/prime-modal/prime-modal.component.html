@@ -18,7 +18,8 @@
             </div>
 
             <div class="FooterSection">
-             <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+              <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="addCollection(name.value)" >Add</button>
+              <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
               <div class="addNewCont" *ngIf="showAdd">
                 <button type="button" class="btn btn-outline-dark" (click)="saveCollection(name.value)" >Save</button>
                 <button type="button" class="btn btn-outline-dark">Cancel</button>
