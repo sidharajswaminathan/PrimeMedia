@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
@@ -26,6 +27,7 @@ import { LocalstorageService} from './localstorage.service';
 import { PrimeModalComponent } from './prime-modal/prime-modal.component';
 import { SearchresultsComponent } from './searchresults/searchresults.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
+import { FilterPipe } from './pipe-filter';
 
 
 @NgModule({
@@ -51,8 +53,8 @@ import { GridViewComponent } from './grid-view/grid-view.component';
     PrimeModalComponent,
     SearchresultsComponent,
     GridViewComponent,
-    SearchresultsComponent
-
+    SearchresultsComponent,
+    FilterPipe
   ],
   entryComponents: [ PrimeModalComponent ],
   imports: [
@@ -61,7 +63,8 @@ import { GridViewComponent } from './grid-view/grid-view.component';
     HttpClientModule,
     HttpModule,
     AppRoutingModule,
-    NgxCarouselModule
+    NgxCarouselModule,
+    FormsModule
   ],
   providers: [ServiceCallService, LocalstorageService],
   bootstrap: [AppComponent]
