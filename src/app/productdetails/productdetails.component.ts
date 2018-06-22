@@ -1,20 +1,27 @@
-import {Component, DoCheck, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, DoCheck, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { PrimeModalComponent } from '../prime-modal/prime-modal.component';
 import {SharedserviceService} from '../sharedservice.service';
 import { LocalstorageService } from '../localstorage.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-productdetails',
   templateUrl: './productdetails.component.html',
   styleUrls: ['./productdetails.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ProductdetailsComponent implements OnInit {
+export class ProductdetailsComponent implements OnInit, OnDestroy {
   showModal: Boolean = false;
   closeResult: string;
   prodDetailLabel: string;
   prodDetails: any;
-  constructor(private sharedObj: SharedserviceService, private modalService: NgbModal, private localstorage: LocalstorageService ) {
+  sub: any;
+  curId: any;
+  constructor(private sharedObj: SharedserviceService,
+              private modalService: NgbModal,
+              private localstorage: LocalstorageService,
+              private route: ActivatedRoute,
+              private router: Router) {
     console.log(this.localstorage.getLocaldata('catId'))
     this.sharedObj.globalObj.breadcrumbList = [
       {'url': '/home', 'statename': 'Home', 'param': ''},
@@ -26,11 +33,16 @@ export class ProductdetailsComponent implements OnInit {
   openVerticallyCentered() {
     this.showModal = true;
     const modalRef = this.modalService.open(PrimeModalComponent);
-    modalRef.componentInstance.name = 'World';
+    modalRef.componentInstance.name = this.curId;
   }
   ngOnInit() {
     this.prodDetails = this.localstorage.getLocaldata('prodDetail') && JSON.parse(this.localstorage.getLocaldata('prodDetail'))
     console.log(this.prodDetails);
+    this.sub = this.route
+      .queryParams
+      .subscribe(params => {
+        this.curId = params['id'];
+      });
     if (this.prodDetails && this.prodDetails.is_active) {
       if (this.prodDetails.is_premium) {
         this.prodDetailLabel = 'Buy Now';
@@ -65,5 +77,8 @@ export class ProductdetailsComponent implements OnInit {
         alert('Page needs to be developed');
         /*window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');*/
     }
+  }
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

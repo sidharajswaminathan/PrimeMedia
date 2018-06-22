@@ -21,7 +21,8 @@ export class ServiceCallService {
   }
   /* post method http request*/
   postMethod(url, data): Observable<Config> {
-    this.posUrl = 'https://www.advancepublishing-testing.com/sommer_learning/index.php?option=com_sommer&task=' + url;
+
+      this.posUrl = 'https://www.advancepublishing-testing.com/sommer_learning/index.php?option=com_sommer&task=' + url;
     return this.http.post<any>( this.posUrl, data );
   }
   /* get method local http request*/

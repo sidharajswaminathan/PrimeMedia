@@ -10,7 +10,7 @@
         <form name="collections">
             <div *ngIf="!showAdd" class="checkVals">
               <ul>
-                  <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.CollectionId}}">{{checkval.name}}</label></li>
+                  <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.CollectionId}}" [id]="checkval.CollectionId" (click)="checkboxChecked($event)">{{checkval.name}}</label></li>
               </ul>
             </div>
             <div *ngIf="showAdd" class="addCollect">
