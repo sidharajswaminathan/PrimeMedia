@@ -10,8 +10,8 @@
         <form name="collections">
             <div *ngIf="!showAdd" class="checkVals">
               <ul>
-                  <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.id}}">{{checkval.name}}</label></li>
-              </ul> 
+                  <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.CollectionId}}">{{checkval.name}}</label></li>
+              </ul>
             </div>
             <div *ngIf="showAdd" class="addCollect">
                   Collection Name: <input type="text" (input) = "colName = $event.target.value">
@@ -19,16 +19,16 @@
 
             <div class="FooterSection">
              <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-              <div class="addNewCont" *ngIf="showAdd">               
+              <div class="addNewCont" *ngIf="showAdd">
                 <button type="button" class="btn btn-outline-dark" (click)="saveCollection(name.value)" >Save</button>
                 <button type="button" class="btn btn-outline-dark">Cancel</button>
-              </div>      
+              </div>
             </div>
         </form>
     </div>
 </div>
 <!--<div class="modal-footer">
-  
+
   <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>-->
 

@@ -32,3 +32,10 @@ export class productAllinfoType {
   title: string;
   description: string;
 }
+export class CollectionList {
+  data: any;
+  collections: Array<any>;
+  name: string;
+  CollectionId: number;
+
+}
