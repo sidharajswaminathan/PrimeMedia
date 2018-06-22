@@ -28,24 +28,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-menu">
-      <ul class="container-fluid navbar-nav mr-auto d-flex flex-column flex-md-row justify-content-between">
-        <li class="nav-item">
-          <a class="nav-link" href="#">SOMMER TIME STORIES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">PHONICS ADVENTURE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">READING SUCCESS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">NUMBER SUCCESS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">WRITING SUCCESS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">GAMES</a>
+      <ul class="navbar-nav mr-auto" *ngIf="contentData && contentData.mediaType.length">
+        <li class="nav-item" *ngFor="let cnt of contentData.mediaType" (click)="headerNavigation(cnt)">
+          <a class="nav-link">{{cnt.name | uppercase}}</a>
         </li>
       </ul>
     </div>

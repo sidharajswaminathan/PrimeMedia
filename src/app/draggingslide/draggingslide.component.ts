@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 import { SharedserviceService } from '../sharedservice.service';
 import {carouselDragData} from '../usertype';
-
+import { LocalstorageService } from '../localstorage.service';
 @Component({
   selector: 'app-draggingslide',
   templateUrl: './draggingslide.component.html',
@@ -24,8 +24,8 @@ export class DraggingslideComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private sharedObj: SharedserviceService
-  ) { }
+    private sharedObj: SharedserviceService,
+    private localstorage: LocalstorageService) { }
   setData: any[];
   lastObject: object = carouselDragData;
   ngOnInit() {
@@ -63,11 +63,12 @@ export class DraggingslideComponent implements OnInit {
   }
   /*goto product details*/
   goToProductDetails (idx) {
-    if ( idx === '24') { this.routUrl = ['productdetail'];
+    if ( idx.id === '24') { this.routUrl = ['productdetail'];
     } else {
       this.routUrl = ['productdetails'];
     }
-    this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
+    this.localstorage.setLocaldata('prodDetail', JSON.stringify(idx));
+    this.router.navigate(this.routUrl,{ queryParams: { id: idx.id } });
     this.sharedObj.globalObj.showBanner = false;
     this.sharedValues = this.sharedObj;
     console.log(this.sharedValues);
