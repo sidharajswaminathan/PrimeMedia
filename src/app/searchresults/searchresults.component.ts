@@ -22,7 +22,7 @@ export class SearchresultsComponent implements OnInit, DoCheck {
               private localstorage: LocalstorageService) {
     this.sharedObj.globalObj.breadcrumbList = [
       {'url': '/home', 'statename': 'Home', 'param': ''},
-      {'url': '/productlist', 'statename': 'ProductList', 'param': ''},
+      {'url': '/searchresults', 'statename': 'Search results', 'param': ''},
       ];
     this.sharedObj.globalObj.showBreadcrumb = true;
   }
