@@ -83,6 +83,11 @@ ul {
         font-size: 1.6vmin;
         border: 2px solid #2a254c;
         color: #2a254c;
+        transition: 0.2s ease-in;
+        &:hover {
+          background-color: #978eda;
+          color: #fff;
+        }
         &.active {
           background-color: #2a254c;
           color: #fff;
