@@ -14,6 +14,7 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
   showModal: Boolean = false;
   closeResult: string;
   prodDetailLabel: string;
+  prodDetails: any;
   sub: any;
   curId: any;
   constructor(private sharedObj: SharedserviceService,
@@ -35,30 +36,49 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
     modalRef.componentInstance.name = this.curId;
   }
   ngOnInit() {
-    const prodDetail: any = this.localstorage.getLocaldata('prodDetail') && JSON.parse(this.localstorage.getLocaldata('prodDetail'))
-    console.log(prodDetail);
-
+    this.prodDetails = this.localstorage.getLocaldata('prodDetail') && JSON.parse(this.localstorage.getLocaldata('prodDetail'))
+    console.log(this.prodDetails);
     this.sub = this.route
       .queryParams
       .subscribe(params => {
         this.curId = params['id'];
       });
-    if (prodDetail && prodDetail.is_active) {
-      if (prodDetail.is_premium) {
+    if (this.prodDetails && this.prodDetails.is_active) {
+      if (this.prodDetails.is_premium) {
         this.prodDetailLabel = 'Buy Now';
       } else {
-        if (!prodDetail.is_premium && !prodDetail.is_featured) {
+        if (!this.prodDetails.is_premium && !this.prodDetails.is_featured) {
           this.prodDetailLabel = 'Explore Now';
-        } else if (!prodDetail.is_premium && prodDetail.is_featured) {
+        } else if (!this.prodDetails.is_premium && this.prodDetails.is_featured) {
           this.prodDetailLabel = 'Register Now';
         }
       }
     }
   }
 
+  launchPlayer() {
+    let mediaurl: any = '';
+    const currentCategory: any = this.localstorage.getLocaldata('currentCategory');
+    if (currentCategory === 'Sommer time stories') {
+      mediaurl = 'http://sommerlearning.com/books/androcles-and-the-lion/';
+      window.open(mediaurl);
+    } else if (currentCategory === 'Phonics Adventure') {
+      if (this.prodDetails.category_name === 'eBooks' && this.prodDetailLabel === 'Explore Now') {
+        mediaurl = 'https://www.advancepublishing-dev.com/ereadermedialibrary/#/eReaderPlayer';
+        this.localstorage.setLocaldata('coursename', this.prodDetails.coursename);
+        this.localstorage.setLocaldata('category_name', this.prodDetails.category_name);
+        this.localstorage.setLocaldata('book_url', this.prodDetails.book_url);
+        /* this.localstorage.setLocaldata('mediaUserid',this.prodDetails.mediaUserid);*/
+        window.open(mediaurl + '/ereadermedialibrary/#/eReaderPlayer');
+      } else {
+        alert ('This is different type of product');
+      }
+    } else if (currentCategory === 'Number success') {
+        alert('Page needs to be developed');
+        /*window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');*/
+    }
+  }
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
-
-
 }

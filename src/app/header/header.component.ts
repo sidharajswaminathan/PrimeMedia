@@ -54,6 +54,9 @@ export class HeaderComponent implements OnInit {
   headerNavigation(headerItem) {
     /*[routerLink]="['/productlist']" [queryParams]="{ id: cnt.id}";*/
     this.router.navigate(this.routUrl,{ queryParams: { id: headerItem.id } });
+    this.localstorage.setLocaldata('currentCategory', headerItem.name);
+    if (headerItem.name === 'Number success') {
+      window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');
+    }
   }
-
 }
