@@ -37,5 +37,10 @@ export class CollectionList {
   collections: Array<any>;
   name: string;
   CollectionId: number;
-
+}
+export class Bookdetail {
+  id: string;
+  name: string;
+  src: string;
+  categoryTitle: string;
 }

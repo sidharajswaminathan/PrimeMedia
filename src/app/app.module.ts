@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
@@ -28,6 +29,7 @@ import { SearchresultsComponent } from './searchresults/searchresults.component'
 import { GridViewComponent } from './grid-view/grid-view.component';
 import { VideoAudioModalComponent } from './video-audio-modal/video-audio-modal.component';
 import { AudioComponent } from './audio/audio.component';
+import { FilterPipe } from './pipe-filter';
 
 
 @NgModule({
@@ -54,9 +56,10 @@ import { AudioComponent } from './audio/audio.component';
     SearchresultsComponent,
     GridViewComponent,
     SearchresultsComponent,
+    productdetails_seemore,
     VideoAudioModalComponent,
-    AudioComponent
-
+    AudioComponent,
+    FilterPipe
   ],
   entryComponents: [ PrimeModalComponent ],
   imports: [
@@ -65,7 +68,8 @@ import { AudioComponent } from './audio/audio.component';
     HttpClientModule,
     HttpModule,
     AppRoutingModule,
-    NgxCarouselModule
+    NgxCarouselModule,
+    FormsModule
   ],
   providers: [ServiceCallService, LocalstorageService],
   bootstrap: [AppComponent]

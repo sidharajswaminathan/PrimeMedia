@@ -1,15 +1,19 @@
 /* Logo and search bar section */
 .header-top {
   padding: 15px;
+  .logo {
+    display: inline-block;
+    margin-top: 8px;
+  }
   .form-control {
-    margin-top: 6px;
+    margin-top: 15px;
     padding-right: 38px;
     background-color: #f4f4f4;
     border: 2px solid #d1d1d1;
   }
   .search-icon {
     position: absolute;
-    top: 7px;
+    top: 16px;
     right: 17px;
     width: 38px;
     height: 38px;
@@ -17,7 +21,7 @@
     background: url(../../assets/images/search.png) center center no-repeat;
   }
   .user-collections {
-    margin: 0;
+    margin: 6px 0 0;
     padding: 0;
     text-align: center;
     li {

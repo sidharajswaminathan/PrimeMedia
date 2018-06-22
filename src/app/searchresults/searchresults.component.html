@@ -3,9 +3,9 @@
   <ngb-tabset class="collection-tabs">
     <ngb-tab>
       <ng-template ngbTabTitle><b>Sommer Time Stories</b></ng-template>
-      <ng-template ngbTabContent>
-          <ul class="search-result-wrap">
-            <li *ngFor="let name of arrBooks; let i = index">
+      <ng-template ngbTabContent >
+          <ul class="search-result-wrap" *ngIf="arrBooks; else notfound">
+            <li *ngFor="let name of arrBooks | filter: searchResultTxt ; let i = index">
               <div>
                 <h3 class="title">{{name.categoryTitle}}</h3>
                 <ul class="book-lists">
@@ -21,6 +21,7 @@
                 <div class="text-center"><button type="button" class="btn" (click)="loadMore(i)">Load more</button></div>
               </div>
             </li>
+            <h3 #notfound>Not found</h3>
           </ul>
       </ng-template>
     </ngb-tab>

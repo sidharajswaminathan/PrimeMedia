@@ -1,7 +1,7 @@
  <ul class="breadcrumb"  *ngIf="breadcrumbList.length">
     <li *ngFor="let path of breadcrumbList; let i= index">
-      <a [routerLink]="path.url" [queryParams] = 'path.param?{id: path.param}:""' *ngIf="i != breadcrumbList.length-1">{{path.statename | uppercase}}</a>
-      <a *ngIf="i == breadcrumbList.length-1">{{path.statename | uppercase}}</a>
+      <a [routerLink]="path.url" [queryParams] = 'path.param?{id: path.param}:""' *ngIf="i != breadcrumbList.length-1">{{path.statename}}</a>
+      <a *ngIf="i == breadcrumbList.length-1">{{path.statename}}</a>
     </li>
 
   </ul>

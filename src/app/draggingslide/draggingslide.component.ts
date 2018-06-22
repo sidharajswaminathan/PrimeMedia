@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 import { SharedserviceService } from '../sharedservice.service';
 import {carouselDragData} from '../usertype';
-
+import { LocalstorageService } from '../localstorage.service';
 @Component({
   selector: 'app-draggingslide',
   templateUrl: './draggingslide.component.html',
@@ -14,6 +14,7 @@ import {carouselDragData} from '../usertype';
 export class DraggingslideComponent implements OnInit {
 
   @Input() shareData: any;
+  @Input() productData: any;
   sharedValues: any;
   changebutton: string = 'edit';
   editView: any;
@@ -23,13 +24,13 @@ export class DraggingslideComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private sharedObj: SharedserviceService
-  ) { }
+    private sharedObj: SharedserviceService,
+    private localstorage: LocalstorageService) { }
   setData: any[];
   lastObject: object = carouselDragData;
-  ngOnInit(){
+  ngOnInit() {
 
-    this.carouselTileItems = this.shareData.data;
+    this.carouselTileItems = this.productData;
 
 
 
@@ -44,29 +45,30 @@ export class DraggingslideComponent implements OnInit {
       load: 2,
       touch: true,
       easing: 'ease'
-    }
+    };
   }
 
 
   /*button to change edit and save view*/
-  editCarousel(){
+  editCarousel() {
     this.editView = !this.editView;
-    this.changebutton = this.changebutton=='edit'?'save':'edit';
+    this.changebutton = this.changebutton === 'edit' ? 'save' : 'edit';
   }
   /*method to delete carousel obj*/
   deleteCarouselObj(obj) {
     console.log(obj.id);
     this.carouselTileItems = _.filter(this.carouselTileItems, function (x) {
-      return x.id != obj.id
-    })
+      return x.id !== obj.id;
+    });
   }
   /*goto product details*/
   goToProductDetails (idx) {
-    if ( idx === '24') { this.routUrl = ['productdetail'];
+    if ( idx.id === '24') { this.routUrl = ['productdetail'];
     } else {
       this.routUrl = ['productdetails'];
     }
-    this.router.navigate(this.routUrl,{ queryParams: { id: idx } });
+    this.localstorage.setLocaldata('prodDetail', JSON.stringify(idx));
+    this.router.navigate(this.routUrl,{ queryParams: { id: idx.id } });
     this.sharedObj.globalObj.showBanner = false;
     this.sharedValues = this.sharedObj;
     console.log(this.sharedValues);
@@ -80,10 +82,10 @@ export class DraggingslideComponent implements OnInit {
       }
     }
     console.log(this.carouselTileItems)
-    this.carouselTileItems = _.filter(this.carouselTileItems, function(x,count){
-      return count<25
+    this.carouselTileItems = _.filter(this.carouselTileItems, function(x, count) {
+      return count < 25;
     })
-    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'})
+    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'});
 
   }
 

@@ -12,6 +12,7 @@ import {SharedserviceService} from '../sharedservice.service';
 })
 export class MycollectionsComponent implements OnInit {
   carousel: object = carouselDragData;
+  producctListdata: any;
 
 
   constructor(config: NgbTabsetConfig, private sharedObj: SharedserviceService ) {
@@ -26,6 +27,7 @@ export class MycollectionsComponent implements OnInit {
       'configuration' : {'deleteoption' : true, 'editsave': true, 'itemevent': false},
       'data': carouselData
     }
+    this.producctListdata = carouselData;
     console.log(this.carousel);
   }
 

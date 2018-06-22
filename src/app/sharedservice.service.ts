@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {breadCrumbObj, sharedValues} from './usertype';
+import {breadCrumbObj, sharedValues, Bookdetail} from './usertype';
 @Injectable({
   providedIn: 'root'
 })

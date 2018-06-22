@@ -1,8 +1,11 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ServiceCallService } from '../service-call.service';
 import {Config} from '../config';
 import {SharedserviceService} from '../sharedservice.service';
 import {LocalstorageService} from '../localstorage.service';
+
+
 
 @Component({
   selector: 'app-searchresults',
