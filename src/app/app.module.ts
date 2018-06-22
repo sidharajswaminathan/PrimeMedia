@@ -56,8 +56,7 @@ import { FilterPipe } from './pipe-filter';
     SearchresultsComponent,
     GridViewComponent,
     SearchresultsComponent,
-    productdetails_seemore,
-    VideoAudioModalComponent,
+     VideoAudioModalComponent,
     AudioComponent,
     FilterPipe
   ],
