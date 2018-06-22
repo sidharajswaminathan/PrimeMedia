@@ -36,7 +36,7 @@ ul {
             padding: 2px !important;
             vertical-align: bottom!important;
         }
-      }  
+      }
 }
 /*mycollections */
 .mycolletions {
@@ -80,12 +80,25 @@ ul {
       .nav-link {
         padding: 0.3rem 3rem;
         border-radius: 0;
-        font-size: 20px;
+        font-size: 1.6vmin;
         border: 2px solid #2a254c;
         color: #2a254c;
         &.active {
           background-color: #2a254c;
-          color: #fff !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1280px) {
+  .collection-tabs {
+    .nav-tabs {
+      .nav-item {
+        .nav-link {
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 1.8vmin;
         }
       }
     }
