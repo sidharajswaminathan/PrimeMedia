@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {ServiceCallService} from '../service-call.service';
+import { CollectionList} from '../usertype';
 
 @Component({
   selector: 'app-prime-modal',
@@ -14,18 +16,14 @@ export class PrimeModalComponent implements OnInit {
   checkData: any;
   currentUser: Array<any>;
   colName: any;
-  constructor(public activeModal: NgbActiveModal) {
+  constructor(public activeModal: NgbActiveModal, private serviceCall: ServiceCallService) {
   }
 
   ngOnInit() {
-
-    this.checkData = [
-    {'name': 'check1', 'id': 'check1'},
-    {'name': 'check2', 'id': 'check2'},
-    {'name': 'check3', 'id': 'check3'},
-    {'name': 'check4', 'id': 'check4'},
-    {'name': 'check5', 'id': 'check5'},
-    {'name': 'check6', 'id': 'check6'}];
+  this.serviceCall.getConfig('medialibv2.getMyCollections').subscribe((data: CollectionList) => {
+    console.log(data);
+    this.checkData = data.data.collections;
+  });
 
  }
 
