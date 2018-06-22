@@ -27,6 +27,8 @@ import { LocalstorageService} from './localstorage.service';
 import { PrimeModalComponent } from './prime-modal/prime-modal.component';
 import { SearchresultsComponent } from './searchresults/searchresults.component';
 import { GridViewComponent } from './grid-view/grid-view.component';
+import { VideoAudioModalComponent } from './video-audio-modal/video-audio-modal.component';
+import { AudioComponent } from './audio/audio.component';
 import { FilterPipe } from './pipe-filter';
 
 
@@ -54,6 +56,9 @@ import { FilterPipe } from './pipe-filter';
     SearchresultsComponent,
     GridViewComponent,
     SearchresultsComponent,
+    productdetails_seemore,
+    VideoAudioModalComponent,
+    AudioComponent,
     FilterPipe
   ],
   entryComponents: [ PrimeModalComponent ],
