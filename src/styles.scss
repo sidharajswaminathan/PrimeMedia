@@ -85,7 +85,7 @@ ul {
         color: #2a254c;
         transition: 0.2s ease-in;
         &:hover {
-          background-color: #978eda;
+          background-color: #327dc0;
           color: #fff;
         }
         &.active {
@@ -200,7 +200,7 @@ app-footer {
 .pagination .page-item:last-child .page-link{
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
-} 
+}
 .pagination .page-item:last-child .page-link span, .pagination .page-item:first-child .page-link span{display:none;}
 .pagination .page-item:first-child .page-link{border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;}
@@ -231,14 +231,14 @@ app-footer {
     border-color: #00b171;
 }
 
-@media only screen and (max-width: 650px) 
+@media only screen and (max-width: 650px)
  {
 .pagination .page-item .page-link {
     width: 30px;
     height: 30px;
     margin: 0 4px;
     font-size: 16px;
-    padding: 2px 2px; 
+    padding: 2px 2px;
 }
      .pagination .page-item:first-child .page-link:after {
       top: 5%;
