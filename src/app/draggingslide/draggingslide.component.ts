@@ -14,6 +14,7 @@ import {carouselDragData} from '../usertype';
 export class DraggingslideComponent implements OnInit {
 
   @Input() shareData: any;
+  @Input() productData: any;
   sharedValues: any;
   changebutton: string = 'edit';
   editView: any;
@@ -27,9 +28,9 @@ export class DraggingslideComponent implements OnInit {
   ) { }
   setData: any[];
   lastObject: object = carouselDragData;
-  ngOnInit(){
+  ngOnInit() {
 
-    this.carouselTileItems = this.shareData.data;
+    this.carouselTileItems = this.productData;
 
 
 
@@ -44,21 +45,21 @@ export class DraggingslideComponent implements OnInit {
       load: 2,
       touch: true,
       easing: 'ease'
-    }
+    };
   }
 
 
   /*button to change edit and save view*/
-  editCarousel(){
+  editCarousel() {
     this.editView = !this.editView;
-    this.changebutton = this.changebutton=='edit'?'save':'edit';
+    this.changebutton = this.changebutton === 'edit' ? 'save' : 'edit';
   }
   /*method to delete carousel obj*/
   deleteCarouselObj(obj) {
     console.log(obj.id);
     this.carouselTileItems = _.filter(this.carouselTileItems, function (x) {
-      return x.id != obj.id
-    })
+      return x.id !== obj.id;
+    });
   }
   /*goto product details*/
   goToProductDetails (idx) {
@@ -80,10 +81,10 @@ export class DraggingslideComponent implements OnInit {
       }
     }
     console.log(this.carouselTileItems)
-    this.carouselTileItems = _.filter(this.carouselTileItems, function(x,count){
-      return count<25
+    this.carouselTileItems = _.filter(this.carouselTileItems, function(x, count) {
+      return count < 25;
     })
-    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'})
+    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'});
 
   }
 

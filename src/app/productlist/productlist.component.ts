@@ -38,6 +38,7 @@ export class ProductlistComponent implements OnInit, OnDestroy {
   carouselData: any;
   curId: any;
   isloaded: any = false;
+  loopData: any = [];
   ngOnInit() {
     /*this.data = carouselData;*/
     this.sub = this.route
@@ -47,6 +48,8 @@ export class ProductlistComponent implements OnInit, OnDestroy {
           this.curId = params['id'];
             this.serviceCall.postMethod('medialibv2.productlist', { 'id' : this.curId}).subscribe((data: Config) => {
                   this.carouselData =  data['data'].content.contents[0].data;
+                  this.loopData = data['data'].content.contents;
+                  console.log(this.loopData,'this.loopData')
                   this.isloaded = true;
                   console.log(data['data'].content.categoryName, 'productList' , this.carouselData);
                   this.carousel = {

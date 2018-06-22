@@ -10,7 +10,7 @@
           </ngb-tab>
           <ngb-tab title="By Age">
             <ng-template ngbTabContent>
-              <app-draggingslide  [shareData]="carousel"></app-draggingslide>
+              <app-draggingslide *ngFor="let list of loopData | slice:1:21 " [shareData]="carousel" [productData]="list.data"></app-draggingslide>
             </ng-template>
           </ngb-tab>
         </ngb-tabset>
