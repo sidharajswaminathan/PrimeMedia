@@ -11,7 +11,10 @@ import {SharedserviceService} from '../sharedservice.service';
 export class HomeComponent implements OnInit {
   config: Config;
   contentData: any;
-  constructor( private serviceCall: ServiceCallService, private sharedObj: SharedserviceService ) {
+  routUrl: Array<any> = ['/productlist'];
+  constructor(
+          private serviceCall: ServiceCallService,
+          private sharedObj: SharedserviceService) {
     this.sharedObj.globalObj.showBreadcrumb = false;
   }
   data: any = JSON.stringify(carouselData);
@@ -25,5 +28,4 @@ export class HomeComponent implements OnInit {
         this.contentData = data['data'];
       });
   }
-
 }
