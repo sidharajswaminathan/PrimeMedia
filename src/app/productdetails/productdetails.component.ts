@@ -4,6 +4,8 @@ import { PrimeModalComponent } from '../prime-modal/prime-modal.component';
 import {SharedserviceService} from '../sharedservice.service';
 import { LocalstorageService } from '../localstorage.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CeiboShare } from 'ng2-social-share';
+
 @Component({
   selector: 'app-productdetails',
   templateUrl: './productdetails.component.html',
@@ -17,6 +19,10 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
   prodDetails: any;
   sub: any;
   curId: any;
+
+  public repoUrl = 'https://www.advancepublishing-dev.com/ereadermedialibrary/#/eReaderPlayer?url=https://apmedialibrary.s3-accelerate.amazonaws.com/Media%20Library/ebooks/Companion%20Reader/The_Rock_1_1';
+  public imageUrl = 'http://apcourseplayer.s3-accelerate.amazonaws.com/phonicadventure/textbook1/images/apple.png';
+
   constructor(private sharedObj: SharedserviceService,
               private modalService: NgbModal,
               private localstorage: LocalstorageService,
