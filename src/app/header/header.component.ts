@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit, DoCheck {
       .subscribe((data: Config) => {
         this.sharedObj.globalObj.headerTabdata = data['data'];
         this.contentData = this.sharedObj.globalObj.headerTabdata;
-        this.resetCols();
+        this.sharedObj.resetTabs(this.contentData);
       });
   }
 
@@ -57,17 +57,6 @@ export class HeaderComponent implements OnInit, DoCheck {
     }
   }
 
-  /*Funtion to reset the collection property*/
-  resetCols() {
-    const localRefTothis = this;
-    _.each(this.contentData.mediaType, function(item) {
-      item.isSelected = false;
-      if (localRefTothis.localstorage.getLocaldata('currentCategory').toLocaleLowerCase() === item.name.toLocaleLowerCase()) {
-        item.isSelected =  true;
-      }
-    });
-  }
-
   headerNavigation(headerItem) {
     this.routUrl = ['/productlist'];
     /*[routerLink]="['/productlist']" [queryParams]="{ id: cnt.id}";*/
@@ -76,7 +65,7 @@ export class HeaderComponent implements OnInit, DoCheck {
     } else {
       this.router.navigate(this.routUrl, {queryParams: {id: headerItem.id}});
       this.localstorage.setLocaldata('currentCategory', headerItem.name);
-      this.resetCols();
+      this.sharedObj.resetTabs(this.contentData);
       /*headerItem.isSelected = true;*/
     }
   }
