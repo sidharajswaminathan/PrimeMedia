@@ -62,6 +62,7 @@
         border-radius: 5px;
         font-size: 18px;
         transition: 0.2s ease-in;
+        cursor: pointer;
         &:hover,
         &.active {
           background-color: #ffe3c1;
