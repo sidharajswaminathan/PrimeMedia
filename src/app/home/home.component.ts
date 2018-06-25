@@ -31,20 +31,8 @@ export class HomeComponent implements OnInit {
         this.config = data['data'];
         this.contentData = this.sharedObj.globalObj.headerTabdata;
         this.localstorage.removeLocaldata('currentCategory');
-        this.resetCols();
+        this.sharedObj.resetTabs(this.contentData);
       });
-  }
-
-  /*Funtion to reset the collection property*/
-  resetCols() {
-    const localRefTothis = this;
-    _.each(this.contentData.mediaType, function(item) {
-      item.isSelected = false;
-      if ((localRefTothis.localstorage.getLocaldata('currentCategory') && localRefTothis.localstorage.getLocaldata('currentCategory').toLocaleLowerCase()) === item.name.toLocaleLowerCase()) {
-        item.isSelected =  true;
-      }
-    });
-    console.log(this.sharedObj.globalObj.headerTabdata['mediaType'],  '  -> check the header data   ' , this.contentData);
   }
 
   headerNavigation(headerItem) {
@@ -54,7 +42,7 @@ export class HomeComponent implements OnInit {
     } else {
       this.router.navigate(this.routUrl, {queryParams: {id: headerItem.id}});
       this.localstorage.setLocaldata('currentCategory', headerItem.name);
-      this.resetCols();
+      this.sharedObj.resetTabs(this.contentData);
     }
   }
 }
