@@ -19,10 +19,9 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
   prodDetails: any;
   sub: any;
   curId: any;
-
   public repoUrl = 'https://www.advancepublishing-dev.com/ereadermedialibrary/#/eReaderPlayer?url=https://apmedialibrary.s3-accelerate.amazonaws.com/Media%20Library/ebooks/Companion%20Reader/The_Rock_1_1';
   public imageUrl = 'http://apcourseplayer.s3-accelerate.amazonaws.com/phonicadventure/textbook1/images/apple.png';
-
+  loggedIn: any;
   constructor(private sharedObj: SharedserviceService,
               private modalService: NgbModal,
               private localstorage: LocalstorageService,
@@ -49,39 +48,76 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
       .subscribe(params => {
         this.curId = params['id'];
       });
-    if (this.prodDetails && this.prodDetails.is_active) {
-      if (this.prodDetails.is_premium) {
-        this.prodDetailLabel = 'Buy Now';
+    this.authenticate();
+  }
+
+  authenticatePlayer() {
+    if (this.prodDetailLabel === 'Buy Now') {
+      if (!this.loggedIn) {
+        alert('you have to login first to continue further!');
       } else {
-        if (!this.prodDetails.is_premium && !this.prodDetails.is_featured) {
-          this.prodDetailLabel = 'Explore Now';
-        } else if (!this.prodDetails.is_premium && this.prodDetails.is_featured) {
-          this.prodDetailLabel = 'Register Now';
+        if (this.prodDetails.is_purchased) {
+          this.launchPlayer();
+        }
+      }
+    } else if (this.prodDetailLabel === 'Explore Now') {
+      this.launchPlayer();
+    } else if (this.prodDetailLabel === 'Register Now') {
+      if (!this.loggedIn) {
+        alert('you have to login first to continue further!');
+      } else {
+        if (this.prodDetails.is_purchased) {
+          this.launchPlayer();
         }
       }
     }
   }
 
-  launchPlayer() {
+  launchPlayer () {
     let mediaurl: any = '';
     const currentCategory: any = this.localstorage.getLocaldata('currentCategory');
-    if (currentCategory === 'Sommer time stories') {
-      mediaurl = 'http://sommerlearning.com/books/androcles-and-the-lion/';
-      window.open(mediaurl);
-    } else if (currentCategory === 'Phonics Adventure') {
-      if (this.prodDetails.category_name === 'eBooks' && this.prodDetailLabel === 'Explore Now') {
+    if (this.prodDetails.book_type.toLocaleLowerCase() === 'ebooks') {
+      if (currentCategory === 'Sommer time stories') {
+        mediaurl = 'http://sommerlearning.com/books/androcles-and-the-lion/';
+        window.open(mediaurl);
+      } else {
         mediaurl = 'https://www.advancepublishing-dev.com/ereadermedialibrary/#/eReaderPlayer';
         this.localstorage.setLocaldata('coursename', this.prodDetails.coursename);
         this.localstorage.setLocaldata('category_name', this.prodDetails.category_name);
         this.localstorage.setLocaldata('book_url', this.prodDetails.book_url);
         /* this.localstorage.setLocaldata('mediaUserid',this.prodDetails.mediaUserid);*/
         window.open(mediaurl + '/ereadermedialibrary/#/eReaderPlayer');
-      } else {
-        alert ('This is different type of product');
       }
-    } else if (currentCategory === 'Number success') {
-        alert('Page needs to be developed');
-        /*window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');*/
+    } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'videos' || this.prodDetails.book_type.toLocaleLowerCase() === 'songs') {
+      alert('Video/audio player will be launched!');
+    } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'worksheets') {
+      alert('Worksheet will be donwloaded!');
+    }
+  }
+
+  authenticate() {
+    if (this.prodDetails && this.prodDetails.is_active) {
+      if (this.prodDetails.is_premium) {
+        this.prodDetailLabel = 'Buy Now';
+      } else {
+        if (!this.prodDetails.is_premium && !this.prodDetails.is_featured) {
+          if (this.prodDetails.book_type.toLocaleLowerCase() === 'ebooks') {
+            this.prodDetailLabel = 'Explore Now';
+          } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'videos') {
+            this.prodDetailLabel = 'Play Now';
+          } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'songs') {
+            this.prodDetailLabel = 'Play Now';
+          } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'worksheets') {
+            this.prodDetailLabel = 'Download Now';
+          } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'games') {
+            this.prodDetailLabel = 'Play Now';
+          } else {
+            this.prodDetailLabel = 'Explore Now';
+          }
+        } else if (!this.prodDetails.is_premium && this.prodDetails.is_featured) {
+          this.prodDetailLabel = 'Register Now';
+        }
+      }
     }
   }
   ngOnDestroy() {

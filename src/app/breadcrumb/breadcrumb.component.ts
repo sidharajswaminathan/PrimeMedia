@@ -1,6 +1,7 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SharedserviceService } from '../sharedservice.service';
+import { LocalstorageService } from '../localstorage.service';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -12,11 +13,11 @@ export class BreadcrumbComponent implements OnInit, DoCheck {
   constructedUrl: any = [];
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private sharedValues: SharedserviceService) { }
+              private sharedValues: SharedserviceService,
+              private localstorage: LocalstorageService) { }
 
   ngOnInit() {
-    //this.breadcrumbList = this.sharedValues.globalObj.breadcrumbList;
-    /*this.breadcrumbList = this.urlArr._value;*/
+    /*this.localstorage.removeLocaldata('currentCategory');*/
   }
 
   ngDoCheck() {
