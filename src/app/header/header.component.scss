@@ -64,10 +64,11 @@
         transition: 0.2s ease-in;
         cursor: pointer;
         &:hover,
-        &:active {
+        &.active {
           background-color: #ffe3c1;
           color: #333;
           text-decoration: none;
+          cursor: pointer;
         }
       }
     }
