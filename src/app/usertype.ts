@@ -17,6 +17,7 @@ export class sharedValues{
   breadcrumbList: Array<any>;
   showBreadcrumb: boolean;
   searchTxt: string;
+  headerTabdata: Array<any>;
 }
 
 export class carouselDragData{

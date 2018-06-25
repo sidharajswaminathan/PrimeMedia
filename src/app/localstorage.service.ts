@@ -14,6 +14,9 @@ export class LocalstorageService {
   getLocaldata(key) {
     return localStorage.getItem(key);
   }
+  removeLocaldata(key) {
+    return localStorage.removeItem(key);
+  }
 
 
 }

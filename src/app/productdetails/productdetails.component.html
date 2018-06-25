@@ -12,7 +12,7 @@
               <h3 class="booktitle ng-binding ng-scope" ng-if="bookDetails.coursename">Androcles and the Lion</h3>
               <h5 class="author-title ng-scope" ng-if="bookDetails.author">Author: <span class="ng-binding">Carl Sommer</span></h5>
               <div class="bookdetail-btn ng-scope" ng-if="!$root.appLoader &amp;&amp; action" ng-disabled="btnDisable" aria-disabled="true" disabled="disabled">
-                         <a id="a_readbook_id" (click)="launchPlayer()" class="ng-binding ng-scope">{{prodDetailLabel}}</a>
+                         <a id="a_readbook_id" (click)="authenticatePlayer()" class="ng-binding ng-scope">{{prodDetailLabel}}</a>
                     <app-video-audio-modal></app-video-audio-modal>
                 <app-audio></app-audio>
               </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { NgxCarousel } from 'ngx-carousel';
 import { _ } from 'underscore';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,7 +12,6 @@ import { LocalstorageService } from '../localstorage.service';
   styleUrls: ['./draggingslide.component.scss']
 })
 export class DraggingslideComponent implements OnInit {
-
   @Input() shareData: any;
   @Input() productData: any;
   sharedValues: any;
@@ -25,15 +24,12 @@ export class DraggingslideComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private sharedObj: SharedserviceService,
-    private localstorage: LocalstorageService) { }
+    private localstorage: LocalstorageService) {  }
   setData: any[];
   lastObject: object = carouselDragData;
+
   ngOnInit() {
-
-    this.carouselTileItems = this.productData;
-
-
-
+    this.carouselTileItems = this.productData.data;
     this.carouselTile = {
       grid: {xs: 2, sm: 3, md: 3, lg: 5, all: 0},
       slide: 2,
@@ -48,12 +44,12 @@ export class DraggingslideComponent implements OnInit {
     };
   }
 
-
   /*button to change edit and save view*/
   editCarousel() {
     this.editView = !this.editView;
     this.changebutton = this.changebutton === 'edit' ? 'save' : 'edit';
   }
+
   /*method to delete carousel obj*/
   deleteCarouselObj(obj) {
     console.log(obj.id);
@@ -61,6 +57,7 @@ export class DraggingslideComponent implements OnInit {
       return x.id !== obj.id;
     });
   }
+
   /*goto product details*/
   goToProductDetails (idx) {
     if ( idx.id === '24') { this.routUrl = ['productdetail'];
@@ -70,9 +67,6 @@ export class DraggingslideComponent implements OnInit {
     this.localstorage.setLocaldata('prodDetail', JSON.stringify(idx));
     this.router.navigate(this.routUrl,{ queryParams: { id: idx.id } });
     this.localstorage.setLocaldata('currentCategory', idx.name);
-    if (idx.name === 'Number success') {
-      window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');
-    }
     this.sharedObj.globalObj.showBanner = false;
     this.sharedValues = this.sharedObj;
     console.log(this.sharedValues);

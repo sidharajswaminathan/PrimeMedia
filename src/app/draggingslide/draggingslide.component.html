@@ -1,11 +1,11 @@
 <div class="carouselSliderCont">
-    <h3 class="slideTitle">{{shareData.title}} <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">See more</a></h3>
+    <h3 class="slideTitle">{{productData.title}} <a [routerLink]="['/productdetail']" *ngIf="productData.data.length && productData.title> 25">See more</a></h3>
     <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}" class="editsaveBtn">
      <i class="fa" [ngClass] = "{'fa-pencil':changebutton == 'edit','fa-floppy-o':changebutton == 'save'}" ></i>
     </button>
    <!-- <a [routerLink]="['/productdetail']" *ngIf="carouselTileItems.length > 25">see more</a>-->
     <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad($event)">
-        <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+        <ngx-tile NgxCarouselItem *ngFor="let Tile of productData.data">
             <div style="display: inline-block; width: 100%; cursor: pointer; touch-action: pan-y;position:relative;" *ngIf="Tile.is_active">
                 <button *ngIf="editView" (click)="deleteCarouselObj(Tile)" class="close-icon"><i class="fa fa-times-circle"></i></button>
 
