@@ -57,7 +57,7 @@ h1{
     width: 90%;
     margin: auto;
     }
-    
+
     .carouselSliderCont {
       width: 95%;
       margin: auto;
@@ -88,14 +88,26 @@ h1{
             color: #2a254c;
             font-weight: bold;
         }
-      }     
+      }
+      .carousel-item {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        touch-action: pan-y;
+      }
+      .carousel-img, .see-more {
+        pointer-events: none;
+        touch-action: pan-y;
+        width: 100%;
+        height: auto;
+      }
     }
-    
+
     .tile img{
       width: auto;
       height: 400px;
     }
-    
+
     .tile{
       display: inline-block;
       width: 100%;
