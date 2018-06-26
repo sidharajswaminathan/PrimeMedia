@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VideoAudioModalComponent } from './video-audio-modal.component';
 
 describe('VideoAudioModalComponent', () => {
@@ -8,6 +8,7 @@ describe('VideoAudioModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [NgbModule.forRoot()],
       declarations: [ VideoAudioModalComponent ]
     })
     .compileComponents();

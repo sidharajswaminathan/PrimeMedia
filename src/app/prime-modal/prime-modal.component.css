@@ -12,4 +12,29 @@
 label.checkbox-inline > input {
     margin-right: 9px;
 }
-
+.checkbox_customize .checkbox-inline > input[type=checkbox]
+{
+  margin-right:10px;position:relative;top:2px;
+}
+.btn.btn-video {
+  display: inline-block;
+  width: 115px;
+  height: 32px;
+  font: 14px "MyriadPro-Bold";
+  margin-right:10px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #1ea6dd;
+  text-align: center;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  border: 0;
+  margin-bottom:10px;
+}
+.btn.btn-video:hover,  .btn.btn-video.active, .btn.btn-video:focus{
+  background: #218db9;
+  color: #fff;
+  text-decoration: none;
+  box-shadow:none;
+}
