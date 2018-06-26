@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit, DoCheck {
       .subscribe((data: Config) => {
         this.sharedObj.globalObj.headerTabdata = data['data'];
         this.contentData = this.sharedObj.globalObj.headerTabdata;
-        this.sharedObj.resetTabs(this.contentData);
+        this.sharedObj.resetTabs(this.contentData,false);
       });
   }
 
@@ -65,7 +65,7 @@ export class HeaderComponent implements OnInit, DoCheck {
     } else {
       this.router.navigate(this.routUrl, {queryParams: {id: headerItem.id}});
       this.localstorage.setLocaldata('currentCategory', headerItem.name);
-      this.sharedObj.resetTabs(this.contentData);
+      this.sharedObj.resetTabs(this.contentData,false);
       /*headerItem.isSelected = true;*/
     }
   }
