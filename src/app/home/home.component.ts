@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
         this.config = data['data'];
         this.contentData = this.sharedObj.globalObj.headerTabdata;
         this.localstorage.removeLocaldata('currentCategory');
-        this.sharedObj.resetTabs(this.contentData);
+        this.sharedObj.resetTabs(this.contentData,false);
       });
   }
 
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     } else {
       this.router.navigate(this.routUrl, {queryParams: {id: headerItem.id}});
       this.localstorage.setLocaldata('currentCategory', headerItem.name);
-      this.sharedObj.resetTabs(this.contentData);
+      this.sharedObj.resetTabs(this.contentData,false);
     }
   }
 }
