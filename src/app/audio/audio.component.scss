@@ -22,3 +22,7 @@ margin-right:10px;
     text-decoration: none;
     box-shadow:none;
 }
+
+@media(max-width: 767px) {
+  .checkVals ul li{width:50%;}
+}
