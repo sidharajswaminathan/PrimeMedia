@@ -136,5 +136,13 @@
 
 .bold{font-weight:bold;}
 
+/* Resonsive style */
+@media(max-width: 767px) {
+  .productdetail_individual_screen {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 
 
