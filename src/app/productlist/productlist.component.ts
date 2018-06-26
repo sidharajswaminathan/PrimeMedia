@@ -26,7 +26,7 @@ export class ProductlistComponent implements OnInit, OnDestroy {
 
     this.sharedObj.globalObj.breadcrumbList = [
         {'url': '/home', 'statename': 'Home', 'param': ''},
-        {'url': '', 'statename': 'ProductList', 'param': ''}
+        {'url': '', 'statename': 'Product list', 'param': ''}
       ];
     this.sharedObj.globalObj.showBreadcrumb = true;
 
