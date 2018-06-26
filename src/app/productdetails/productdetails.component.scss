@@ -36,13 +36,16 @@
     height: 32px;
     font: 14px "MyriadPro-Bold";
     line-height: 34px;
-    color: #fff;
+    color: #fff!important;
     text-transform: uppercase;
     border-radius: 5px;
     background: #1ea6dd;
     text-align: center;
     transition: 0.2s ease-in;
     cursor: pointer;
+    vertical-align: top;
+    margin-bottom: 15px;
+    margin-right:10px;
     &:hover {
       background: #218db9;
       color: #fff;
