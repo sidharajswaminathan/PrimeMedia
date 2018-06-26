@@ -83,7 +83,7 @@ export class DraggingslideComponent implements OnInit {
     this.carouselTileItems = _.filter(this.carouselTileItems, function(x, count) {
       return count < 25;
     })
-    this.carouselTileItems.push(this.lastObject = {'src': '../assets/images/img1.png', 'id': '26'});
+    this.carouselTileItems.push(this.lastObject = {'src': 'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/img1.png', 'id': '26'});
 
   }
 
