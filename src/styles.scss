@@ -170,67 +170,93 @@ app-footer {
 }
 
 .pagination {
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 0;
-    list-style: none;
-    border-radius: .25rem;
-    align-items: center;
-    justify-content: center;
-    margin:1em 0;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+	border-radius: .25rem;
+	align-items: center;
+	justify-content: center;
+	margin: 1em 0;
+	.page-item {
+		position: relative;
+		.page-link {
+			width: 40px;
+			height: 40px;
+			margin: 0 8px;
+			font-size: 18px;
+			padding: 6px .75rem;
+			line-height: 1.42857;
+			color: #999 !important;
+			border-radius: 50%;
+			border-color: #b4b3b3;
+			border-width: 2px;
+			background-color: #fff;
+			text-align: center;
+			position: relative;
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+		&:last-child {
+			.page-link {
+				border-top-right-radius: 50%;
+				border-bottom-right-radius: 50%;
+				span {
+					display: none;
+				}
+				&:after {
+					content: "\f101";
+					font-family: FontAwesome;
+					font-weight: normal;
+					font-style: normal;
+					text-decoration: none;
+					position: absolute;
+					top: 8%;
+					font-size: 22px;
+					left: 34%;
+				}
+			}
+		}
+		&:first-child {
+			.page-link {
+				span {
+					display: none;
+				}
+				border-top-left-radius: 50%;
+				border-bottom-left-radius: 50%;
+				&:after {
+					content: "\f100";
+					font-family: FontAwesome;
+					font-weight: normal;
+					font-style: normal;
+					text-decoration: none;
+					position: absolute;
+					top: 8%;
+					font-size: 22px;
+					left: 30%;
+				}
+			}
+		}
+		&:hover {
+			.page-link {
+				z-index: 1;
+				background-color: #eeeeee;
+				border-color: #ddd;
+			}
+		}
+	}
+	.page-item.active {
+		.page-link {
+			z-index: 1;
+			color: #fff !important;
+			background-color: #00b171;
+			border-color: #00b171;
+		}
+	}
 }
-.pagination .page-item{position:relative;}
-.pagination .page-item .page-link {
-       width: 40px;
-    height: 40px;
-    margin: 0 8px;
-    font-size: 18px;
-    padding: 6px .75rem;
-    line-height: 1.42857;
-    color: #999 !important;
-    border-radius: 50%;
-    border-color: #b4b3b3;
-    border-width: 2px;
-    background-color: #fff;
-    text-align: center;position:relative;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-.pagination .page-item:last-child .page-link{
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-.pagination .page-item:last-child .page-link span, .pagination .page-item:first-child .page-link span{display:none;}
-.pagination .page-item:first-child .page-link{border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;}
-.pagination .page-item:first-child .page-link:after{content: "\f100";
-   font-family: FontAwesome;
-   font-weight: normal;
-   font-style: normal;
-    text-decoration:none;position:absolute;top: 8%;
-    font-size: 22px;
-    left: 30%;}
-.pagination .page-item:last-child .page-link:after{content: "\f101";
-   font-family: FontAwesome;
-   font-weight: normal;
-   font-style: normal;
-    text-decoration:none;position:absolute;top: 8%;
-    font-size: 22px;
-    left: 34%;}
 
-.pagination .page-item:hover .page-link {
-    z-index: 1;
- background-color: #eeeeee;
-    border-color: #ddd;
-}
-.pagination .page-item.active .page-link {
-    z-index: 1;
-    color: #fff !important;
-    background-color: #00b171;
-    border-color: #00b171;
-}
 
 @media only screen and (max-width: 650px)
  {
