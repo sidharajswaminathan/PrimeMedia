@@ -28,7 +28,7 @@ export class ServiceCallService {
   }
   /* get method local http request*/
   localService(url): Observable<Config> {
-    this.localUrl = '../assets/json-files/' + url;
+    this.localUrl = 'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/json-files/' + url;
     return this.http.get<any>( this.localUrl );
   }
   getConfigResponse(): Observable<HttpResponse<Config>> {
