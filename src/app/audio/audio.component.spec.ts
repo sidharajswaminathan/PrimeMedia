@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AudioComponent } from './audio.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 describe('AudioComponent', () => {
   let component: AudioComponent;
@@ -8,7 +9,8 @@ describe('AudioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AudioComponent ]
+      declarations: [ AudioComponent ],
+      imports: [NgbModule.forRoot()]
     })
     .compileComponents();
   }));

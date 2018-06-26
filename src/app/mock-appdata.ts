@@ -76,5 +76,32 @@ export  const productAllInfo: productAllinfoType[] = [
   },
   {
     'title': 'Ebook12', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook13', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook14', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook15', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook16', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook17', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook18', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook19', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook20', 'description': 'XYZ'
+  },
+  {
+    'title': 'Ebook21', 'description': 'XYZ'
   }
 ]
