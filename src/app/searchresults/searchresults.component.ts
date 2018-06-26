@@ -28,7 +28,7 @@ export class SearchresultsComponent implements OnInit, DoCheck {
   }
 
   ngOnInit() {
-    this.loaclCall.localService('book-list.json').subscribe((data: any) => {
+    this.loaclCall.localService('https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/json-files/book-list.json').subscribe((data: any) => {
       this.arrBooks = data.searchResults;
     });
   }
