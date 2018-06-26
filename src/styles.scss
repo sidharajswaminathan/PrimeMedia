@@ -267,6 +267,9 @@ app-footer {
     margin: 1em auto!important;
 }
 }
+@media(max-width: 767px) {
+  .checkVals ul li{width:50%;}
+}
 
 @media only screen and (max-width: 414px){
 .pagination .page-item .page-link {
@@ -287,9 +290,7 @@ app-footer {
   .removeposition{position:static!important;}
   .checkVals ul li{width:100%;}
 }
-@media(max-width: 767px) {
-  .checkVals ul li{width:50%;}
-}
+
 .checkbox_customize .checkbox-inline > input[type=checkbox]
 {
   margin-right:10px;position:relative;top:2px;
