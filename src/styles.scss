@@ -115,13 +115,18 @@ ul {
     }
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .collection-tabs {
     .nav-tabs {
+      display: block;
+      font-size: 0;
+      white-space: nowrap;
+      overflow-x: auto;
       .nav-item {
+        display: inline-block;
         .nav-link {
-          padding: 0.3rem 1.5rem;
-          font-size: 18px;
+          padding: 0.2rem 0.9rem;
+          font-size: 14px;
         }
       }
     }
