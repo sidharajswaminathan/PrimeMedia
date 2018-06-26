@@ -30,6 +30,7 @@ import { GridViewComponent } from './grid-view/grid-view.component';
 import { VideoAudioModalComponent } from './video-audio-modal/video-audio-modal.component';
 import { AudioComponent } from './audio/audio.component';
 import { FilterPipe } from './pipe-filter';
+import { CeiboShare } from 'ng2-social-share';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FilterPipe } from './pipe-filter';
     SearchresultsComponent,
      VideoAudioModalComponent,
     AudioComponent,
-    FilterPipe
+    FilterPipe,
+    CeiboShare
   ],
   entryComponents: [ PrimeModalComponent ],
   imports: [

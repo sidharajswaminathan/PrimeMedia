@@ -19,6 +19,7 @@ export class MycollectionsComponent implements OnInit {
     config.justify = 'start';
     config.type = 'tabs';
     this.sharedObj.globalObj.showBreadcrumb = false;
+    this.sharedObj.resetTabs(this.sharedObj.globalObj.headerTabdata, true );
   }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, DoCheck, OnDestroy, OnInit} from '@angular/core';
 import { carouselData } from '../mock-appdata';
 import { ActivatedRoute, Router } from '@angular/router';
 import {carouselDragData} from '../usertype';
@@ -44,19 +44,17 @@ export class ProductlistComponent implements OnInit, OnDestroy {
     this.sub = this.route
       .queryParams
       .subscribe(params => {
-          console.log(params['id']);
           this.curId = params['id'];
             this.serviceCall.postMethod('medialibv2.productlist', { 'id' : this.curId}).subscribe((data: Config) => {
                   this.carouselData =  data['data'].content.contents[0].data;
                   this.loopData = data['data'].content.contents;
-                  console.log(this.loopData,'this.loopData')
                   this.isloaded = true;
-                  console.log(data['data'].content.categoryName, 'productList' , this.carouselData);
                   this.carousel = {
                     'configuration': {'deleteoption': false, 'editsave': false, 'itemevent': true},
                     'data': this.carouselData,
-                    'title': data['data'].content.categoryName
+                    'title': data['data'].content.categoryName.toLocaleLowerCase()
                   };
+              /*this.carousel.title = this.carousel.title.toLocaleLowerCase();*/
           });
             this.localstorage.setLocaldata('catId', this.curId);
       });

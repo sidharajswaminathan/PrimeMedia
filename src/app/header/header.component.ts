@@ -1,9 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, DoCheck, Input, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {SharedserviceService} from '../sharedservice.service';
 import {LocalstorageService} from '../localstorage.service';
 import { ServiceCallService } from '../service-call.service';
 import * as $ from 'jquery';
+import { _ } from 'underscore';
 import {Config} from '../config';
 
 @Component({
@@ -11,7 +12,7 @@ import {Config} from '../config';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, DoCheck {
 
   @Input() shareData: any;
   routUrl: Array<any> = ['/productlist'];
@@ -28,9 +29,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.serviceCall.getConfig('medialibv2.productcategories')
       .subscribe((data: Config) => {
-        console.log( data['data'] );
-        this.contentData = data['data'];
+        this.sharedObj.globalObj.headerTabdata = data['data'];
+        this.contentData = this.sharedObj.globalObj.headerTabdata;
+        this.sharedObj.resetTabs(this.contentData);
       });
+  }
+
+  ngDoCheck() {
+    this.contentData = this.sharedObj.globalObj.headerTabdata;
   }
 
   searchInput(event) {
@@ -52,11 +58,15 @@ export class HeaderComponent implements OnInit {
   }
 
   headerNavigation(headerItem) {
+    this.routUrl = ['/productlist'];
     /*[routerLink]="['/productlist']" [queryParams]="{ id: cnt.id}";*/
-    this.router.navigate(this.routUrl,{ queryParams: { id: headerItem.id } });
-    this.localstorage.setLocaldata('currentCategory', headerItem.name);
     if (headerItem.name === 'Number success') {
       window.open('https://www.advancepublishing-dev.com/sommer_learning/publicsite/numbersuccess');
+    } else {
+      this.router.navigate(this.routUrl, {queryParams: {id: headerItem.id}});
+      this.localstorage.setLocaldata('currentCategory', headerItem.name);
+      this.sharedObj.resetTabs(this.contentData);
+      /*headerItem.isSelected = true;*/
     }
   }
 }
