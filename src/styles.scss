@@ -146,8 +146,8 @@ ul {
     padding: 0!important;
 }
 .modal-dialog{
-    width: 45%!important;
-    max-width: 45%!important;
+       width: 750px !important;
+    max-width: 750px !important;
 }
 .ngxcarouselPointDefault {
     display: none;
@@ -259,8 +259,13 @@ app-footer {
 		}
 	}
 }
-
-
+@media only screen and (max-width: 768px)
+ {
+ .modal-dialog{
+   width: 80% !important;
+    max-width: 80% !important;
+	}
+}
 @media only screen and (max-width: 650px)
  {
 .pagination .page-item .page-link {
@@ -277,6 +282,11 @@ app-footer {
      .pagination .page-item:last-child .page-link:after {
       top: 5%;
     font-size: 18px;
+}
+.modal-dialog{
+     width: 80% !important;
+    max-width: 80% !important;
+    margin: 1em auto!important;
 }
 }
 
