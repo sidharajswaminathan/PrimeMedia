@@ -28,7 +28,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-menu">
-      <ul class="container-fluid navbar-nav mr-auto d-flex flex-column flex-md-row justify-content-between">
+      <ul class="container-fluid navbar-nav mr-auto">
         <li class="nav-item" *ngFor="let cnt of contentData.mediaType" (click)="headerNavigation(cnt)">
           <a class="nav-link" [ngClass]="{'active': cnt.isSelected}">{{cnt.name | uppercase}}</a>
         </li>
