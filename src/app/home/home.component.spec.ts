@@ -24,4 +24,7 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should be Number success', () => {
+    console.log(component);
+  });
 });
