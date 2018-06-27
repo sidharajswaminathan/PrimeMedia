@@ -26,3 +26,30 @@
   }
 }
 
+/* Media query */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .search-result-wrap {
+    .book-lists {
+      li {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-result-wrap {
+    .book-lists {
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+
