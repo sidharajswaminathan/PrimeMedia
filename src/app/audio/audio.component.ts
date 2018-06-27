@@ -1,7 +1,7 @@
 
 
 
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,7 +12,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class AudioComponent {
   closeResult: string;
-
+  @Input() actionName: string;
   constructor(private modalService: NgbModal) {}
 
   open(content) {

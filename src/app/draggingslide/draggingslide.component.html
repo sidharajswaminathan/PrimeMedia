@@ -8,7 +8,7 @@
         <ngx-tile NgxCarouselItem *ngFor="let Tile of productData.data">
             <div class="carousel-item" *ngIf="Tile.is_active">
                 <button *ngIf="editView" (click)="deleteCarouselObj(Tile)" class="close-icon"><i class="fa fa-times-circle"></i></button>
-
+                {{Tile.book_type}}
                 <div class="carousel-item" (click)="shareData.configuration.itemevent && goToProductDetails(Tile)">
                     <img class="carousel-img" src="{{Tile.src}}" id="{{Tile.id}}" alt="" *ngIf="Tile.id != '26'">
                     <div class="see-more" *ngIf="Tile.id == '26'"><p style="position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 30px; word-break: break-all; text-align: center;">See more</p></div>

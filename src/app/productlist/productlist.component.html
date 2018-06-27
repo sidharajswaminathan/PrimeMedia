@@ -11,7 +11,7 @@
           </ngb-tab>
           <ngb-tab title="By Age">
             <ng-template ngbTabContent>
-              <app-draggingslide *ngFor="let list of loopData | slice:1:3 " [shareData]="carousel" [productData]="list"></app-draggingslide>
+              <app-draggingslide *ngFor="let list of loopData | slice:0:10 " [shareData]="carousel" [productData]="list"></app-draggingslide>
             </ng-template>
           </ngb-tab>
         </ngb-tabset>
@@ -31,7 +31,7 @@
   <!--sommer time stories template ends here-->
   <!--Phonics adventrue template starts here-->
   <div *ngIf="carousel.title == 'phonics adventure'">
-    <app-draggingslide *ngFor="let list of loopData | slice:1:21 " [shareData]="carousel" [productData]="list"></app-draggingslide>
+    <app-draggingslide *ngFor="let list of loopData | slice:0:10 " [shareData]="carousel" [productData]="list"></app-draggingslide>
   </div>
   <!--Phonics adventrue template ends here-->
   <!--Writing success template starts here-->
