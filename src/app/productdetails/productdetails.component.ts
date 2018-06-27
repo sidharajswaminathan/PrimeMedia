@@ -60,7 +60,7 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
           this.launchPlayer();
         }
       }
-    } else if (this.prodDetailLabel === 'Explore Now') {
+    } else if (this.prodDetailLabel === 'Explore Now' || this.prodDetailLabel === 'Play Now' || this.prodDetailLabel === 'Download Now') {
       this.launchPlayer();
     } else if (this.prodDetailLabel === 'Register Now') {
       if (!this.loggedIn) {
@@ -91,7 +91,11 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
     } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'videos' || this.prodDetails.book_type.toLocaleLowerCase() === 'songs') {
       alert('Video/audio player will be launched!');
     } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'worksheets') {
-      alert('Worksheet will be donwloaded!');
+      /*alert('Worksheet will be donwloaded!');*/
+      window.open('http://spiglobaltestingbucket.s3.amazonaws.com/Testing/assets/unit1/documents/B10U1P10.pdf');
+    } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'games') {
+      /*alert('games page will be lauched!');*/
+      window.open('https://www.advancepublishing-dev.com/courseplayer');
     }
   }
 
