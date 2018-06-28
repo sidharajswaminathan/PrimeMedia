@@ -16,6 +16,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Chocolate Bar Demo';
+  src: url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/ChocolateBarDemo.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mf-sippin-on-sunshine';
+  src: url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/mf-sippin-on-sunshine.eot");
+  src: url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/mf-sippin-on-sunshine.woff2") format("woff2"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/mf-sippin-on-sunshine.woff") format("woff"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/mf-sippin-on-sunshine.svg#Montserrat-Regular") format("svg"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/mf-sippin-on-sunshine.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'MyriadPro-Regular',Arial!important;
 }
@@ -25,6 +40,14 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.modal-dialog {
+  border-radius: 10px;
+  .modal-content {
+    border: 0;
+  }
+}
+
 .main-wrapper {
   padding: 20px 6%;
 }

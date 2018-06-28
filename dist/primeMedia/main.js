@@ -202,12 +202,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pipe_filter__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pipe-filter */ "./src/app/pipe-filter.ts");
 /* harmony import */ var ng2_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ng2-social-share */ "./node_modules/ng2-social-share/src/ng2-social-share.js");
 /* harmony import */ var ng2_social_share__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(ng2_social_share__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var _login_modal_login_modal_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./login-modal/login-modal.component */ "./src/app/login-modal/login-modal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -272,9 +274,10 @@ var AppModule = /** @class */ (function () {
                 _video_audio_modal_video_audio_modal_component__WEBPACK_IMPORTED_MODULE_29__["VideoAudioModalComponent"],
                 _audio_audio_component__WEBPACK_IMPORTED_MODULE_30__["AudioComponent"],
                 _pipe_filter__WEBPACK_IMPORTED_MODULE_31__["FilterPipe"],
-                ng2_social_share__WEBPACK_IMPORTED_MODULE_32__["CeiboShare"]
+                ng2_social_share__WEBPACK_IMPORTED_MODULE_32__["CeiboShare"],
+                _login_modal_login_modal_component__WEBPACK_IMPORTED_MODULE_33__["LoginModalComponent"]
             ],
-            entryComponents: [_prime_modal_prime_modal_component__WEBPACK_IMPORTED_MODULE_26__["PrimeModalComponent"]],
+            entryComponents: [_prime_modal_prime_modal_component__WEBPACK_IMPORTED_MODULE_26__["PrimeModalComponent"], _login_modal_login_modal_component__WEBPACK_IMPORTED_MODULE_33__["LoginModalComponent"]],
             imports: [
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -975,7 +978,7 @@ var GridViewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row header-top\">\r\n      <div class=\"col-md-2\"><a class=\"logo\" href=\"https://www.advancepublishing-stg.com/sommer_learning/publicsite/sommerlearning\" target=\"_blank\"><img src=\"https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/sommer-learning-logo.png\"/></a></div>\r\n      <div class=\"col-md-3 offset-md-3\">\r\n        <input (input) = \"searchText = $event.target.value\" (keypress)=\" searchInput($event)\" type=\"search\" class=\"form-control\" id=\"search\" placeholder=\"Search\">\r\n        <a (click)=\"searchResult($event)\" class=\"search-icon\"><i></i></a>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <ul class=\"user-collections float-right\">\r\n\r\n          <!--<li><a href=\"#\"><i class=\"fa fa-question\"></i> <span> Help </span> </a></li>\r\n          <li><a href=\"#\"><i class=\"fa fa-lock\"></i> <span> Login </span> </a></li>\r\n          <li><a href=\"#\"><i class=\"fa fa-pencil\"></i> <span> Sign Up </span> </a></li> -->\r\n          <!-- After logged in -->\r\n            <li><a routerLink=\"/mycollections\"><i class=\"fa fa-files-o\"></i> <span> My Collections </span> </a></li>\r\n            <li><a href=\"#\"><i class=\"fa fa-heart\"></i> <span> Favorites </span> </a></li>\r\n            <!--<li><a href=\"#\"><i class=\"fa fa-user\"></i> <span> My Profile </span> </a></li> -->\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <nav class=\"navbar navbar-expand-lg\">\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-menu\" aria-controls=\"navbar-menu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon fa fa-bars\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbar-menu\">\r\n      <ul class=\"container-fluid navbar-nav mr-auto\">\r\n        <li class=\"nav-item\" *ngFor=\"let cnt of contentData.mediaType\" (click)=\"headerNavigation(cnt)\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': cnt.isSelected}\">{{cnt.name | uppercase}}</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n\r\n</header>\r\n"
+module.exports = "<header>\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row header-top\">\r\n      <div class=\"col-md-2\"><a class=\"logo\" href=\"https://www.advancepublishing-stg.com/sommer_learning/publicsite/sommerlearning\" target=\"_blank\"><img src=\"https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/sommer-learning-logo.png\"/></a></div>\r\n      <div class=\"col-md-3 offset-md-3\">\r\n        <input (input) = \"searchText = $event.target.value\" (keypress)=\" searchInput($event)\" type=\"search\" class=\"form-control\" id=\"search\" placeholder=\"Search\">\r\n        <a (click)=\"searchResult($event)\" class=\"search-icon\"><i></i></a>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <ul class=\"user-collections float-right\">\r\n\r\n          <!--<li><a href=\"#\"><i class=\"fa fa-question\"></i> <span> Help </span> </a></li>-->\r\n          <li (click)=\"openVerticallyCentered()\"><a href=\"#\"><i class=\"fa fa-lock\"></i> <span> Login </span> </a></li>\r\n          <li (click)=\"openVerticallyCentered()\"><a href=\"#\"><i class=\"fa fa-pencil\"></i> <span> Sign Up </span> </a></li>\r\n          <!-- After logged in -->\r\n            <li><a routerLink=\"/mycollections\"><i class=\"fa fa-files-o\"></i> <span> My Collections </span> </a></li>\r\n            <li><a href=\"#\"><i class=\"fa fa-heart\"></i> <span> Favorites </span> </a></li>\r\n            <!--<li><a href=\"#\"><i class=\"fa fa-user\"></i> <span> My Profile </span> </a></li> -->\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <nav class=\"navbar navbar-expand-lg\">\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-menu\" aria-controls=\"navbar-menu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon fa fa-bars\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbar-menu\">\r\n      <ul class=\"container-fluid navbar-nav mr-auto\">\r\n        <li class=\"nav-item\" *ngFor=\"let cnt of contentData.mediaType\" (click)=\"headerNavigation(cnt)\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': cnt.isSelected}\">{{cnt.name | uppercase}}</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n\r\n</header>\r\n"
 
 /***/ }),
 
@@ -1005,6 +1008,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sharedservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sharedservice.service */ "./src/app/sharedservice.service.ts");
 /* harmony import */ var _localstorage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../localstorage.service */ "./src/app/localstorage.service.ts");
 /* harmony import */ var _service_call_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service-call.service */ "./src/app/service-call.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _login_modal_login_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../login-modal/login-modal.component */ "./src/app/login-modal/login-modal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1019,13 +1024,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(serviceCall, route, router, sharedObj, localstorage) {
+    function HeaderComponent(serviceCall, modalService, route, router, sharedObj, localstorage) {
         this.serviceCall = serviceCall;
+        this.modalService = modalService;
         this.route = route;
         this.router = router;
         this.sharedObj = sharedObj;
         this.localstorage = localstorage;
+        this.showModal = false;
         this.routUrl = ['/productlist'];
     }
     HeaderComponent.prototype.ngOnInit = function () {
@@ -1036,6 +1045,11 @@ var HeaderComponent = /** @class */ (function () {
             _this.contentData = _this.sharedObj.globalObj.headerTabdata;
             _this.sharedObj.resetTabs(_this.contentData, false);
         });
+    };
+    HeaderComponent.prototype.openVerticallyCentered = function () {
+        this.showModal = true;
+        var modalRef = this.modalService.open(_login_modal_login_modal_component__WEBPACK_IMPORTED_MODULE_6__["LoginModalComponent"]);
+        modalRef.componentInstance.name = 'login modal';
     };
     HeaderComponent.prototype.ngDoCheck = function () {
         this.contentData = this.sharedObj.globalObj.headerTabdata;
@@ -1080,6 +1094,7 @@ var HeaderComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/header/header.component.scss")]
         }),
         __metadata("design:paramtypes", [_service_call_service__WEBPACK_IMPORTED_MODULE_4__["ServiceCallService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _sharedservice_service__WEBPACK_IMPORTED_MODULE_2__["SharedserviceService"],
@@ -1298,6 +1313,76 @@ var LocalstorageService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], LocalstorageService);
     return LocalstorageService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/login-modal/login-modal.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/login-modal/login-modal.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"login-wrap\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n  <div class=\"modal-body\">\n\n    <div class=\"login-left\">\n      <div class=\"md-toolbar-tools\">\n        <label class=\"learninggrp-logo\"></label>\n        <h2>Have Fun Learning</h2>\n        <span>Join Today</span>\n      </div>\n    </div>\n\n    <div class=\"login-right\">\n      <form>\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\" class=\"form-control\" id=\"name\" required>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"alterEgo\">Alter Ego</label>\n          <input type=\"text\" class=\"form-control\" id=\"alterEgo\">\n        </div>\n\n        <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n\n      </form>\n    </div>\n\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/login-modal/login-modal.component.scss":
+/*!********************************************************!*\
+  !*** ./src/app/login-modal/login-modal.component.scss ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".login {\n  background: #000; }\n\n.login-wrap {\n  width: 970px;\n  min-height: 564px;\n  overflow: visible;\n  padding: 25px;\n  max-height: inherit;\n  border-radius: 10px;\n  margin: 0 auto;\n  background: #77d5ef;\n  background: linear-gradient(to bottom, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%); }\n\n.login-left {\n  display: block;\n  float: left;\n  width: 48.5%;\n  background: none !important;\n  margin-top: 90px;\n  height: auto !important; }\n\n.login-left h2 {\n    color: #db3c70 !important;\n    font-size: 40px;\n    font-weight: normal;\n    font-family: \"Chocolate Bar Demo\" !important;\n    margin-bottom: 10px;\n    text-transform: uppercase; }\n\n.login-left span {\n    font-size: 44px;\n    font-family: \"mf-sippin-on-sunshine\" !important;\n    font-weight: normal;\n    color: #175a6d; }\n\n.login-right {\n  position: relative;\n  float: left;\n  width: 51.5%;\n  background: #fff;\n  border-radius: 6px;\n  z-index: 1;\n  overflow: inherit;\n  top: 0; }\n"
+
+/***/ }),
+
+/***/ "./src/app/login-modal/login-modal.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/login-modal/login-modal.component.ts ***!
+  \******************************************************/
+/*! exports provided: LoginModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginModalComponent", function() { return LoginModalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LoginModalComponent = /** @class */ (function () {
+    function LoginModalComponent(activeModal) {
+        this.activeModal = activeModal;
+    }
+    LoginModalComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], LoginModalComponent.prototype, "name", void 0);
+    LoginModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-login-modal',
+            template: __webpack_require__(/*! ./login-modal.component.html */ "./src/app/login-modal/login-modal.component.html"),
+            styles: [__webpack_require__(/*! ./login-modal.component.scss */ "./src/app/login-modal/login-modal.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbActiveModal"]])
+    ], LoginModalComponent);
+    return LoginModalComponent;
 }());
 
 
@@ -2644,7 +2729,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\006700\Documents\AP\appWorld\Angular\AngularFramework\primeMedia\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\github\PrimeMedia\src\main.ts */"./src/main.ts");
 
 
 /***/ })

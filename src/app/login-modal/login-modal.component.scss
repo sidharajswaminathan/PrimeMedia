@@ -1,0 +1,54 @@
+.login-modal {
+
+
+}
+.login {
+  background: #000;
+}
+.login-wrap {
+  width: 970px;
+  min-height: 564px;
+  overflow: visible;
+  padding: 25px;
+  max-height: inherit;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #77d5ef;
+  background: -moz-linear-gradient(top, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
+  background: -webkit-linear-gradient(top, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
+  background: linear-gradient(to bottom, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
+}
+
+.login-left {
+  display: block;
+  float: left;
+  width: 48.5%;
+  background: none !important;
+  margin-top: 90px;
+  height: auto !important;
+  h2 {
+    color: #db3c70 !important;
+    font-size: 40px;
+    font-weight: normal;
+    font-family: "Chocolate Bar Demo" !important;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  span {
+    font-size: 44px;
+    font-family: "mf-sippin-on-sunshine" !important;
+    font-weight: normal;
+    color: #175a6d;
+  }
+}
+.login-right {
+  position: relative;
+  float: left;
+  width: 51.5%;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 1;
+  overflow: inherit;
+  top: 0;
+}
+

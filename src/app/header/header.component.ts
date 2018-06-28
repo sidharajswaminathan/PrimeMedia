@@ -3,9 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {SharedserviceService} from '../sharedservice.service';
 import {LocalstorageService} from '../localstorage.service';
 import { ServiceCallService } from '../service-call.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
 import { _ } from 'underscore';
 import {Config} from '../config';
+import {PrimeModalComponent} from "../prime-modal/prime-modal.component";
+import {LoginModalComponent} from "../login-modal/login-modal.component";
 
 @Component({
   selector: 'app-header',
@@ -15,11 +18,13 @@ import {Config} from '../config';
 export class HeaderComponent implements OnInit, DoCheck {
 
   @Input() shareData: any;
+  showModal: Boolean = false;
   routUrl: Array<any> = ['/productlist'];
   searchText: string;
   contentData: any;
   constructor(
     private serviceCall: ServiceCallService,
+    private modalService: NgbModal,
     private route: ActivatedRoute,
     private router: Router,
     private sharedObj: SharedserviceService,
@@ -34,7 +39,11 @@ export class HeaderComponent implements OnInit, DoCheck {
         this.sharedObj.resetTabs(this.contentData,false);
       });
   }
-
+  openVerticallyCentered() {
+    this.showModal = true;
+    const modalRef = this.modalService.open(LoginModalComponent);
+    modalRef.componentInstance.name = 'login modal';
+  }
   ngDoCheck() {
     this.contentData = this.sharedObj.globalObj.headerTabdata;
   }
