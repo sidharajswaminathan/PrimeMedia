@@ -31,6 +31,7 @@ import { VideoAudioModalComponent } from './video-audio-modal/video-audio-modal.
 import { AudioComponent } from './audio/audio.component';
 import { FilterPipe } from './pipe-filter';
 import { CeiboShare } from 'ng2-social-share';
+import { LoginModalComponent } from './login-modal/login-modal.component';
 
 
 @NgModule({
@@ -60,9 +61,10 @@ import { CeiboShare } from 'ng2-social-share';
      VideoAudioModalComponent,
     AudioComponent,
     FilterPipe,
-    CeiboShare
+    CeiboShare,
+    LoginModalComponent
   ],
-  entryComponents: [ PrimeModalComponent ],
+  entryComponents: [ PrimeModalComponent, LoginModalComponent ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
