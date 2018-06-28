@@ -1,10 +1,8 @@
-
 <div class="login-wrap">
-  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-    <span aria-hidden="true">&times;</span>
-  </button>
+    <button type="button" class="close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   <div class="modal-body">
-
     <div class="login-left">
       <div class="md-toolbar-tools">
         <label class="learninggrp-logo"></label>
@@ -12,23 +10,31 @@
         <span>Join Today</span>
       </div>
     </div>
-
     <div class="login-right">
+      <div class="loginShow">
+        <ul class="login-social-icons">
+          <li><button><i class="fb-icon"></i></button></li>
+          <li><button><i class="gplus-icon"></i></button></li>
+        </ul>
+      </div>
       <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" required>
+        <div class="or"> or </div>
+        <div class="user-login">
+          <div class="form-group">
+            <label for="username">User name / Email</label>
+            <input type="text" class="form-control" id="username" required>
+          </div>
+          <div class="form-group">
+            <label for="pswd">Password</label>
+            <input type="text" class="form-control" id="pswd">
+          </div>
+          <div class="clearfix"> <a href="#" class="pw-text">Oops! Forgot my password?</a> </div>
+          <div class="text-right"> <button type="submit" class="btn btn-primary">Login</button> </div>
         </div>
-
-        <div class="form-group">
-          <label for="alterEgo">Alter Ego</label>
-          <input type="text" class="form-control" id="alterEgo">
-        </div>
-
-        <button type="submit" class="btn btn-success">Submit</button>
-
       </form>
+      <div class="login-bottom">
+        <p>Don't have an account? <a class="sign-inlink" href="javascript:void(0);">JOIN NOW</a> </p>
+      </div>
     </div>
-
   </div>
 </div>
