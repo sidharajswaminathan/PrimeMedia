@@ -31,6 +31,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/Montserrat-Regular.eot");
+  src: url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/Montserrat-Regular.woff2") format("woff2"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/Montserrat-Regular.woff") format("woff"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg"), url("https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'MyriadPro-Regular',Arial!important;
 }
