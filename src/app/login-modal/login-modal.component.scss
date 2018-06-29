@@ -8,6 +8,7 @@
   position: relative;
   margin: 0 auto;
   background: #77d5ef;
+  font-family: Montserrat;
   background: -moz-linear-gradient(top, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
   background: -webkit-linear-gradient(top, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
   background: linear-gradient(to bottom, #77d5ef 0%, #97e0f3 50%, #c4eff8 100%);
@@ -26,7 +27,7 @@
     display: block;
     position: absolute;
     top: -12px;
-    right: -14px;
+    right: -12px;
     width: 34px;
     height: 34px;
     min-height: 20px;
@@ -38,8 +39,22 @@
     color: #fff;
     opacity: 1;
     z-index: 5;
+    outline: 0;
     &:hover, &:focus {
       background: #444 !important;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: -6px auto 0;
+      font-size: 10px;
+      top: 50%;
+      background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/cross-symbol.png) no-repeat;
+      background-size: 100%;
+      width: 12px;
+      height: 12px;
     }
   }
 }
@@ -57,7 +72,7 @@
     width: 100px;
     height: 81px;
     background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/learning_group_popup.png) no-repeat;
-    margin: 0 auto 40px;
+    margin: 0 auto 36px;
     clear: both;
   }
   h2 {
@@ -65,7 +80,7 @@
     font-size: 40px;
     font-weight: normal;
     font-family: "Chocolate Bar Demo";
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
   }
   span {
@@ -85,7 +100,7 @@
   overflow: inherit;
   top: 0;
   .loginShow {
-    padding: 40px 25px 0;
+    padding: 30px 25px 0;
     .login-social-icons {
       margin: 0;
       padding: 0px 0 0;
@@ -122,7 +137,7 @@
   .or {
     position: relative;
     display: block;
-    margin: 20px 0 5px;
+    margin: 20px 0 25px;
     color: #E04462;
     font-size: 14px;
     overflow: hidden;
@@ -148,16 +163,50 @@
   .user-login {
     margin: 0 auto;
     max-width: 82%;
-    label {
-      margin-bottom: 0px;
-      color: #B4B4B4;
-      font-size: 16px;
-      bottom: 95%;
-      left: 11px;
+    .form-group {
+      position: relative;
+      margin-bottom: 1.7rem;
+      label {
+        margin-bottom: 0px;
+        color: #B4B4B4;
+        font-size: 14px;
+        position: absolute;
+        top: 9px;
+        left: 12px;
+        transition: 0.5s ease-in-out;
+        &:after {
+          content: ' *';
+          font-size: 13px;
+          vertical-align: top;
+        }
+      }
+      .form-control {
+        height: 40px;
+        line-height: 38px;
+        font-size: 14px;
+        padding: 2px 15px;
+        padding-right: 35px;
+        cursor: text;
+        border-color: #C0EBF6;
+        &:hover, &:focus {
+          box-shadow: none;
+        }
+      }
+      .form-control:focus + label {
+        top: -15px;
+        font-size: 10px;
+      }
+      .fa-eye-slash {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        margin-top: 11px;
+        color:#337ab7;
+      }
     }
     .pw-text {
       color: #eab1ac;
-      font-size: 16px;
+      font-size: 14px;
       float: right;
       margin-bottom: 20px;
     }
@@ -166,6 +215,7 @@
       padding: 7px 35px;
       border-radius: 5px;
       border:0;
+      margin: 12px 0;
       &:hover, &:focus {
         background-color: #d82013 !important;
         box-shadow: none;
@@ -182,7 +232,7 @@
     margin-top: 25px;
     P {
       margin-top: 10px;
-      font-size: 18px;
+      font-size: 16px;
       color: #999;
     }
     .sign-inlink {
@@ -190,5 +240,3 @@
     }
   }
 }
-
-
