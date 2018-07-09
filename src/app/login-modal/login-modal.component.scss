@@ -76,7 +76,7 @@
     clear: both;
   }
   h2 {
-    color: #db3c70 !important;
+    color: #db3c70;
     font-size: 40px;
     font-weight: normal;
     font-family: "Chocolate Bar Demo";
@@ -101,34 +101,34 @@
   top: 0;
   .loginShow {
     padding: 30px 25px 0;
-    .login-social-icons {
+  }
+  .login-social-icons {
+    margin: 0;
+    padding: 0px 0 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 0px;
       margin: 0;
-      padding: 0px 0 0;
+      width: 100%;
       text-align: center;
-      li {
-        display: inline-block;
-        padding: 0px;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        button {
+      button {
+        display: block;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        background: none;
+        margin: 0 auto;
+        i {
+          width: 324px;
+          height: 44px;
           display: block;
-          cursor: pointer;
-          border: 0;
-          outline: 0;
-          background: none;
-          margin: 0 auto;
-          i {
-            width: 324px;
-            height: 44px;
+          &.fb-icon {
             display: block;
-            &.fb-icon {
-              display: block;
-              background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/fbIcontxt.png) no-repeat center center;
-            }
-            &.gplus-icon {
-              background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/gpIcontxt.png) no-repeat center center;
-            }
+            background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/fbIcontxt.png) no-repeat center center;
+          }
+          &.gplus-icon {
+            background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/gpIcontxt.png) no-repeat center center;
           }
         }
       }
@@ -160,13 +160,13 @@
       width: 19%;
     }
   }
-  .user-login {
+  .user-login, .signup-form {
     margin: 0 auto;
     max-width: 82%;
     .form-group {
       position: relative;
       margin-bottom: 1.7rem;
-      label {
+      label{
         margin-bottom: 0px;
         color: #B4B4B4;
         font-size: 14px;
@@ -187,6 +187,7 @@
         padding: 2px 15px;
         padding-right: 35px;
         cursor: text;
+        color: #B4B4B4;
         border-color: #C0EBF6;
         &:hover, &:focus {
           box-shadow: none;
@@ -221,6 +222,33 @@
         box-shadow: none;
       }
     }
+    .nameCls {
+      display: inline-block;
+      width: 100%;
+      padding: 0;
+      .first-name, .last-name {
+        float: left;
+        width: calc(50% - 4px);
+      }
+      .first-name{
+        margin-right: 4px;
+      }
+      .last-name {
+        margin-left: 4px;
+        position: relative;
+      }
+    }
+    .dob {
+      display: inline-block;
+      width: 100%;
+      .month, .day, .year {
+        float: left;
+        width: calc(32%);
+      }
+      .month, .day {
+        margin-right: 6px;
+      }
+    }
   }
   .login-bottom {
     color: #a9a9a9;
@@ -237,6 +265,224 @@
     }
     .sign-inlink {
       color: #50c7e8;
+    }
+  }
+  .right-wrap {
+    .pswdStrength {
+      list-style: none;
+      padding: 0;
+      vertical-align: 2px;
+      display: block;
+      margin: 10px 0 18px 0;
+    }
+    .point {
+      background: #DDD;
+      border-radius: 2px;
+      display: inline-block;
+      height: 5px;
+      margin-right: 4px;
+      width: 47px;
+    }
+    .parent-signup, .student-signup {
+      padding-top: 10px;
+      .or {
+        margin: 10px 0 15px;
+      }
+    }
+    .student-signup {
+      .signup-form {
+        max-width: 100%;
+      }
+    }
+    .student-login-wrap{
+      padding: 160px 46px 50px;
+      min-height: 415px;
+      display: block;
+      &.activemain {
+        padding: 50px 46px 0;
+      }
+      &.activemain1 {
+        padding: 18px 46px 0;
+      }
+      .content {
+        margin-top: 40px;
+        text-align: left;
+        p {
+          font-size: 13px;
+          color: #3cdbbf;
+        }
+        .signup-form {
+          max-width: 100%;
+          .form-group {
+            margin-bottom: 100px;
+          }
+        }
+      }
+      .student-age {
+        .student-login {
+          border: 0;
+          display: inline-block;
+          background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/agebg.png) no-repeat;
+          color: #3cdbbf;
+          width: 174px;
+          height: 68px;
+          cursor: pointer;
+          text-align: center;
+          outline: 0;
+          &.aboveage {
+            margin-left: 4px;
+            width: 176px;
+            background-position: 0 -165px;
+            &.active {
+              background-position: 0 -259px;
+            }
+          }
+          &.belowage {
+            margin-right: 6px;
+          }
+          &.active {
+            background-position: 0 -74px;
+            p { color: #fff; }
+          }
+          p {
+            font-size: 13px !important;
+            color: #3cdbbf;
+            line-height: 20px;
+            &:first-of-type {
+              font-size: 16px !important;
+              font-weight: 600;
+              margin: 12px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .forgotpw-wrap {
+    width: 100%;
+    padding: 35% 25px 35.5%;
+    h2 {
+      margin: 0 0 25px;
+      color: #4295ad;
+      font-weight: 500;
+      font-size: 23px;
+      text-align: center;
+    }
+    .user-login {
+      max-width: 100%;
+    }
+  }
+}
+.letsstared-wrap {
+  padding-top: 25px;
+  .letsstared {
+    text-align: center;
+    margin-bottom: 60px;
+    h3 {
+      margin: 0 0 25px;
+      color: #4295ad;
+      font-weight: 600;
+      font-size: 23px;
+    }
+    span {
+      color: #8699ac;
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+    .loguser-type {
+      margin: 0 0 25px;
+      p {
+        color: #50c7e8;
+        font-size: 16px;
+        line-height: 54px;
+        font-weight: bold;
+        margin: 0;
+        outline: 0;
+        cursor: pointer;
+        display: inline-block;
+        background: url(https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/loguser-bg.png) no-repeat;
+        width: 228px;
+        height: 54px;
+        &:hover {
+          background-position: 0 -79px;
+          color: #fff;
+        }
+      }
+      &.type2 {
+        p {
+          background-position: 0 -159px;
+          &:hover {
+            background-position: 0 -233px;
+          }
+        }
+      }
+      &.type3 {
+        p {
+          background-position: 0 -309px;
+          &:hover {
+            background-position: 0 -387px;
+          }
+        }
+      }
+    }
+  }
+}
+.hide {
+  display: none !important;
+}
+.login-scroll {
+  border-radius: 6px;
+  height: 507px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #b5b5b5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #838383;
+  }
+}
+@media (max-width: 1023px) {
+  .login-wrap {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100% !important;
+    min-height: 100%;
+    padding: 200px 0 20px;
+    border-radius: 0;
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: none !important;
+    z-index: 100;
+    .login-left {
+      float: none;
+      display: block;
+      width: 100%;
+      margin: 0 auto 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #7cd7ef !important;
+      min-height: 200px;
+      z-index: 1;
+      .learninggrp-logo {
+        margin: 20px auto 10px;
+        width: 75px;
+        background-size: 100%;
+        height: 65px;
+      }
     }
   }
 }
