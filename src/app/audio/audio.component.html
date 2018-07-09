@@ -1,0 +1,17 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Video Audio</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="player">
+        <audio controls>
+          <source src="https://apmedialibrary.s3.amazonaws.com/Media%20Library/songs/Sommer%20Learning%20Audio%20Files/Alphabet%20Song%2010%20Final%20Chicken%20Dance.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary btn-audio" (click)="open(content)">{{actionName}}</button>

@@ -1,0 +1,17 @@
+<ul class="grid-list">
+  <li class="item" *ngFor="let gridItem of shareData.data">
+    <div class="gridlist-inner">
+      <div class="fig-info" (click)="shareData.configuration.itemevent && goToProductDetails(gridItem)">
+        <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/cache/1/small_image/300x350/e9c3970ab036de70892d86c6d221abfe/s/t/sts_b_androcles.jpg">
+      </div>
+      <div class="content-info">
+        <h3>Androcles and the Lion</h3>
+        <span> Sommer-Time Stories for Phonics Adventure (16 books part of program) </span>
+        <ul>
+          <li> <span class="fa fa-book"></span> </li>
+          <li> <label>EN</label> </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>

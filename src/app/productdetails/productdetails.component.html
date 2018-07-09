@@ -1,31 +1,35 @@
+
+<script src="productdetails.component.ts"></script>
 <section class="container-fluid">
   <div class="productdetail_individual_screen">
     <h2 class="category-title ng-binding">Ebooks</h2>
     <div class="bookdetail-main">
       <div class="row mb30">
-        <div class="col-md-5 col-sm-5 col-lg-4 col-xl-3  col-12 bookimage">
+        <div class="col-md-5 col-sm-5 col-xl-3 mb20 bookimage">
           <img src="https://www.advancepublishing-dev.com/ecommerce/pub/media/catalog/product/s/t/sts_e_androcles.jpg" alt="">
         </div>
-        <div class="offset-lg-1 offset-col-0 offset-xl-1 offset-md-0 offset-sm-0 col-md-5 col-sm-5 col-lg-4 col-xl-3 col-12 d-flex">
+        <div class="col-md-7 col-sm-7 col-xl-8 offset-xl-1 d-flex">
             <div class="bookimage_content align-self-center">
               <h3 class="booktitle ng-binding ng-scope" ng-if="bookDetails.coursename">Androcles and the Lion</h3>
               <h5 class="author-title ng-scope" ng-if="bookDetails.author">Author: <span class="ng-binding">Carl Sommer</span></h5>
               <div class="bookdetail-btn ng-scope" ng-if="!$root.appLoader &amp;&amp; action" ng-disabled="btnDisable" aria-disabled="true" disabled="disabled">
-                <a id="a_readbook_id" ng-if="bookDetails.book_type != 'Games'" ng-click="readBook(bookDetails.book_type)" class="ng-binding ng-scope">Read Now</a>
+                <a id="a_readbook_id" (click)="authenticatePlayer()" class="ng-binding ng-scope" *ngIf="(prodDetails.book_type.toLocaleLowerCase() === 'ebooks' || prodDetails.book_type.toLocaleLowerCase() === 'worksheets' || prodDetails.book_type.toLocaleLowerCase() === 'games')">{{prodDetailLabel}}</a>
+                <app-video-audio-modal *ngIf="prodDetails.book_type.toLocaleLowerCase() === 'videos'" [actionName]="this.prodDetailLabel"></app-video-audio-modal>
+                <app-audio  *ngIf="prodDetails.book_type.toLocaleLowerCase() === 'songs'" [actionName]="this.prodDetailLabel"></app-audio>
               </div>
               <div class="fav_menus">
                 <ul>
                   <li> <div class="fav_iconsdiv"><i class="fa fa-heart-o" aria-hidden="true"></i></div><span>Favourite</span></li>
-                  <li> <div class="fav_iconsdiv"><i class="fa fa-files-o" aria-hidden="true"></i></div><span>My collections</span></li>
-                  <li> <div class="fav_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true"></i></div><span>Share</span></li>
+                  <li (click)="openVerticallyCentered()"> <div class="fav_iconsdiv"><i class="fa fa-files-o" aria-hidden="true"></i></div><span>My collections</span></li>
+                  <li> <div class="fav_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true" ceiboShare  [facebook]="{u: repoUrl}"></i></div><span>Share</span></li>
                  </ul>
               </div>
               <h6 class="avaialbe-title">Available in:</h6>
               <div class="available_in_menus">
                 <ul>
-                  <li> <div class="available_iconsdiv"><i class="fa fa-apple" aria-hidden="true"></i></div></li>
-                  <li> <div class="available_iconsdiv"><i class="fa fa-play" aria-hidden="true"></i></div></li>
-                  <li> <div class="available_iconsdiv"><i class="fa fa-amazon" aria-hidden="true"></i></div></li>
+                  <li> <div class="available_iconsdiv"><a href="https://itunes.apple.com/us/book/id1318206765" target="_blank"><i class="fa fa-apple" aria-hidden="true"></i></a></div></li>
+                  <li> <div class="available_iconsdiv"><a href="https://play.google.com/store/books/details?id=J3JADwAAQBAJ" target="_blank"><i class="fa fa-play" aria-hidden="true"></i></a></div></li>
+                  <li> <div class="available_iconsdiv"><a href="https://www.amazon.com/dp/B077SYH937" target="_blank"><i class="fa fa-amazon" aria-hidden="true"></i></a></div></li>
                   <li> <div class="available_iconsdiv"><i class="fa fa-share-alt" aria-hidden="true"></i></div></li>
                 </ul>
               </div>
@@ -44,7 +48,7 @@
         <div class="col-12">
           <h6 class="bold">Product Details:</h6>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-8">
           <ul class="detail-list">
            <li ng-if="bookDetails.age_range" class="ng-scope">
             <label>Age Range :</label>

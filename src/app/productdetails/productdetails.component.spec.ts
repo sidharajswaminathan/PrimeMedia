@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { VideoAudioModalComponent } from '../video-audio-modal/video-audio-modal.component';
+import { AudioComponent } from '../audio/audio.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProductdetailsComponent } from './productdetails.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { GridViewComponent } from '../grid-view/grid-view.component';
+import { CeiboShare } from 'ng2-social-share';
 
 describe('ProductdetailsComponent', () => {
   let component: ProductdetailsComponent;
@@ -8,7 +14,8 @@ describe('ProductdetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductdetailsComponent ]
+      imports: [NgbModule.forRoot(), RouterTestingModule, HttpClientTestingModule],
+      declarations: [ ProductdetailsComponent, VideoAudioModalComponent, AudioComponent, GridViewComponent, CeiboShare]
     })
     .compileComponents();
   }));
@@ -23,3 +30,4 @@ describe('ProductdetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

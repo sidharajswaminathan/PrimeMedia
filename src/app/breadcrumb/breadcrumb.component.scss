@@ -1,5 +1,7 @@
 /* breadcrumb */
 .breadcrumb {
+  margin: 0 0 20px;
+  padding: 20px 6%;
   background: none;
   font-size: 0.95em;
   li {
@@ -14,5 +16,12 @@
         display: none;
       }
     }
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .breadcrumb {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

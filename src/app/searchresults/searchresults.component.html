@@ -1,0 +1,63 @@
+<section class="main-wrapper">
+  <h2>Search Results for "{{searchResultTxt}}"</h2>
+  <ngb-tabset class="collection-tabs">
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>Sommer Time Stories</b></ng-template>
+      <ng-template ngbTabContent >
+          <ul class="search-result-wrap">
+            <li *ngFor="let name of arrBooks | filter: searchResultTxt ; let i = index">
+              <div>
+                <h3 class="title">{{name.categoryTitle}}</h3>
+                <ul class="book-lists">
+                  <li *ngFor="let subname of name.results; let i=index">
+                    <div *ngIf=" i < name.loadcnt ">
+                      <div class="bl-wrap">
+                        <figure><img src="{{subname.src}}"/></figure>
+                        <strong>{{subname.name}}</strong>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="text-center"><button type="button" class="btn" (click)="loadMore(i)">Load more</button></div>
+              </div>
+            </li>
+          </ul>
+
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>Phonics Adventure</b></ng-template>
+      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+          craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+          cillum PBR.</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>Reading Success</b></ng-template>
+      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+          craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+          cillum PBR.</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>Number Success</b></ng-template>
+      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+          craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+          cillum PBR.</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>Writing Success</b></ng-template>
+      <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+          craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+          cillum PBR.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</section>
+
+

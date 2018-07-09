@@ -1,4 +1,53 @@
-
-  <app-carousel [shareData]="data"></app-carousel>
-
-
+<div *ngIf="isloaded" class="main-wrapper">
+  <!--sommer time stories template starts here-->
+  <ngb-tabset class="collection-tabs" *ngIf="carousel.title == 'sommer time stories'">
+    <ngb-tab title="English">
+      <ng-template ngbTabContent>
+        <ngb-tabset class="collection-tabs">
+          <ngb-tab title="By Alphabetical">
+            <ng-template ngbTabContent>
+              <app-grid-view [shareData]="carousel"></app-grid-view>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="By Age">
+            <ng-template ngbTabContent>
+              <app-draggingslide *ngFor="let list of loopData | slice:0:10 " [shareData]="carousel" [productData]="list"></app-draggingslide>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Spanish">
+      <ng-template ngbTabContent>
+        <!--<app-draggingslide  [shareData]="carousel"></app-draggingslide>-->
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="bilingual">
+      <ng-template ngbTabContent>
+        <!--<app-draggingslide  [shareData]="carousel"></app-draggingslide>-->
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+  <!--sommer time stories template ends here-->
+  <!--Phonics adventrue template starts here-->
+  <div *ngIf="carousel.title == 'phonics adventure'">
+    <app-draggingslide *ngFor="let list of loopData | slice:0:10 " [shareData]="carousel" [productData]="list"></app-draggingslide>
+  </div>
+  <!--Phonics adventrue template ends here-->
+  <!--Writing success template starts here-->
+  <div *ngIf="carousel.title == 'writing success'">
+    Writing success page content yet to be developed!
+  </div>
+  <!--Writing success template ends here-->
+  <!--Reading success template starts here-->
+  <div *ngIf="carousel.title == 'reading success'">
+    Reading success page content yet to be developed!
+  </div>
+  <!--Reading success template ends here-->
+  <!--Games template starts here-->
+  <div *ngIf="carousel.title == 'games'">
+    <app-grid-view [shareData]="carousel"></app-grid-view>
+  </div>
+  <!--Games template ends here-->
+</div>
+<!--<app-carousel ></app-carousel>-->

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
@@ -14,8 +15,25 @@ import { UsercollectionsComponent } from './usercollections/usercollections.comp
 import { HttprequestComponent } from './httprequest/httprequest.component';
 import { MycollectionsComponent } from './mycollections/mycollections.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+import { DraggingslideComponent } from './draggingslide/draggingslide.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { ServiceCallService } from './service-call.service';
+import { LocalstorageService} from './localstorage.service';
+import { PrimeModalComponent } from './prime-modal/prime-modal.component';
+import { SearchresultsComponent } from './searchresults/searchresults.component';
+import { GridViewComponent } from './grid-view/grid-view.component';
+import { VideoAudioModalComponent } from './video-audio-modal/video-audio-modal.component';
+import { AudioComponent } from './audio/audio.component';
+import { FilterPipe } from './pipe-filter';
+import { CeiboShare } from 'ng2-social-share';
+import { LoginModalComponent } from './login-modal/login-modal.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,15 +51,30 @@ import { ProductlistComponent } from './productlist/productlist.component';
     UsercollectionsComponent,
     CarouselComponent,
     ProductdetailsComponent,
+    DraggingslideComponent,
     BreadcrumbComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    PrimeModalComponent,
+    SearchresultsComponent,
+    GridViewComponent,
+    SearchresultsComponent,
+     VideoAudioModalComponent,
+    AudioComponent,
+    FilterPipe,
+    CeiboShare,
+    LoginModalComponent
   ],
+  entryComponents: [ PrimeModalComponent, LoginModalComponent ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    HttpModule,
+    AppRoutingModule,
+    NgxCarouselModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ServiceCallService, LocalstorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

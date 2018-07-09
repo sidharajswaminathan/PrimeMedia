@@ -36,13 +36,16 @@
     height: 32px;
     font: 14px "MyriadPro-Bold";
     line-height: 34px;
-    color: #fff;
+    color: #fff!important;
     text-transform: uppercase;
     border-radius: 5px;
     background: #1ea6dd;
     text-align: center;
     transition: 0.2s ease-in;
     cursor: pointer;
+    vertical-align: top;
+    margin-bottom: 15px;
+    margin-right:10px;
     &:hover {
       background: #218db9;
       color: #fff;
@@ -60,7 +63,7 @@
     width:45px;height:45px;border:1px solid #ccc;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    border-radius: 50px;padding: 10px 9px;margin:0px auto;
+    border-radius: 50px;padding: 11px 9px;margin:0px auto;
     .fa.fa-heart-o{font-size:24px;color:#ccc;}
     .fa.fa-share-alt{font-size:23px;color:#ccc;}
     .fa.fa-files-o{font-size:23px;color:#ccc;}
@@ -132,3 +135,13 @@
 }
 
 .bold{font-weight:bold;}
+
+/* Resonsive style */
+@media screen and (max-width: 1023px) {
+  .productdetail_individual_screen {
+    padding: 20px;
+  }
+}
+
+
+

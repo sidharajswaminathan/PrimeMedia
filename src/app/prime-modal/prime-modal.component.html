@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add to Collection</h4>
+  <button (click)="showAdd = !showAdd" [disabled]="showAdd" class="btn btn-video removeposition" style="float:right;position: absolute;right: 50px;background: #218db9;border: navajowhite;color: #fff;padding: 2px 10px;border-radius: 6px;">Add New</button>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+   <div id="modalBody" class="checkbox_customize">
+        <form name="collections">
+            <div *ngIf="!showAdd" class="checkVals">
+              <ul>
+                  <li *ngFor="let checkval of checkData"><label class="checkbox-inline"><input type="checkbox" value="{{checkval.CollectionId}}" [id]="checkval.CollectionId" (click)="checkboxChecked($event)">{{checkval.name}}</label></li>
+              </ul>
+            </div>
+            <div *ngIf="showAdd" class="addCollect">
+                  Collection Name: <input type="text" (input) = "colName = $event.target.value">
+            </div>
+
+            <div class="FooterSection">
+              <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark marright15" (click)="addCollection(name.value)" >Add</button>
+              <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+              <div class="addNewCont" *ngIf="showAdd">
+                <button type="button" class="btn btn-outline-dark marright15" (click)="saveCollection(name.value)" >Save</button>
+                <button type="button" class="btn btn-outline-dark">Cancel</button>
+              </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--<div class="modal-footer">
+
+  <button type="button" *ngIf="!showAdd" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>-->
+
+
+
+

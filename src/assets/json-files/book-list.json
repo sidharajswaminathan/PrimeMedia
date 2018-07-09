@@ -1,0 +1,230 @@
+{
+  "searchResults": [
+    {
+    "categoryTitle": "eBooks",
+      "loadcnt":5,
+    "results": [
+      {
+        "name": "Book Title 1",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+      {
+        "name": "Book Title 2",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+      },
+      {
+        "name": "Book Title 3",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+      },
+      {
+        "name": "Book Title 4",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+      },
+      {
+        "name": "Book Title 5",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+      },
+      {
+        "name": "Book Title 6",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+      {
+        "name": "Book Title 7",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+      },
+      {
+        "name": "Book Title 8",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+      },
+      {
+        "name": "Book Title 9",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+      },
+      {
+        "name": "Book Title 10",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+      }
+    ]
+    },
+    {
+      "categoryTitle": "Videos",
+      "loadcnt":5,
+      "results": [{
+        "name": "Book Title 1",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Songs",
+      "loadcnt":5,
+      "results": [{
+        "name": "Book Title 1",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Worksheets/Activities",
+      "loadcnt":5,
+      "results": [{
+        "name": "Book Title 1",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Games",
+      "loadcnt":5,
+      "results": [{
+        "name": "Book Title 1",
+        "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+      },
+        {
+          "name": "Book Title 2",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 3",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 4",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 5",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        },
+        {
+          "name": "Book Title 6",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img1.png"
+        },
+        {
+          "name": "Book Title 7",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img2.png"
+        },
+        {
+          "name": "Book Title 8",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img3.png"
+        },
+        {
+          "name": "Book Title 9",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img4.png"
+        },
+        {
+          "name": "Book Title 10",
+          "src": "https://www.advancepublishing-dev.com/PrimeMedia/dist/primeMedia/assets/images/img5.png"
+        }
+      ]
+    }
+  ]
+}
