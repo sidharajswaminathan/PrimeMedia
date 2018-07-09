@@ -55,7 +55,26 @@ ul {
     border: 0;
   }
 }
-
+.hide {
+  display: none !important;
+}
+.login-scroll {
+  border-radius: 6px;
+  height: 507px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #b5b5b5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #838383;
+  }
+}
   .main-wrapper {
     padding: 20px 6%;
   }
@@ -393,7 +412,15 @@ ul {
     margin: 0 auto !important;
   }
 }
-
+@media (max-width: 1023px) {
+  .login-modal {
+    .modal-dialog {
+      margin: 0;
+      max-width: 100% !important;
+      min-height: 100%;
+    }
+  }
+}
 .ngxcarousel-inner > .ngxcarousel-items > .item:last-child .carousel-item{
     min-height: 300px;
 }
