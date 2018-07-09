@@ -621,9 +621,10 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\006700\Documents\AP\appWorld\Angular\AngularFramework\primeMedia\src\styles.scss */"./src/styles.scss");
-__webpack_require__(/*! C:\Users\006700\Documents\AP\appWorld\Angular\AngularFramework\primeMedia\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\006700\Documents\AP\appWorld\Angular\AngularFramework\primeMedia\node_modules\font-awesome\css\font-awesome.min.css */"./node_modules/font-awesome/css/font-awesome.min.css");
+__webpack_require__(/*! C:\Users\006855\Documents\Githubrepo\PrimeMedia\src\styles.scss */"./src/styles.scss");
+__webpack_require__(/*! C:\Users\006855\Documents\Githubrepo\PrimeMedia\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\006855\Documents\Githubrepo\PrimeMedia\node_modules\font-awesome\css\font-awesome.min.css */"./node_modules/font-awesome/css/font-awesome.min.css");
+
 
 
 /***/ })
