@@ -1,6 +1,6 @@
 <script src="../../../dist/primeMedia/main.js"></script>
 <div class="carouselSliderCont">
-    <h3 class="slideTitle">{{productData.title}} <a [routerLink]="['/productdetail']" *ngIf="productData.data.length && productData.title> 25">See more</a></h3>
+    <h3 class="slideTitle">{{productData.title}} <a [routerLink]="['/productdetail']" *ngIf="productData.data.length > 25 && productData.title">See more</a></h3>
     <button (click)="editCarousel()" *ngIf="shareData.configuration.editsave" [ngClass]="{'edit':changebutton == 'edit','save':changebutton == 'save'}" class="editsaveBtn">
      <i class="fa" [ngClass] = "{'fa-pencil':changebutton == 'edit','fa-floppy-o':changebutton == 'save'}" ></i>
     </button>
