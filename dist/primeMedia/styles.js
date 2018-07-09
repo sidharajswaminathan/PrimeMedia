@@ -626,7 +626,6 @@ __webpack_require__(/*! C:\Users\006855\Documents\Githubrepo\PrimeMedia\node_mod
 module.exports = __webpack_require__(/*! C:\Users\006855\Documents\Githubrepo\PrimeMedia\node_modules\font-awesome\css\font-awesome.min.css */"./node_modules/font-awesome/css/font-awesome.min.css");
 
 
-
 /***/ })
 
 },[[2,"runtime"]]]);
