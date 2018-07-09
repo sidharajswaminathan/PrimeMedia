@@ -66,7 +66,7 @@ export class DraggingslideComponent implements OnInit {
     }
     this.localstorage.setLocaldata('prodDetail', JSON.stringify(idx));
     this.router.navigate(this.routUrl,{ queryParams: { id: idx.id } });
-    this.localstorage.setLocaldata('currentCategory', idx.name);
+    /*this.localstorage.setLocaldata('currentCategory', idx.name);*/
     this.sharedObj.globalObj.showBanner = false;
     this.sharedValues = this.sharedObj;
     console.log(this.sharedValues);

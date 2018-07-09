@@ -10,9 +10,9 @@
       <div class="col-md-4">
         <ul class="user-collections float-right">
 
-          <!--<li><a href="#"><i class="fa fa-question"></i> <span> Help </span> </a></li>
-          <li><a href="#"><i class="fa fa-lock"></i> <span> Login </span> </a></li>
-          <li><a href="#"><i class="fa fa-pencil"></i> <span> Sign Up </span> </a></li> -->
+          <!--<li><a href="#"><i class="fa fa-question"></i> <span> Help </span> </a></li>-->
+          <li (click)="openVerticallyCentered()"><a href="#"><i class="fa fa-lock"></i> <span> Login </span> </a></li>
+          <li (click)="openVerticallyCentered()"><a href="#"><i class="fa fa-pencil"></i> <span> Sign Up </span> </a></li>
           <!-- After logged in -->
             <li><a routerLink="/mycollections"><i class="fa fa-files-o"></i> <span> My Collections </span> </a></li>
             <li><a href="#"><i class="fa fa-heart"></i> <span> Favorites </span> </a></li>
@@ -28,7 +28,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-menu">
-      <ul class="container-fluid navbar-nav mr-auto d-flex flex-column flex-md-row justify-content-between">
+      <ul class="container-fluid navbar-nav mr-auto">
         <li class="nav-item" *ngFor="let cnt of contentData.mediaType" (click)="headerNavigation(cnt)">
           <a class="nav-link" [ngClass]="{'active': cnt.isSelected}">{{cnt.name | uppercase}}</a>
         </li>

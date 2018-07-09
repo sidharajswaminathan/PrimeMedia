@@ -60,7 +60,7 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
           this.launchPlayer();
         }
       }
-    } else if (this.prodDetailLabel === 'Explore Now') {
+    } else if (this.prodDetailLabel === 'Explore Now' || this.prodDetailLabel === 'Play Now' || this.prodDetailLabel === 'Download Now') {
       this.launchPlayer();
     } else if (this.prodDetailLabel === 'Register Now') {
       if (!this.loggedIn) {
@@ -91,7 +91,43 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
     } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'videos' || this.prodDetails.book_type.toLocaleLowerCase() === 'songs') {
       alert('Video/audio player will be launched!');
     } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'worksheets') {
-      alert('Worksheet will be donwloaded!');
+      /*alert('Worksheet will be donwloaded!');*/
+      window.open('http://spiglobaltestingbucket.s3.amazonaws.com/Testing/assets/unit1/documents/B10U1P10.pdf');
+    } else if (this.prodDetails.book_type.toLocaleLowerCase() === 'games') {
+      /*alert('games page will be lauched!');*/
+      const gamesObj: any = {
+        'activity': {'isPreview': true, 'id': 2},
+        'data':
+          {
+            'name': 'Connect the Dots A-E',
+            'isActive': false,
+            'url': 'Data to come',
+            'scormurl': 'https://www.advancepublishing-dev.com/lms/lms/mod/scorm/player.php?scoid=3972&cm=36',
+            'section': 1,
+            'lesson': '1B',
+            'sectionname': 'Section1AlphabetAtoE',
+            'lessonname': 'lesson1',
+            'text': 'Data to come',
+            'scormstatus': 'not attempted',
+            'activityType': 'game',
+            'activityid': 2,
+            'bookclass': 'text-book1',
+            'bookname': 'textbook1',
+            'isadded': true,
+            'directive': [
+              {
+                'url': 'connectthedots',
+                'json': 'PA_UI/courseJson/JsonFiles/textbook1/Section1AlphabetAtoE/lesson1/connectthedotsgame-ae'
+              }
+            ],
+            'bookLevel': 0,
+            'sectLevel': 0,
+            'lessLevel': 0,
+            '$$hashKey': 'object:32'
+          }
+      }
+      this.localstorage.setLocaldata('mlGames',JSON.stringify(gamesObj));
+      window.open('https://www.advancepublishing-dev.com/courseplayer');
     }
   }
 
