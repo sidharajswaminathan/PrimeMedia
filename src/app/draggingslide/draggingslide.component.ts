@@ -60,6 +60,7 @@ export class DraggingslideComponent implements OnInit {
 
   /*goto product details*/
   goToProductDetails (idx) {
+    console.log(idx,'   ');
     if ( idx.id === '24') { this.routUrl = ['productdetail'];
     } else {
       this.routUrl = ['productdetails'];
