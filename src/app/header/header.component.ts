@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit, DoCheck {
   }
   openVerticallyCentered() {
     this.showModal = true;
-    const modalRef = this.modalService.open(LoginModalComponent);
+    const modalRef = this.modalService.open(LoginModalComponent, { windowClass: 'dark-modal' });
     modalRef.componentInstance.name = 'login modal';
   }
   ngDoCheck() {
