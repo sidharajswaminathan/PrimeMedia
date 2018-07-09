@@ -394,8 +394,6 @@ ul {
   }
 }
 
-
-.ngxcarousel-inner > .ngxcarousel-items > .item:last-child > .tile{
+.ngxcarousel-inner > .ngxcarousel-items > .item:last-child .carousel-item{
     min-height: 300px;
-    line-height: 100px;
 }
