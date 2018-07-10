@@ -4,7 +4,7 @@
       <li  *ngFor="let cnt of contentData.mediaType">
         <div class="homenew-list">
           <div class="newhome-image">
-            <img [src]="'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/'+cnt.img+'.png'" [srcset]="'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/'+cnt.img+'2x.png 2x'">
+            <img [src]="'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/'+cnt.img+'.png'" [srcset]="'https://spiglobaltestingbucket.s3.amazonaws.com/PrimeMedia/images/'+cnt.img+'-2x.png'">
             <div class="img-info">
               <h3>{{cnt.name | uppercase}}</h3>
              <ul class="book-info">
